@@ -1472,16 +1472,32 @@ img { max-width: 100%; display: block; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 220px;
+  padding: 18px 26px;
   background: rgba(8,14,31,0.76);
   border: 1px solid rgba(201,168,76,0.55);
   color: #c9a84c;
   font-family: 'DM Mono', monospace;
-  font-size: 0.85rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
   cursor: pointer;
   backdrop-filter: blur(12px);
+}
+
+#playHint strong {
+  font-size: 0.88rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+#playHint span {
+  color: rgba(245,244,240,0.75);
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 #playHint.is-blocked {

@@ -5,6 +5,11 @@ const overlay = document.getElementById('introOverlay');
 const video = document.getElementById('introVideo');
 const skipBtn = document.getElementById('skipBtn');
 const forceIntro = new URLSearchParams(window.location.search).get('intro') === '1';
+const skipIntro = new URLSearchParams(window.location.search).get('skipIntro') === '1';
+
+if (forceIntro) {
+  sessionStorage.removeItem('introSeen');
+}
 
 function dismissIntro() {
   if (!overlay) return;
@@ -14,10 +19,11 @@ function dismissIntro() {
 }
 
 if (overlay) {
-  if (sessionStorage.getItem('introSeen') && !forceIntro) {
+  if (skipIntro) {
     overlay.style.display = 'none';
   } else {
     let fallbackTimer;
+    let playHintTimer;
 
     function showPlayHint() {
       if (document.getElementById('playHint')) return;
@@ -25,12 +31,13 @@ if (overlay) {
       const playHint = document.createElement('button');
       playHint.id = 'playHint';
       playHint.type = 'button';
-      playHint.innerHTML = '<span>Tap to play intro</span>';
+      playHint.innerHTML = '<strong>Play Intro</strong><span>Tap to start the video</span>';
       overlay.appendChild(playHint);
       playHint.addEventListener('click', async () => {
         try {
           await video.play();
           playHint.remove();
+          clearTimeout(playHintTimer);
           fallbackTimer = setTimeout(dismissIntro, 15000);
         } catch {
           playHint.classList.add('is-blocked');
@@ -48,6 +55,7 @@ if (overlay) {
 
       try {
         await video.play();
+        clearTimeout(playHintTimer);
         fallbackTimer = setTimeout(dismissIntro, 15000);
       } catch {
         showPlayHint();
@@ -55,10 +63,15 @@ if (overlay) {
     }
 
     skipBtn.addEventListener('click', dismissIntro);
+    video.addEventListener('playing', () => clearTimeout(playHintTimer));
     video.addEventListener('ended', () => {
       clearTimeout(fallbackTimer);
       dismissIntro();
     });
+    video.addEventListener('error', showPlayHint);
+    playHintTimer = setTimeout(() => {
+      if (video.paused || video.readyState < 2) showPlayHint();
+    }, 1200);
     startIntroVideo();
   }
 }
