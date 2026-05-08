@@ -1329,3 +1329,20 @@ img { max-width: 100%; display: block; }
 .section-founder .container {
   max-width: var(--max-w);
 }
+
+/* Hero logo - transparent, larger, aligned with Infrastructure baseline */
+.hero-infra-row {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 28px !important;
+  line-height: 1 !important;
+}
+.hero-logo-inline {
+  height: 130px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  mix-blend-mode: normal !important;
+  background: transparent !important;
+  vertical-align: middle !important;
+  filter: drop-shadow(0 0 24px rgba(201,168,76,0.3)) !important;
+}
