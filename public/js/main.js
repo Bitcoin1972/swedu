@@ -4,6 +4,7 @@
 const overlay = document.getElementById('introOverlay');
 const video = document.getElementById('introVideo');
 const skipBtn = document.getElementById('skipBtn');
+const forceIntro = new URLSearchParams(window.location.search).get('intro') === '1';
 
 function dismissIntro() {
   if (!overlay) return;
@@ -13,7 +14,7 @@ function dismissIntro() {
 }
 
 if (overlay) {
-  if (sessionStorage.getItem('introSeen')) {
+  if (sessionStorage.getItem('introSeen') && !forceIntro) {
     overlay.style.display = 'none';
   } else {
     let fallbackTimer;

@@ -1332,12 +1332,15 @@ img { max-width: 100%; display: block; }
 
 /* Hero logo - transparent, left of Infrastructure */
 .hero-infra-row {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 28px !important;
+  display: inline-block !important;
+  position: relative !important;
   line-height: 1 !important;
 }
 .hero-logo-inline {
+  position: absolute !important;
+  top: 50% !important;
+  right: calc(100% + 36px) !important;
+  transform: translateY(-50%) !important;
   height: 120px !important;
   width: auto !important;
   object-fit: contain !important;
@@ -1371,10 +1374,12 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 768px) {
   .hero-infra-row {
-    gap: 14px !important;
+    padding-left: 86px !important;
   }
 
   .hero-logo-inline {
+    left: 0 !important;
+    right: auto !important;
     height: 72px !important;
   }
 }
