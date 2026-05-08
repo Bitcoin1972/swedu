@@ -5,17 +5,17 @@
 ============================================ */
 
 :root {
-  --black: #0a0a0b;
-  --dark: #111114;
-  --dark-2: #16161a;
-  --dark-3: #1e1e24;
-  --border: rgba(255,255,255,0.08);
-  --border-light: rgba(255,255,255,0.15);
+  --black: #080e1f;
+  --dark: #0d1530;
+  --dark-2: #111d3a;
+  --dark-3: #162245;
+  --border: rgba(201,168,76,0.12);
+  --border-light: rgba(201,168,76,0.25);
   --gold: #c9a84c;
   --gold-light: #e8c97a;
   --white: #f5f4f0;
-  --white-dim: rgba(245,244,240,0.7);
-  --white-faint: rgba(245,244,240,0.35);
+  --white-dim: rgba(245,244,240,0.75);
+  --white-faint: rgba(245,244,240,0.4);
   --accent: #4a7fa8;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'DM Sans', system-ui, sans-serif;
@@ -36,6 +36,25 @@ body {
   line-height: 1.7;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+}
+
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-logo-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.founder-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -215,7 +234,7 @@ img { max-width: 100%; display: block; }
   transform: translateX(-50%);
   width: 800px;
   height: 600px;
-  background: radial-gradient(ellipse, rgba(74,127,168,0.08) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(201,168,76,0.07) 0%, rgba(13,21,48,0.3) 50%, transparent 70%);
   pointer-events: none;
 }
 
