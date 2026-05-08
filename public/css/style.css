@@ -632,7 +632,7 @@ img { max-width: 100%; display: block; }
   background: var(--dark);
   border-top: 1px solid var(--border);
 }
-.cofounder-profile {
+.founder-profile.cofounder-profile {
   grid-template-columns: minmax(280px, 0.55fr) minmax(0, 1.45fr);
 }
 .cofounder-photo-card {
