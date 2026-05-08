@@ -109,7 +109,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.field-card, .partner-card, .hub-step, .forwhom-item, .event, .credential-card').forEach(el => {
+document.querySelectorAll('.field-card, .partner-card, .hub-step, .forwhom-item, .event, .credential-card, .topics-list span').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(20px)';
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';

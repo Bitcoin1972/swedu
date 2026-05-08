@@ -627,6 +627,23 @@ img { max-width: 100%; display: block; }
 .section-founder {
   padding: var(--section-pad) 0;
 }
+.section-cofounder {
+  padding: var(--section-pad) 0;
+  background: var(--dark);
+  border-top: 1px solid var(--border);
+}
+.cofounder-profile {
+  grid-template-columns: minmax(280px, 0.62fr) minmax(0, 1.38fr);
+}
+.cofounder-photo-card {
+  aspect-ratio: 4/5;
+}
+.cofounder-portrait {
+  object-position: 72% center;
+}
+.cofounder-grid {
+  margin-top: 20px;
+}
 .founder-profile {
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
