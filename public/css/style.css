@@ -633,7 +633,7 @@ img { max-width: 100%; display: block; }
   border-top: 1px solid var(--border);
 }
 .cofounder-profile {
-  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
+  grid-template-columns: minmax(280px, 0.55fr) minmax(0, 1.45fr);
 }
 .cofounder-photo-card {
   aspect-ratio: 4/5;
