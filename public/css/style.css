@@ -1140,3 +1140,77 @@ img { max-width: 100%; display: block; }
   object-fit: contain;
   padding: 12px;
 }
+
+/* Hero Logo Inline */
+.hero-infra-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+}
+.hero-logo-inline {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.95;
+  filter: drop-shadow(0 0 20px rgba(201,168,76,0.3));
+}
+
+/* Founder Visual - text only */
+.founder-quote-attr {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+/* Partner Logo Fix - contain not crop */
+.partner-logo-wrap {
+  background: rgba(255,255,255,0.03);
+}
+.partner-logo {
+  object-fit: contain !important;
+  padding: 16px;
+}
+
+/* Motto Section */
+.section-motto {
+  padding: 80px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.motto-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+}
+.motto-line {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.motto-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--white);
+  line-height: 1.4;
+  max-width: 800px;
+}
+.motto-text em {
+  color: var(--gold);
+  font-style: italic;
+}
+.motto-attr {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white-faint);
+}
