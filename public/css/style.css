@@ -639,7 +639,10 @@ img { max-width: 100%; display: block; }
   aspect-ratio: 4/5;
 }
 .cofounder-portrait {
-  object-position: 72% center;
+  object-position: center center;
+}
+.cofounder-body-extended {
+  margin-top: 30px;
 }
 .cofounder-grid {
   margin-top: 20px;
