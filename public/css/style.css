@@ -1330,7 +1330,7 @@ img { max-width: 100%; display: block; }
   max-width: var(--max-w);
 }
 
-/* Hero logo - transparent, larger, aligned with Infrastructure baseline */
+/* Hero logo - transparent, left of Infrastructure */
 .hero-infra-row {
   display: inline-flex !important;
   align-items: center !important;
@@ -1338,11 +1338,43 @@ img { max-width: 100%; display: block; }
   line-height: 1 !important;
 }
 .hero-logo-inline {
-  height: 130px !important;
+  height: 120px !important;
   width: auto !important;
   object-fit: contain !important;
   mix-blend-mode: normal !important;
   background: transparent !important;
   vertical-align: middle !important;
   filter: drop-shadow(0 0 24px rgba(201,168,76,0.3)) !important;
+}
+
+#playHint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 16px 24px;
+  background: rgba(8,14,31,0.76);
+  border: 1px solid rgba(201,168,76,0.55);
+  color: #c9a84c;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+}
+
+#playHint.is-blocked {
+  border-color: rgba(224,112,112,0.75);
+  color: #e07070;
+}
+
+@media (max-width: 768px) {
+  .hero-infra-row {
+    gap: 14px !important;
+  }
+
+  .hero-logo-inline {
+    height: 72px !important;
+  }
 }
