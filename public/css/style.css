@@ -1308,3 +1308,24 @@ img { max-width: 100%; display: block; }
   max-width: 760px;
 }
 .founder-full .founder-body p em { font-style: italic; color: var(--white); }
+
+/* Founder - full width text, no column limit */
+.founder-full,
+.founder-inner-full {
+  max-width: 100% !important;
+}
+.founder-full p,
+.founder-inner-full p,
+.founder-body p {
+  max-width: 100% !important;
+}
+.founder-body {
+  display: block !important;
+  grid-template-columns: unset !important;
+}
+.founder-inner {
+  grid-template-columns: 1fr !important;
+}
+.section-founder .container {
+  max-width: var(--max-w);
+}
