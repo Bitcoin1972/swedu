@@ -6,20 +6,42 @@ const video = document.getElementById('introVideo');
 const skipBtn = document.getElementById('skipBtn');
 
 function dismissIntro() {
+  if (!overlay) return;
   overlay.classList.add('fade-out');
   setTimeout(() => { overlay.style.display = 'none'; }, 800);
   sessionStorage.setItem('introSeen', '1');
 }
 
 if (overlay) {
-  // Skip if already seen this session
   if (sessionStorage.getItem('introSeen')) {
     overlay.style.display = 'none';
   } else {
+    // Force play with multiple fallbacks
+    video.muted = true;
+    video.playsInline = true;
+    video.setAttribute('muted', '');
+    video.setAttribute('playsinline', '');
+    
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Autoplay failed — show click-to-play overlay
+        const playHint = document.createElement('div');
+        playHint.id = 'playHint';
+        playHint.innerHTML = '<span>▶ Tap to play intro</span>';
+        playHint.style.cssText = 'position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#c9a84c;font-family:DM Mono,monospace;font-size:1rem;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;text-align:center;';
+        overlay.appendChild(playHint);
+        playHint.addEventListener('click', () => {
+          video.play();
+          playHint.remove();
+        });
+      });
+    }
+
     skipBtn.addEventListener('click', dismissIntro);
     video.addEventListener('ended', dismissIntro);
-    // Fallback: dismiss after 12 seconds
-    setTimeout(dismissIntro, 12000);
+    // Fallback dismiss after 15 seconds
+    setTimeout(dismissIntro, 15000);
   }
 }
 
