@@ -1113,3 +1113,30 @@ img { max-width: 100%; display: block; }
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Partner Logos */
+.partners-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+.partner-logo-wrap {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.partner-logo-dark {
+  background: #111;
+}
+.partner-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.partner-logo-contain {
+  object-fit: contain;
+  padding: 12px;
+}
