@@ -1456,9 +1456,9 @@ img { max-width: 100%; display: block; }
 .hero-logo-inline {
   position: absolute !important;
   top: 50% !important;
-  right: calc(100% + 36px) !important;
+  right: calc(100% + 44px) !important;
   transform: translateY(-50%) !important;
-  height: 120px !important;
+  height: 165px !important;
   width: auto !important;
   object-fit: contain !important;
   mix-blend-mode: normal !important;
@@ -1507,12 +1507,12 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 768px) {
   .hero-infra-row {
-    padding-left: 86px !important;
+    padding-left: 108px !important;
   }
 
   .hero-logo-inline {
     left: 0 !important;
     right: auto !important;
-    height: 72px !important;
+    height: 94px !important;
   }
 }
