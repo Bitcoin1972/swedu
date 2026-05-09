@@ -62,20 +62,35 @@ app.post('/contact', async (req, res) => {
   // Log contact (in production, send email via nodemailer)
   console.log('Contact form submission:', { name, email, organization, message, type });
 
-  // If EMAIL_USER and EMAIL_PASS are set, send email
-  if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
+  const mailUser = process.env.SMTP_USER || process.env.EMAIL_USER;
+  const mailPass = process.env.SMTP_PASS || process.env.EMAIL_PASS;
+  const mailTo = process.env.EMAIL_TO || mailUser;
+
+  // If SMTP credentials are set, send email
+  if (mailUser && mailPass) {
     try {
-      const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: process.env.EMAIL_USER,
-          pass: process.env.EMAIL_PASS
-        }
-      });
+      const transporter = process.env.SMTP_HOST
+        ? nodemailer.createTransport({
+            host: process.env.SMTP_HOST,
+            port: Number(process.env.SMTP_PORT || 465),
+            secure: process.env.SMTP_SECURE !== 'false',
+            auth: {
+              user: mailUser,
+              pass: mailPass
+            }
+          })
+        : nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+              user: mailUser,
+              pass: mailPass
+            }
+          });
 
       await transporter.sendMail({
-        from: process.env.EMAIL_USER,
-        to: process.env.EMAIL_TO || process.env.EMAIL_USER,
+        from: `"Smart World Education" <${mailUser}>`,
+        replyTo: email,
+        to: mailTo,
         subject: `[swedu.me] ${type || 'Contact'} from ${name}`,
         html: `
           <h2>New Contact from swedu.me</h2>
