@@ -1163,6 +1163,9 @@ img { max-width: 100%; display: block; }
   .swex-inner { grid-template-columns: 1fr; gap: 48px; }
   .founder-inner { grid-template-columns: 1fr; }
   .founder-profile { grid-template-columns: 1fr; gap: 44px; }
+  .founder-profile.cofounder-profile { grid-template-columns: 1fr; }
+  .cofounder-profile .founder-main { order: 1; }
+  .cofounder-profile .founder-aside { order: 2; }
   .founder-aside { position: static; max-width: 380px; }
   .credential-grid { grid-template-columns: 1fr; }
   .founder-visual { position: static; }
