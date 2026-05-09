@@ -74,6 +74,9 @@ app.post('/contact', async (req, res) => {
             host: process.env.SMTP_HOST,
             port: Number(process.env.SMTP_PORT || 465),
             secure: process.env.SMTP_SECURE !== 'false',
+            connectionTimeout: 10000,
+            greetingTimeout: 10000,
+            socketTimeout: 15000,
             auth: {
               user: mailUser,
               pass: mailPass
@@ -104,6 +107,7 @@ app.post('/contact', async (req, res) => {
       });
     } catch (err) {
       console.error('Email error:', err);
+      return res.status(502).json({ error: 'Email delivery failed' });
     }
   }
 
