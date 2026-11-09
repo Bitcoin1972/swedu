@@ -5,17 +5,21 @@ const overlay = document.getElementById('introOverlay');
 const video = document.getElementById('introVideo');
 const skipBtn = document.getElementById('skipBtn');
 const forceIntro = new URLSearchParams(window.location.search).get('intro') === '1';
-const skipIntro = new URLSearchParams(window.location.search).get('skipIntro') === '1';
+let introSeen = false;
+try { introSeen = sessionStorage.getItem('introSeen') === '1'; } catch { /* Storage can be unavailable in private contexts. */ }
+const skipIntro = new URLSearchParams(window.location.search).get('skipIntro') === '1'
+  || (!forceIntro && (introSeen || Boolean(window.location.hash) || window.matchMedia('(prefers-reduced-motion: reduce)').matches));
 
 if (forceIntro) {
-  sessionStorage.removeItem('introSeen');
+  try { sessionStorage.removeItem('introSeen'); } catch { /* The intro can run without persistence. */ }
 }
 
 function dismissIntro() {
   if (!overlay) return;
+  video?.pause();
   overlay.classList.add('fade-out');
   setTimeout(() => { overlay.style.display = 'none'; }, 800);
-  sessionStorage.setItem('introSeen', '1');
+  try { sessionStorage.setItem('introSeen', '1'); } catch { /* Dismissing the overlay must still work. */ }
 }
 
 if (overlay) {
@@ -137,13 +141,16 @@ if (form) {
         body: JSON.stringify(data)
       });
       const json = await res.json();
-      if (json.success) {
+      if (res.ok && json.success) {
+        success.textContent = 'Your message was accepted by our mail service. Thank you.';
         success.style.display = 'block';
         form.reset();
       } else {
+        error.textContent = json.error || 'We could not send your message. Please email info@swedu.info.';
         error.style.display = 'block';
       }
     } catch {
+      error.textContent = 'We could not confirm delivery. Please try again later or email info@swedu.info.';
       error.style.display = 'block';
     } finally {
       btn.disabled = false;

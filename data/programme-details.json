@@ -1,0 +1,176 @@
+{
+  "aicademy": {
+    "category": "Online AI education",
+    "topics": [
+      "Understand AI",
+      "Guide AI",
+      "Verify AI",
+      "Apply AI",
+      "Governance and responsible use"
+    ],
+    "benefits": [
+      "Connect the four learning areas to your own use case.",
+      "Practise with workbooks, contextual AI guidance and interactive tasks.",
+      "Use the existing multilingual platform and its individual, student or institutional access paths."
+    ],
+    "hours": "Not specified in the verified public offer",
+    "weeks": "Confirm current learning schedule with AIcademy",
+    "assessment": "Completion of all four parts, governance and a competence assessment; final conditions are set by AIcademy.",
+    "issuer": "Confirm the legal issuing organisation in the AIcademy enrolment terms",
+    "credentialType": "AIcademy KI-Experte course certificate after successful completion",
+    "recognition": "Not a professional qualification. No external accreditation claimed; Knowledge Camp selection is not automatic.",
+    "renewal": "Pending internal verification",
+    "evidence": "Documented practical case (Understand), tested instruction system (Guide), personal quality check (Verify), and workflow or prototype (Apply).",
+    "careers": "Apply AI more critically in an existing role; build evidence for further learning or supervised project contributions.",
+    "additionalQualifications": "Role-specific experience and any legally required qualifications remain necessary.",
+    "paymentTerms": "The final price, applicable taxes and access conditions are confirmed in the original AIcademy checkout.",
+    "features": [
+      "Four sequential learning areas with your own practical use case",
+      "AI tutor and contextual guidance",
+      "Voice / avatar support as listed by the platform",
+      "Practical tasks, artifact challenges and agent simulation",
+      "Digital workbooks and multilingual learning"
+    ],
+    "outcome": "Produce a documented use case, a tested instruction system, a quality checklist and a workflow or prototype.",
+    "availability": "Existing online learning product with individual, verified-student, education, business and public-organisation access paths.",
+    "capability": "Structured practical AI learning",
+    "evidenceSource": "https://academy.swex.ai/individual"
+  },
+  "labs": {
+    "category": "Practical application",
+    "topics": [
+      "Use-case definition",
+      "Guided experimentation",
+      "Output evaluation",
+      "Project demonstration"
+    ],
+    "benefits": [
+      "Focus on a concrete problem rather than isolated tool demonstrations.",
+      "Make progress visible through a practical output and structured feedback."
+    ],
+    "evidence": "Proposed: a working demonstration, evaluation notes and a short account of limitations.",
+    "careers": "Potential supervised project contribution or practical application in an existing role.",
+    "status": "existing capability",
+    "availability": "SWE has practical workshop and technology education experience. Ask about a tailored learning lab; the standardised lab syllabus, dates and assessment package are not yet published.",
+    "capability": "Hands-on education and workshop delivery",
+    "evidenceSource": "/#founder"
+  },
+  "bootcamp": {
+    "category": "Intensive technology learning",
+    "topics": [
+      "Technology foundations",
+      "Collaborative implementation",
+      "Testing",
+      "Project review"
+    ],
+    "benefits": [
+      "Bring learning and project work together in a focused cohort.",
+      "Develop a portfolio with feedback on both implementation and responsible use."
+    ],
+    "evidence": "Proposed: a documented project, test results and a final demonstration.",
+    "careers": "Potential technical project support; further technical training and experience may be needed.",
+    "status": "existing capability",
+    "availability": "Bootcamps are part of SWE's established training and hub-development approach. Enquire about a tailored cohort; no scheduled public intake or fixed-duration package is advertised here.",
+    "capability": "Intensive technology training and bootcamp organisation",
+    "evidenceSource": "/#cofounder"
+  },
+  "architecture": {
+    "category": "Systems and implementation",
+    "topics": [
+      "Requirements",
+      "AI system design",
+      "Evaluation",
+      "Security and governance",
+      "Deployment trade-offs"
+    ],
+    "benefits": [
+      "Connect technical choices with real organisational requirements.",
+      "Practise explaining design decisions, risks and evaluation criteria."
+    ],
+    "evidence": "Proposed: an architecture case study, decision record and evaluation plan.",
+    "careers": "Potential software and AI project roles, subject to prior technical competence and project requirements.",
+    "status": "available service",
+    "availability": "AI, systems architecture and governance training or advisory enquiries are welcome. Scope, technical prerequisites and delivery are agreed with the organisation; a standard course certificate is not implied.",
+    "capability": "Systems architecture, technical education and advisory work",
+    "evidenceSource": "/#founder",
+    "description": "Connect AI system design, evaluation and governance with your organisation's practical requirements."
+  },
+  "teachers": {
+    "category": "Education and human agency",
+    "topics": [
+      "Critical thinking",
+      "Human-centred pedagogy",
+      "Classroom AI applications",
+      "Responsible use"
+    ],
+    "benefits": [
+      "Keep teacher judgement and learner agency central to AI use.",
+      "Translate technical understanding into a practical classroom application."
+    ],
+    "evidence": "Proposed: a lesson concept, classroom-use plan and reflection on learner safeguards.",
+    "careers": "Professional development for educators; this is not a teaching licence.",
+    "status": "available service",
+    "availability": "Roots2AI Schools already presents AI-orientation workshops, educator dialogue and school-strategy support. Enquire through Roots2AI or SWE; delivery dates and the separate SWE course framework are agreed case by case.",
+    "capability": "Educator workshops and human-centred school support through Roots2AI",
+    "evidenceSource": "https://roots2.ai/programs/schools/",
+    "description": "Human-centred AI education for teachers and schools, connected to the existing Roots2AI Schools offer."
+  },
+  "trainers": {
+    "category": "Local knowledge transfer",
+    "topics": [
+      "Facilitation",
+      "Learning assessment",
+      "Supervised teaching",
+      "Training quality"
+    ],
+    "benefits": [
+      "Develop the ability to teach and assess, not only to use technology.",
+      "Support local delivery capacity with supervised practice and feedback."
+    ],
+    "evidence": "Proposed: observed teaching, a training plan and assessment examples.",
+    "careers": "Potential local trainer or mentor roles after separate competence and authorisation checks.",
+    "status": "proposed programme",
+    "availability": "The Train-the-Trainer format builds on existing training and facilitation experience. Its formal selection, observed-teaching assessment and trainer authorisation pathway are still being defined; no upcoming intake is confirmed.",
+    "capability": "Existing training experience; structured trainer qualification is in development",
+    "evidenceSource": "/#cofounder"
+  },
+  "local": {
+    "category": "Institutional capability",
+    "topics": [
+      "Local readiness",
+      "Practical learning",
+      "Trainer development",
+      "Sustainable delivery"
+    ],
+    "benefits": [
+      "Start from local needs, language and delivery capacity.",
+      "Link learner projects to a realistic plan for continuing local education."
+    ],
+    "evidence": "Proposed: local readiness baseline, pilot outputs and a capability development plan.",
+    "careers": "Potential hub coordination, education coordination and local implementation roles.",
+    "status": "existing capability",
+    "availability": "SWE's local education experience includes Open Citizen learning in Kigali and international institutional engagement. A coordinated Local Capability Programme is scoped with partners; this is not a claim that every listed hub is operational.",
+    "capability": "Local education and institutional engagement",
+    "evidenceSource": "/#founder"
+  },
+  "national": {
+    "category": "Strategic capability development",
+    "topics": [
+      "Readiness assessment",
+      "Pilot design",
+      "Qualification",
+      "Local trainers",
+      "Independent capability"
+    ],
+    "benefits": [
+      "Plan staged progress with institutions instead of assuming a single course creates national capacity.",
+      "Build towards locally sustained teaching, implementation and evaluation."
+    ],
+    "evidence": "Proposed: an agreed readiness baseline, measurable pilot milestones and a staged roadmap.",
+    "careers": "Potential regional coordination and implementation partnerships, subject to approval, funding and local requirements.",
+    "status": "proposed programme",
+    "availability": "The national model is an established strategic programme concept informed by education, governance and institutional experience. A national rollout requires an agreed readiness assessment, local partners and funding. No upcoming pilot is confirmed.",
+    "capability": "Existing institutional education and governance experience; national rollout subject to agreement",
+    "evidenceSource": "/#founder"
+  }
+}

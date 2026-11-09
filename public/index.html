@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart World Education — Building Human Infrastructure for the Digital Age</title>
+  <title>Smart World Education — From Education to Independent Capability</title>
   <meta name="description" content="Smart World Education is an international education, innovation and transformation platform preparing people, institutions and governments for the digital future.">
   <meta property="og:title" content="Smart World Education">
-  <meta property="og:description" content="Building Human Infrastructure for the Digital Age">
+  <meta property="og:description" content="From Education to Independent Capability. Learn. Build. Teach. Work. Lead.">
   <meta property="og:url" content="https://swedu.me">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
@@ -16,12 +16,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/programmes.css">
+  <script src="/js/site-menu.js" defer></script>
+  <noscript><style>#introOverlay { display:none; }</style></noscript>
 </head>
 <body>
+  <a class="skip-content" href="#hero">Skip to content</a>
 
   <!-- VIDEO INTRO OVERLAY -->
   <div id="introOverlay">
-    <video id="introVideo" autoplay muted playsinline preload="auto">
+    <video id="introVideo" muted playsinline preload="none">
       <source src="/intro.mp4" type="video/mp4">
     </video>
     <button id="skipBtn">
@@ -39,30 +43,25 @@
         <img src="/logo.png" alt="Smart World Education" class="nav-logo-img">
         <span class="logo-text">Smart World Education</span>
       </a>
-      <div class="nav-links">
-        <a href="#mission">Mission</a>
-        <a href="#fields">Fields</a>
-        <a href="#hubs">Global Hubs</a>
-        <a href="#founder">Founder</a>
-        <a href="#cofounder">Co-Founder</a>
-        <a href="#partners">Partners</a>
-        <a href="#contact" class="nav-cta">Get in Touch</a>
-      </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="nav-mobile" id="navMobile">
-      <a href="#mission">Mission</a>
-      <a href="#fields">Fields</a>
-      <a href="#hubs">Global Hubs</a>
-      <a href="#founder">Founder</a>
-      <a href="#cofounder">Co-Founder</a>
-      <a href="#partners">Partners</a>
-      <a href="#contact">Get in Touch</a>
+      <a class="partner-access" href="/partners">Partner Login</a>
+      <details class="site-menu">
+        <summary>Menu</summary>
+        <nav aria-label="Main navigation">
+          <a href="/">Home</a>
+          <a href="/approach">Our Approach</a>
+          <a href="/programmes">Programmes</a>
+          <a href="/who-we-serve">Who We Serve</a>
+          <a href="/capability-careers">Capability &amp; Careers</a>
+          <a href="/national-capability">Local &amp; National Capability</a>
+          <a href="/network">Global Initiatives &amp; Network</a>
+          <a href="/about">About Smart World Education</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+      </details>
     </div>
   </nav>
 
+  <main>
   <!-- HERO -->
   <section id="hero">
     <div class="hero-bg">
@@ -74,32 +73,27 @@
         <span class="eyebrow-dot"></span>
         International Education · Innovation · Transformation
       </div>
-      <h1 class="hero-headline">
-        <span>Building</span><br>
-        <span class="hero-infra-row">
-          <img src="/logo_transparent.png" alt="Smart World Education" class="hero-logo-inline">
-          <em>Infrastructure</em>
-        </span><br>
-        <span>for the Digital Age.</span>
-      </h1>
+      <img src="/logo_transparent.png" alt="" class="swe-hero-mark" width="170" height="170">
+      <h1 class="hero-headline swe-title">Smart World<br><em>Education</em></h1>
+      <p class="swe-positioning">From Education to Independent Capability.</p>
+      <p class="swe-pathway">Learn. Build. Teach. Work. Lead.</p>
       <p class="hero-sub">
-        Smart World Education connects people, institutions, governments and industries 
-        with the knowledge and competence structures required to navigate — and shape — 
-        the technological transformation of our time.
+        Education, human agency and technological understanding come together in
+        practical projects, local training capacity and potential professional pathways.
       </p>
       <div class="hero-actions">
-        <a href="#mission" class="btn-primary">Explore the Initiative</a>
-        <a href="https://swex.ai" target="_blank" class="btn-ghost">SWEX.AI Platform →</a>
+        <a href="/programmes" class="btn-primary">Explore Programmes</a>
+        <a href="/programmes/aicademy" class="btn-ghost">Discover AIcademy4you →</a>
       </div>
       <div class="hero-stats">
         <div class="stat">
-          <span class="stat-num">15+</span>
-          <span class="stat-label">Years of Expertise</span>
+          <span class="stat-num">2017</span>
+          <span class="stat-label">Speaking History Since</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <span class="stat-num">40+</span>
-          <span class="stat-label">Countries Reached</span>
+          <span class="stat-num">Global</span>
+          <span class="stat-label">Education &amp; Exchange</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
@@ -108,8 +102,8 @@
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <span class="stat-num">∞</span>
-          <span class="stat-label">Growing Hub Network</span>
+          <span class="stat-num">Local</span>
+          <span class="stat-label">Capability Development</span>
         </div>
       </div>
     </div>
@@ -141,6 +135,64 @@
           but through competence that translates into action, products and lasting impact.
         </p>
       </div>
+    </div>
+  </section>
+
+  <section class="swe-band" id="ecosystem">
+    <div class="container">
+      <div class="section-label">One Connected Ecosystem</div>
+      <h2>Education with<br><em>purpose and practice.</em></h2>
+      <div class="ecosystem-list">
+        <article><h3>Roots2AI</h3><p>Human agency, pedagogy and critical thinking. Responsible AI education for teachers, families and learning environments.</p><a href="https://roots2ai.com">Explore Roots2AI →</a></article>
+        <article><h3>AIcademy4you</h3><p>A standalone AI learning product for individuals, students and institutions. Understand, guide, verify and apply AI.</p><a href="/programmes/aicademy">Explore AIcademy4you →</a></article>
+        <article><h3>SWEX.AI</h3><p>Applied AI and digital systems: the technology contribution to practical implementation and responsible capability development.</p><a href="https://www.swex.ai">Explore SWEX.AI →</a></article>
+      </div>
+    </div>
+  </section>
+  <section class="swe-band swe-feature" id="aicademy">
+    <div class="container">
+      <div class="section-label">Existing Learning Product</div>
+      <h2>AIcademy4you</h2>
+      <p class="programme-lead">Understand. Guide. Verify. Apply.</p>
+      <p>Develop practical AI understanding through workbooks, interactive tasks and contextual AI guidance. Choose the existing individual, verified-student, institutional, business or government access path.</p>
+      <p>Explore verified country offers and assessment requirements before continuing to the original learning and enrolment platform.</p>
+      <a class="btn-primary" href="/programmes/aicademy">Discover the Programme</a>
+    </div>
+  </section>
+  <section class="swe-band" id="programme-overview">
+    <div class="container">
+      <div class="section-label">SWE Capability Programmes</div>
+      <h2>From a first project<br><em>to local capacity.</em></h2>
+      <p>Build on SWE's existing training, workshop and advisory experience. Explore available educator and technical services alongside structured programmes in development. Each programme explains what exists today and what needs to be agreed for your cohort.</p>
+      <ul class="swe-programme-links">
+        <li><a href="/programmes/labs">Applied Learning Labs →</a></li>
+        <li><a href="/programmes/bootcamp">Technology Bootcamps →</a></li>
+        <li><a href="/programmes/architecture">AI and Systems Architecture →</a></li>
+        <li><a href="/programmes/teachers">Teacher Development →</a></li>
+        <li><a href="/programmes/trainers">Train-the-Trainer →</a></li>
+        <li><a href="/programmes/local">Local Capability Programmes →</a></li>
+        <li><a href="/programmes/national">National Capability Programmes →</a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="swe-band swe-feature" id="capability-pathway">
+    <div class="container">
+      <div class="section-label">The Development Pathway</div>
+      <h2>Learn. Build. Teach.<br><em>Work. Lead.</em></h2>
+      <p>Learn the foundations, build practical evidence and develop the ability to teach others. Assessed competence can support professional applications and responsible local leadership.</p>
+      <div class="ecosystem-list">
+        <article><h3>Capability &amp; Careers</h3><p>Qualified participants may contribute to SWE, SWEX.AI or Roots2AI as trainers, mentors, project contributors or local coordinators when suitable opportunities exist. Participation does not guarantee employment, income or contracts.</p><a href="/capability-careers">Explore pathways →</a></article>
+        <article><h3>Local &amp; National</h3><p>Move from readiness and education to practical application, local trainers and independently sustained capability.</p><a href="/national-capability">Explore the model →</a></article>
+        <article><h3>Who We Serve</h3><p>Individuals, educators, families, universities, businesses and public institutions, each with their own starting point.</p><a href="/who-we-serve">Find your starting point →</a></article>
+      </div>
+    </div>
+  </section>
+  <section class="swe-band" id="partners">
+    <div class="container">
+      <div class="section-label">Global Initiatives &amp; Network</div>
+      <h2>People, institutions<br><em>and shared knowledge.</em></h2>
+      <p>Explore SWE's existing international work, founder profiles and network references. Historical conference participation does not imply current institutional endorsement or accreditation.</p>
+      <a href="/network">Explore the network →</a>
     </div>
   </section>
 
@@ -212,38 +264,38 @@
         <div class="section-label">Global Reach</div>
         <h2>Regional Competence<br><em>Hub Network</em></h2>
         <p class="section-desc">
-          Our Hubs are not franchise locations. They are independent regional competence centres 
-          connected through a shared education and transformation framework — turning local 
-          talent into global capability.
+          The hub concept connects regional education and practical capability through a shared
+          framework. New locations and programme delivery require local readiness, resources and
+          approved agreements; this overview is not an offer of an operational franchise.
         </p>
       </div>
       <div class="hubs-model">
         <div class="hub-step">
           <div class="hub-step-num">I</div>
           <h4>Boot Camp</h4>
-          <p>5-day intensive covering AI, Bitcoin, DLT, IoT, Smart Cities and Systems Thinking. Participants go from understanding to selling.</p>
+          <p>Proposed intensive learning in AI and connected technologies. Duration, admission and assessment require an approved programme scope.</p>
         </div>
         <div class="hub-arrow">→</div>
         <div class="hub-step">
           <div class="hub-step-num">II</div>
           <h4>Talent Selection</h4>
-          <p>Builders, sales talent, trainers and future hub leaders are identified during the programme. The Boot Camp is a discovery engine, not just education.</p>
+          <p>Practical evidence may inform separate selection for project, trainer or coordination opportunities. Participation does not guarantee selection.</p>
         </div>
         <div class="hub-arrow">→</div>
         <div class="hub-step">
           <div class="hub-step-num">III</div>
           <h4>Hub Formation</h4>
-          <p>Local teams form around shared products, client relationships, licensing and recurring revenue — connected to Main Hub Cologne for standards and support.</p>
+          <p>Local teams may develop delivery capacity with agreed governance, quality standards and institutional support. Arrangements require separate approval.</p>
         </div>
         <div class="hub-arrow">→</div>
         <div class="hub-step">
           <div class="hub-step-num">IV</div>
           <h4>Network Scale</h4>
-          <p>Products, learnings and client bases are shared across the network. Each new hub strengthens the entire ecosystem.</p>
+          <p>Successful local pilots can inform wider collaboration, subject to resources, partner agreements and evidence of sustainable capability.</p>
         </div>
       </div>
       <div class="hubs-tagline">
-        Teach fast. Select talent. Build hubs. Launch projects. Capture market share. Scale through a connected global system.
+        Learn locally. Build evidence. Develop trainers. Sustain independent capability.
       </div>
       <div class="hub-locations">
         <div class="hub-location active">
@@ -271,6 +323,7 @@
           Expanding globally
         </div>
       </div>
+      <p class="section-desc">Locations shown are existing SWE network references, not confirmation of current course availability. <a href="/national-capability">Explore the proposed capability model</a>.</p>
     </div>
   </section>
 
@@ -337,9 +390,9 @@
         </div>
         <div class="credential-card">
           <span class="credential-kicker">Government Blockchain Association</span>
-          <h3>Leadership role</h3>
+          <h3>Leadership experience</h3>
           <p>
-            Leadership Board Member, Chapter Lead, Working Group Leader for Cybersecurity
+            Experience includes Leadership Board Member, Chapter Lead, Working Group Leader for Cybersecurity
             and Working Group Leader for Certification of Professionals.
           </p>
         </div>
@@ -515,7 +568,7 @@
     <div class="container">
       <div class="section-header">
         <div class="section-label">Who We Serve</div>
-        <h2>Not for everyone.<br><em>For the right ones.</em></h2>
+        <h2>Different starting points.<br><em>Shared capability.</em></h2>
       </div>
       <div class="forwhom-grid">
         <div class="forwhom-item">
@@ -578,7 +631,7 @@
             </div>
             <div class="contact-detail">
               <span class="cd-label">Location</span>
-              <span>Dubai South, UAE · Cologne, Germany</span>
+              <span>Karlsruhe, Germany · International collaboration</span>
             </div>
           </div>
         </div>
@@ -586,16 +639,16 @@
           <div class="form-row">
             <div class="form-group">
               <label for="name">Full Name *</label>
-              <input type="text" id="name" name="name" required placeholder="Your name">
+              <input type="text" id="name" name="name" required maxlength="120" autocomplete="name" placeholder="Your name">
             </div>
             <div class="form-group">
               <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required placeholder="your@email.com">
+              <input type="email" id="email" name="email" required maxlength="254" autocomplete="email" placeholder="your@email.com">
             </div>
           </div>
           <div class="form-group">
             <label for="organization">Organisation / Institution</label>
-            <input type="text" id="organization" name="organization" placeholder="Company, university, ministry...">
+            <input type="text" id="organization" name="organization" maxlength="200" autocomplete="organization" placeholder="Company, university, ministry...">
           </div>
           <div class="form-group">
             <label for="type">Nature of Enquiry</label>
@@ -613,16 +666,16 @@
           </div>
           <div class="form-group">
             <label for="message">Message *</label>
-            <textarea id="message" name="message" required rows="5" placeholder="Tell us about your interest or vision..."></textarea>
+            <textarea id="message" name="message" required maxlength="10000" rows="5" placeholder="Tell us about your interest or vision..."></textarea>
           </div>
           <button type="submit" class="btn-primary btn-full">
             <span class="btn-text">Send Message</span>
             <span class="btn-arrow">→</span>
           </button>
-          <div class="form-success" id="formSuccess">
+          <div class="form-success" id="formSuccess" role="status" aria-live="polite">
             Thank you. We will be in touch shortly.
           </div>
-          <div class="form-error" id="formError">
+          <div class="form-error" id="formError" role="alert">
             Something went wrong. Please try again.
           </div>
         </form>
@@ -631,6 +684,7 @@
   </section>
 
   <!-- FOOTER -->
+  </main>
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
@@ -646,18 +700,23 @@
         <div class="footer-links">
           <div class="footer-col">
             <h5>Initiative</h5>
+            <a href="/approach">Our Approach</a>
+            <a href="/programmes">Programmes</a>
+            <a href="/capability-careers">Capability &amp; Careers</a>
+            <a href="/national-capability">Local &amp; National Capability</a>
+            <a href="/partners">Partner Login</a>
             <a href="#mission">Mission</a>
             <a href="#fields">Fields</a>
             <a href="#hubs">Global Hubs</a>
             <a href="#founder">Founder</a>
             <a href="#cofounder">Co-Founder</a>
           </div>
-          <div class="footer-col">
+          <div class="footer-col" id="network-links">
             <h5>Network</h5>
             <a href="https://galterprofmkb.org" target="_blank">GALTER</a>
             <a href="https://www.estfab.com" target="_blank">EST-FAB</a>
             <a href="https://coinnewsextra.com" target="_blank">Coin News Extra</a>
-            <a href="https://www.teengirlsinblockchain.com" target="_blank">Teen Girls in Blockchain</a>
+            <a href="https://ng.linkedin.com/company/teen-girls-in-blockchain-tgib" target="_blank" rel="noopener noreferrer">Teen Girls in Blockchain</a>
           </div>
           <div class="footer-col">
             <h5>Contact</h5>
