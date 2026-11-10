@@ -45,7 +45,7 @@ test('HTTP public pages preserve upstream registration and withhold private cont
   const html = await (await fetch(root + '/programmes/aicademy')).text();
   assert.match(html, /https:\/\/education.swex.ai\/#student/);
   assert.doesNotMatch(html, /deliveryCost|passwordHash|contingencyRate/);
-  const other = await (await fetch(root + '/programmes?country=DE')).text();
+  const other = await (await fetch(root + '/programmes/aicademy?country=DE')).text();
   assert.match(other, /No verified prices/);
   assert.doesNotMatch(other, /2,500/);
   for (const route of ['/data/catalogue.json','/data/programme-details.json','/IN/report.md','/partner-private/IN/pricing.json','/docs/partner-campus.md','/.env','/test-results/release-2026-11-09/pages.json','/lib/contact.js']) {

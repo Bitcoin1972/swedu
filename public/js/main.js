@@ -7,7 +7,8 @@ const skipBtn = document.getElementById('skipBtn');
 const forceIntro = new URLSearchParams(window.location.search).get('intro') === '1';
 let introSeen = false;
 try { introSeen = sessionStorage.getItem('introSeen') === '1'; } catch { /* Storage can be unavailable in private contexts. */ }
-const skipIntro = new URLSearchParams(window.location.search).get('skipIntro') === '1'
+const skipIntro = (!forceIntro && document.body.classList.contains('capability-home'))
+  || new URLSearchParams(window.location.search).get('skipIntro') === '1'
   || (!forceIntro && (introSeen || Boolean(window.location.hash) || window.matchMedia('(prefers-reduced-motion: reduce)').matches));
 
 if (forceIntro) {
@@ -23,6 +24,7 @@ function dismissIntro() {
 }
 
 if (overlay) {
+  if (forceIntro) overlay.hidden = false;
   if (skipIntro) {
     overlay.style.display = 'none';
   } else {
@@ -96,6 +98,7 @@ if (navToggle && navMobile) {
 // NAV scroll effect
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
+  if (!nav) return;
   if (window.scrollY > 60) {
     nav.style.borderBottomColor = 'rgba(201,168,76,0.15)';
   } else {
