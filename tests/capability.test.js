@@ -79,17 +79,16 @@ test('A-E visitor journeys reach capabilities, detail, evidence and appropriate 
   const root=await site(t);
   for(const [audience,capability,programme] of [['society','ai','aicademy'],['academia','teachers','teachers'],['business','cybersecurity','architecture'],['governments','local-national','national'],['institutions','trainers','trainers']]) {
     const entry=await (await fetch(root+'/audiences/'+audience)).text();
-    assert.ok(entry.includes(`audience=${audience}&amp;capability=${capability}`));
+    assert.ok(entry.includes(`/programmes/${programme}?audience=${audience}&amp;country=IN`));
     const discovery=await (await fetch(root+`/programmes?audience=${audience}&capability=${capability}`)).text();
     assert.ok(discovery.includes(`/programmes/${programme}?`));
     const detail=await (await fetch(root+'/programmes/'+programme)).text();
-    for(const heading of ['The need this programme addresses','Who is this for?','Capabilities developed','Topics, modules &amp; practical work','Expertise &amp; delivery basis','Duration &amp; delivery','Demonstrable outcomes','Credentials','Fees &amp; registration','Your next possible step']) assert.ok(detail.includes(heading),`${programme}: ${heading}`);
+    for(const heading of ['What is this programme?','Who is it for?','What will participants learn?','How does the programme work?','What can participants do afterwards?','How can they start?']) assert.ok(detail.includes(heading),`${programme}: ${heading}`);
     assert.match(detail,/does not guarantee/);
   }
   const ai=await (await fetch(root+'/programmes/aicademy?country=IN')).text();
-  assert.match(ai,/2,500/);
-  assert.match(ai,/1,500/);
-  assert.match(ai,/https:\/\/academy.swex.ai\/individual/);
+  assert.doesNotMatch(ai,/2,500|1,500|price-table/);
+  assert.match(ai,/https:\/\/academy.swex.ai/);
   assert.match(ai,/No external accreditation/);
   assert.equal((await fetch(root+'/data/capability-model.json')).status,404);
   assert.equal((await fetch(root+'/partners')).status,503);

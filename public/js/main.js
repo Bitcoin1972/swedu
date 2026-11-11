@@ -7,32 +7,55 @@ const skipBtn = document.getElementById('skipBtn');
 const forceIntro = new URLSearchParams(window.location.search).get('intro') === '1';
 let introSeen = false;
 try { introSeen = sessionStorage.getItem('introSeen') === '1'; } catch { /* Storage can be unavailable in private contexts. */ }
-const skipIntro = (!forceIntro && document.body.classList.contains('capability-home'))
-  || new URLSearchParams(window.location.search).get('skipIntro') === '1'
-  || (!forceIntro && (introSeen || Boolean(window.location.hash) || window.matchMedia('(prefers-reduced-motion: reduce)').matches));
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const skipIntro = new URLSearchParams(window.location.search).get('skipIntro') === '1'
+  || (!forceIntro && (introSeen || Boolean(window.location.hash) || reducedMotion));
+let introClosed = false;
+let fallbackTimer;
+let playHintTimer;
+let previousFocus;
+let pageSiblings = [];
 
 if (forceIntro) {
   try { sessionStorage.removeItem('introSeen'); } catch { /* The intro can run without persistence. */ }
 }
 
 function dismissIntro() {
-  if (!overlay) return;
+  if (!overlay || introClosed) return;
+  introClosed = true;
+  clearTimeout(fallbackTimer);
+  clearTimeout(playHintTimer);
   video?.pause();
-  overlay.classList.add('fade-out');
-  setTimeout(() => { overlay.style.display = 'none'; }, 800);
+  overlay.hidden = true;
+  pageSiblings.forEach(([element, inert]) => { element.inert = inert; });
+  document.body.style.overflow = '';
+  if (previousFocus && previousFocus !== document.body) previousFocus.focus();
+  else document.querySelector('.skip-content')?.focus({preventScroll:true});
   try { sessionStorage.setItem('introSeen', '1'); } catch { /* Dismissing the overlay must still work. */ }
 }
 
 if (overlay) {
-  if (forceIntro) overlay.hidden = false;
   if (skipIntro) {
-    overlay.style.display = 'none';
+    overlay.hidden = true;
   } else {
-    let fallbackTimer;
-    let playHintTimer;
+    overlay.hidden = false;
+    previousFocus = document.activeElement;
+    pageSiblings = [...document.body.children].filter(el => el !== overlay && !['SCRIPT','STYLE'].includes(el.tagName)).map(el => [el, el.inert]);
+    pageSiblings.forEach(([element]) => { element.inert = true; });
+    document.body.style.overflow = 'hidden';
+    skipBtn.focus({preventScroll:true});
+    overlay.addEventListener('keydown', event => {
+      if (event.key === 'Escape') dismissIntro();
+      if (event.key === 'Tab') {
+        const buttons = [...overlay.querySelectorAll('button')];
+        const first = buttons[0], last = buttons[buttons.length - 1];
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      }
+    });
 
     function showPlayHint() {
-      if (document.getElementById('playHint')) return;
+      if (introClosed || document.getElementById('playHint')) return;
 
       const playHint = document.createElement('button');
       playHint.id = 'playHint';
@@ -42,9 +65,10 @@ if (overlay) {
       playHint.addEventListener('click', async () => {
         try {
           await video.play();
+          if (introClosed) { video.pause(); return; }
           playHint.remove();
           clearTimeout(playHintTimer);
-          fallbackTimer = setTimeout(dismissIntro, 15000);
+          fallbackTimer = setTimeout(dismissIntro, 30000);
         } catch {
           playHint.classList.add('is-blocked');
         }
@@ -61,24 +85,32 @@ if (overlay) {
 
       try {
         await video.play();
+        if (introClosed) { video.pause(); return; }
         clearTimeout(playHintTimer);
-        fallbackTimer = setTimeout(dismissIntro, 15000);
+        fallbackTimer = setTimeout(dismissIntro, 30000);
       } catch {
         showPlayHint();
       }
     }
 
     skipBtn.addEventListener('click', dismissIntro);
-    video.addEventListener('playing', () => clearTimeout(playHintTimer));
+    video.addEventListener('playing', () => {
+      clearTimeout(playHintTimer);
+      const hint = document.getElementById('playHint');
+      if (hint && document.activeElement === hint) skipBtn.focus({preventScroll:true});
+      hint?.remove();
+    });
     video.addEventListener('ended', () => {
       clearTimeout(fallbackTimer);
       dismissIntro();
     });
-    video.addEventListener('error', showPlayHint);
+    video.addEventListener('error', dismissIntro);
     playHintTimer = setTimeout(() => {
       if (video.paused || video.readyState < 2) showPlayHint();
     }, 1200);
-    startIntroVideo();
+    // Explicit replay still respects reduced motion: the visitor starts playback.
+    if (reducedMotion) showPlayHint();
+    else startIntroVideo();
   }
 }
 

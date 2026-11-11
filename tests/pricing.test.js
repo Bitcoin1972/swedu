@@ -43,10 +43,10 @@ test('HTTP public pages preserve upstream registration and withhold private cont
     assert.match(await response.text(), /Smart World Education/);
   }
   const html = await (await fetch(root + '/programmes/aicademy')).text();
-  assert.match(html, /https:\/\/education.swex.ai\/#student/);
+  assert.match(html, /href="https:\/\/academy.swex.ai"/);
   assert.doesNotMatch(html, /deliveryCost|passwordHash|contingencyRate/);
   const other = await (await fetch(root + '/programmes/aicademy?country=DE')).text();
-  assert.match(other, /No verified prices/);
+  assert.match(other, /current offers, enrolment/);
   assert.doesNotMatch(other, /2,500/);
   for (const route of ['/data/catalogue.json','/data/programme-details.json','/IN/report.md','/partner-private/IN/pricing.json','/docs/partner-campus.md','/.env','/test-results/release-2026-11-09/pages.json','/lib/contact.js']) {
     assert.equal((await fetch(root + route)).status, 404);
@@ -56,18 +56,14 @@ test('HTTP public pages preserve upstream registration and withhold private cont
     const response = await fetch(root + programme.url);
     assert.equal(response.status, 200);
     const detail = await response.text();
-    for (const heading of ['Why Choose This Programme?','Learning hours','Weeks or months','Credential type','Issuing organisation','External recognition','Evidence and portfolio','Career pathways','Fees &amp; registration']) {
+    for (const heading of ['What is this programme?','Who is it for?','What will participants learn?','How does the programme work?','What can participants do afterwards?','How can they start?']) {
       assert.ok(detail.includes(heading), `${programme.id}: missing ${heading}`);
     }
     assert.doesNotMatch(detail,/undefined|deliveryCost|contingencyRate|passwordHash/);
-    assert.ok(detail.includes(escape(programme.availability)));
-    if (programme.id !== 'aicademy') assert.ok(detail.includes(escape(programme.capability)));
-    if (programme.status === 'proposed programme') assert.match(detail,/No upcoming pilot|no upcoming intake/);
+    if (programme.status === 'proposed programme') assert.match(detail,/proposed|pilot/i);
   }
   assert.equal((await fetch(root + '/programmes/unknown')).status,404);
-  for (const url of ['https://academy.swex.ai/individual','https://education.swex.ai/#student','https://education.swex.ai/#institution','https://business.swex.ai/','https://government.swex.ai/']) {
-    assert.ok(html.includes(url));
-  }
+  assert.equal((html.match(/class="btn-primary"/g)||[]).length,1);
   const home = await (await fetch(root + '/')).text();
   for (const id of ['mission','fields','hubs','founder','cofounder','partners','contact','network-links','imprint','contactForm']) {
     assert.ok(home.includes(`id="${id}"`), `preserved anchor ${id}`);

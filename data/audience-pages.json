@@ -1,0 +1,98 @@
+{
+  "society": {
+    "headline": "Understand technology. Keep your own judgement.",
+    "problem": "AI is already part of work, learning and family life. Knowing which tool to open is not the same as knowing whether its answer is reliable, what information to share or how to use it for a task that matters to you.",
+    "provides": "SWE connects accessible online AI learning with human-centred guidance and practical learning formats. Start with an everyday use case, learn to question the result and build evidence of what you can do. Families and communities can also explore Roots2AI's human-agency approach.",
+    "action": {"label":"Explore AIcademy enrolment","url":"https://academy.swex.ai/individual"},
+    "offers": [
+      {"id":"aicademy","description":"For individuals who want more than a collection of AI tips. Work through Understand, Guide, Verify and Apply using your own practical case, with digital workbooks, contextual guidance and tasks that turn learning into evidence.","modules":["ai-practice"]},
+      {"id":"labs","description":"Bring a question or a small project and discuss a guided learning lab. Define the problem, experiment with an AI workflow, check the output and explain the result. SWE scopes the group, resources and support before delivery.","modules":["ai-practice","system-design"]}
+    ],
+    "roots": true,
+    "progression": [
+      {"title":"Build understanding","text":"Use AIcademy's four learning areas or Roots2AI orientation to develop responsible everyday practice."},
+      {"title":"Apply and demonstrate","text":"Discuss a Lab or Bootcamp when you are ready for a scoped project, structured feedback and evidence of your work.","programme":"bootcamp"},
+      {"title":"Explore further contribution","text":"Demonstrated competence may support further learning, supervised projects or mentoring when suitable opportunities and qualifications align."}
+    ],
+    "expertise": "Joerg Molt's technology education and systems experience complements Angelika Riefling's human-centred education and programme coordination. SWE's documented activities include Open Citizen learning in Kigali and international workshops.",
+    "contact": "Tell us what you want to understand or build, your starting point and whether you are learning individually or with a group."
+  },
+  "academia": {
+    "headline": "Make AI part of better learning, not a substitute for it.",
+    "problem": "Schools and universities need more than tool access. Teachers must decide what learners should do themselves, how AI can support a lesson, how to assess understanding and how to protect human agency as classroom practices change.",
+    "provides": "SWE connects educator development, AI literacy, practical workshops and institutional planning. Roots2AI supports school dialogue and responsible-use principles; SWE can scope technical learning and practical projects around an institution's curriculum and needs.",
+    "action": {"label":"Discuss your education programme","url":"/#contact"},
+    "offers": [
+      {"id":"teachers","description":"Develop classroom judgement alongside AI literacy. Discuss lesson design, critical evaluation of AI outputs, learner safeguards and competency assessment. Roots2AI Schools offers orientation workshops, educator dialogue, project days and school-strategy support.","modules":["pedagogy","human-judgement"]},
+      {"id":"aicademy","description":"Give students and educators a practical AI learning route alongside their subject work. Learners build a use case, test instructions, check quality and apply AI in a workflow. Verified-student and education-institution access paths remain on the original platform.","modules":["ai-practice"]},
+      {"id":"labs","description":"Scope a workshop or project around a teaching or research question. Participants define requirements, compare outputs and present a reviewable demonstration rather than treating an AI-generated answer as proof of learning.","modules":["ai-practice","accountability"]},
+      {"id":"local","description":"Connect individual workshops with an institutional education plan: establish learning needs, staff capacity, delivery resources and a practical way to keep knowledge available locally.","modules":["local-delivery","facilitation"]}
+    ],
+    "roots": false,
+    "progression": [
+      {"title":"Develop educator judgement","text":"Begin with AI literacy, pedagogy and decisions about learning, privacy and assessment."},
+      {"title":"Test classroom practice","text":"Review a lesson concept or practical project against agreed learning objectives and evidence."},
+      {"title":"Build institutional capacity","text":"Use staff learning and evaluated projects to inform wider delivery, internal knowledge sharing and possible trainer development.","programme":"trainers"}
+    ],
+    "expertise": "Roots2AI's existing school work centres on dialogue among educators, learners and school leadership. SWE adds technology education and institutional engagement documented in its university and international conference history.",
+    "contact": "Tell us your institution, learner age group or study level, staff needs, curriculum context and approximate cohort size."
+  },
+  "business": {
+    "headline": "Build useful AI skills and systems your organisation can trust.",
+    "problem": "Teams may experiment with AI without knowing which use cases are worthwhile, how information moves between tools or who is responsible when something fails. Training needs to connect staff capability with security, governance and real operating requirements.",
+    "provides": "SWE scopes applied training and advisory work across AI, cybersecurity and systems architecture. Start with a process or technical challenge, identify the skills and controls it needs, and agree practical evidence before choosing a delivery format.",
+    "action": {"label":"Discuss your team's requirements","url":"/#contact"},
+    "offers": [
+      {"id":"architecture","description":"Connect AI integration with requirements, data flows, evaluation and accountability. Relevant modules include threat modelling, least-privilege access, incident response and architecture decision records. Scope the technical depth to your team's environment.","modules":["system-design","resilience","accountability"]},
+      {"id":"bootcamp","description":"Bring a team together around a scoped implementation challenge. Combine technology foundations, collaborative work, testing and a project review. Existing bootcamp experience supports tailored enquiries; this is not a scheduled open-enrolment course.","modules":["ai-practice","resilience"]},
+      {"id":"aicademy","description":"Build a shared foundation in responsible AI use before or alongside organisational training. The four learning areas connect a practical case with instructions, quality checks and a workflow. Business access and seat-dependent terms are confirmed on the original platform.","modules":["ai-practice"]}
+    ],
+    "roots": false,
+    "progression": [
+      {"title":"Identify a useful process","text":"Agree the problem, information boundaries and success criteria before introducing another tool."},
+      {"title":"Build and evaluate","text":"Develop staff practice or a scoped prototype, then review quality, security, integration and operational limitations."},
+      {"title":"Sustain internal capability","text":"Document decisions, share tested practices and develop internal mentors where qualifications and responsibilities support it."}
+    ],
+    "expertise": "SWE draws on Joerg Molt's systems architecture, AI, blockchain and governance education experience. SWEX.AI contributes the wider ecosystem's applied technology perspective; any implementation engagement requires its own agreed scope.",
+    "contact": "Describe your business process, current systems, data sensitivity, team experience and the result you want to evaluate."
+  },
+  "institutions": {
+    "headline": "Turn a development mandate into capability that stays locally.",
+    "problem": "A workshop alone does not resolve institutional capability gaps. Public organisations, NGOs and development institutions need to understand readiness, assign responsibility, support internal learning and plan how knowledge will remain usable after external support ends.",
+    "provides": "SWE connects readiness assessment, governance learning, practical projects and local knowledge transfer. The starting point is an agreed institutional need, followed by a scoped delivery plan and evidence that staff can apply and sustain what they learn.",
+    "action": {"label":"Start an institutional enquiry","url":"/#contact"},
+    "offers": [
+      {"id":"local","description":"Map local learning needs, languages, infrastructure and trainer capacity. Connect a practical learning activity to an implementation plan with responsibilities, support and review criteria rather than assuming a course creates lasting capacity.","modules":["local-delivery","development"]},
+      {"id":"architecture","description":"Use governance and systems training to clarify ownership, decision rights, risks and information flows. Work towards an accountable design and evaluation plan for a real institutional use case.","modules":["accountability","system-design"]},
+      {"id":"trainers","description":"Explore how experienced practitioners could develop facilitation, assessment and supervised teaching. This proposed structured programme builds on existing training experience; formal selection, authorisation and intake arrangements are not yet approved.","modules":["facilitation","human-judgement"]}
+    ],
+    "roots": false,
+    "progression": [
+      {"title":"Understand readiness","text":"Identify capability gaps, responsibilities, access requirements and the resources already available."},
+      {"title":"Learn through a scoped pilot","text":"Agree a practical activity, support needs and evidence of staff learning before delivery."},
+      {"title":"Develop local knowledge transfer","text":"Review outcomes, document practice and consider supervised trainer or coordinator pathways subject to qualification and approval."}
+    ],
+    "expertise": "SWE's existing institutional engagement, local education and international technology training inform this approach. Angelika Riefling's programme coordination complements the technical and governance education focus. Past activities do not imply a current partner mandate.",
+    "contact": "Share your institutional mandate, country or region, audience, capability gaps, available resources and decision-making responsibilities."
+  },
+  "governments": {
+    "headline": "Connect national objectives with independent local capability.",
+    "problem": "National technology development depends on more than purchasing systems or providing isolated courses. Ministries and public authorities need accountable governance, capable institutions, relevant education, economic application and feedback from society.",
+    "provides": "SWE's National Capability approach brings these relationships into a staged institutional development programme. It begins with readiness and shared objectives, connects learning with practical application and works towards locally sustained teaching and implementation. A rollout requires an agreed mandate, partners and funding.",
+    "action": {"label":"Discuss a national capability enquiry","url":"/#contact"},
+    "offers": [
+      {"id":"national","description":"Develop a strategic scope linking readiness, educational delivery, practical evidence and independent capability. Identify institutions, governance responsibilities and measurable pilot objectives before any rollout commitment.","modules":["development","local-delivery","accountability"]},
+      {"id":"architecture","description":"Develop decision-maker and technical-team understanding of AI governance, accountability, security and system integration. Agree the required depth around a public-sector use case and its operational responsibilities.","modules":["accountability","resilience","system-design"]},
+      {"id":"local","description":"Ground wider objectives in local learning needs, infrastructure and delivery capacity. Scoped local education and institutional work can provide evidence for decisions about expansion.","modules":["local-delivery","development"]},
+      {"id":"trainers","description":"Consider local teaching capacity as part of long-term sustainability. The proposed trainer pathway connects facilitation, observed teaching and quality review; trainer authorisation and programme approval remain separate decisions.","modules":["facilitation","human-judgement"]}
+    ],
+    "roots": false,
+    "progression": [
+      {"title":"Agree objectives and readiness","text":"Establish the mandate, institutional responsibilities, local needs and an evidence baseline."},
+      {"title":"Scope and evaluate a pilot","text":"Connect learning, applied projects and review criteria before considering expansion."},
+      {"title":"Sustain independent capability","text":"Develop local delivery and knowledge transfer with governance, funding and qualification checks at each stage."}
+    ],
+    "expertise": "SWE's documented education, governance and institutional engagement informs the model, including university and international policy-related speaking. This is relevant experience, not a claim of government endorsement, accreditation or an already operating national rollout.",
+    "contact": "Identify the public objective, responsible authority, participating institutions, country, target groups and the readiness work already completed."
+  }
+}

@@ -38,12 +38,13 @@
 a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible { outline:2px solid var(--gold-light); outline-offset:4px; }
 .skip-content { position:fixed; top:-100px; left:12px; z-index:10001; padding:12px; background:var(--black); color:var(--white); }
 .skip-content:focus { top:12px; }
+.skip-content:not(:focus) { clip-path:inset(100%); }
 .programme-list { padding-left:22px; line-height:1.8; }
 .programme-list li { margin:12px 0; }
 .programme-main .btn-primary { color:var(--black); text-decoration:none; }
 .capability-path li { padding:12px 0; }
 .people-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:48px; }
-.people-list img { display:block; width:300px; max-width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; object-position:top; }
+.people-list img { display:block; width:300px; max-width:100%; height:auto; aspect-ratio:auto; object-fit:contain; object-position:top; }
 .swe-band { padding:80px 0; border-top:1px solid #ffffff15; }
 .swe-feature { background:var(--dark); }
 .swe-band h2 { font-family:'Cormorant Garamond',serif; font-size:48px; font-weight:300; line-height:1.12; margin:20px 0 32px; }
