@@ -1,0 +1,10 @@
+{
+  "version": "1",
+  "master": "de",
+  "masterSha256": "9050e075d3b43b43abe6f754134c83c9eb80d6cfcb701012568b05d947fa4739",
+  "languages": {
+    "de": { "label": "Deutsch", "articleStatus": "approved", "journeyStatus": "pending-review" },
+    "en": { "label": "English", "articleStatus": "pending-review", "journeyStatus": "pending-review" },
+    "hi": { "label": "हिन्दी", "articleStatus": "pending-review", "journeyStatus": "pending-review" }
+  }
+}

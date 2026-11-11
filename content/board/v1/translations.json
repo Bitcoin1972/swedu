@@ -1,0 +1,25 @@
+{
+  "status": "editorial-review-required",
+  "de": [
+    ["Jeder Mensch beginnt mit Potenzial. Lernen, menschliches Urteilsvermögen und unterstützende Systeme helfen, daraus die Fähigkeit zum Handeln zu entwickeln.", "Human Agency & Bildung", "Einen Einstieg ins Lernen finden"],
+    ["Familien schaffen den ersten Raum für Neugier, Vertrauen und eigenständiges Urteilen. Roots2AI verbindet digitale Alltagsfragen mit menschenzentriertem Lernen.", "Human Agency & digitale Grundbildung", "Lernen für Einzelpersonen und Familien entdecken"],
+    ["Aus Neugier wird Lernfähigkeit. Lehrende verbinden KI-Grundbildung, kritisches Denken und verantwortungsvollen Technologieeinsatz mit den Bedürfnissen ihrer Lerngemeinschaft.", "Lehrkräfteentwicklung · Künstliche Intelligenz", "Lehrkräfteentwicklung entdecken"],
+    ["Erkundung macht aus Fragen praktische Erfahrung. Lernende erproben Ideen, bewerten Informationen und entdecken, wo ihre Interessen einen sinnvollen Beitrag ermöglichen.", "Human Agency · praktische Anwendung", "Praktische Lernlabore entdecken"],
+    ["Strukturiertes Lernen verbindet Verständnis mit überprüfbaren Ergebnissen. AIcademy bietet digitales KI-Lernen; SWE verbindet akademische Bedürfnisse mit modularer Bildung und praktischen Projekten.", "Künstliche Intelligenz · Systemdenken", "AIcademy und die Anmeldung entdecken"],
+    ["Gelerntes auf reale Bedürfnisse anwenden, Ergebnisse dokumentieren und berufliches Urteilsvermögen entwickeln. Chancen hängen von nachgewiesener Kompetenz und tatsächlichem Bedarf ab, nicht allein von einer Kursteilnahme.", "Cybersicherheit & Resilienz · Künstliche Intelligenz", "Anwendungsorientiertes Training entdecken"],
+    ["Fachleute verbinden Systeme statt isolierter Werkzeuge. Architektur, Sicherheit, KI und digitale Infrastruktur werden zu praktischen Fähigkeiten, die andere beurteilen und nachhaltig weiterführen können.", "Systemarchitektur · IoT · Blockchain", "Systemarchitektur entdecken"],
+    ["Institutionen verstetigen Handlungsfähigkeit durch Lehrkompetenz, Koordination und verantwortliche Umsetzung. Train-the-Trainer und lokale Programme verbinden Menschen mit tragfähigen Strukturen.", "Institutionelle Transformation · Train-the-Trainer", "Trainerentwicklung entdecken"],
+    ["Governance verbindet Bildung, Institutionen und wirtschaftliche Chancen mit gesellschaftlichen Bedürfnissen. National Capability führt lokale Entwicklungspfade zusammen; gesellschaftliche Erfahrung fließt in den nächsten Entwicklungszyklus ein.", "KI-Governance & Verantwortlichkeit · digitale Souveränität", "National Capability entdecken"]
+  ],
+  "hi": [
+    ["हर व्यक्ति में संभावनाएँ होती हैं। सीखना, मानवीय विवेक और सहायक प्रणालियाँ इन संभावनाओं को कार्य करने की क्षमता में बदलने में मदद करती हैं।", "मानवीय स्वायत्तता और शिक्षा", "सीखने की शुरुआत खोजें"],
+    ["परिवार जिज्ञासा, विश्वास और स्वतंत्र निर्णय के लिए पहला परिवेश बनाते हैं। Roots2AI रोज़मर्रा के डिजिटल प्रश्नों को मानव-केंद्रित शिक्षा से जोड़ता है।", "मानवीय स्वायत्तता और डिजिटल साक्षरता", "व्यक्तियों और परिवारों के लिए शिक्षा देखें"],
+    ["जिज्ञासा सीखने की क्षमता बनती है। शिक्षक AI साक्षरता, आलोचनात्मक सोच और प्रौद्योगिकी के ज़िम्मेदार उपयोग को अपने शिक्षण समुदाय की आवश्यकताओं से जोड़ते हैं।", "शिक्षक विकास · कृत्रिम बुद्धिमत्ता", "शिक्षक विकास देखें"],
+    ["खोज प्रश्नों को व्यावहारिक अनुभव में बदलती है। विद्यार्थी विचारों को आज़माते हैं, जानकारी का मूल्यांकन करते हैं और समझते हैं कि उनकी रुचियाँ कहाँ उपयोगी योगदान दे सकती हैं।", "मानवीय स्वायत्तता · व्यावहारिक अनुप्रयोग", "व्यावहारिक शिक्षण प्रयोगशालाएँ देखें"],
+    ["सुव्यवस्थित शिक्षा समझ को प्रमाण से जोड़ती है। AIcademy डिजिटल AI शिक्षा प्रदान करता है; SWE शैक्षणिक आवश्यकताओं को मॉड्यूलर शिक्षा और व्यावहारिक परियोजनाओं से जोड़ता है।", "कृत्रिम बुद्धिमत्ता · प्रणालीगत सोच", "AIcademy की शिक्षा और पंजीकरण देखें"],
+    ["सीखने को वास्तविक आवश्यकताओं पर लागू करें, परिणाम दर्ज करें और व्यावसायिक विवेक विकसित करें। अवसर प्रदर्शित दक्षता और वास्तविक आवश्यकताओं पर निर्भर हैं, केवल पाठ्यक्रम में भाग लेने पर नहीं।", "साइबर सुरक्षा और लचीलापन · कृत्रिम बुद्धिमत्ता", "अनुप्रयोग-आधारित प्रशिक्षण देखें"],
+    ["विशेषज्ञ अलग-अलग उपकरणों के बजाय प्रणालियों को जोड़ते हैं। आर्किटेक्चर, सुरक्षा, AI और डिजिटल अवसंरचना ऐसी व्यावहारिक क्षमताएँ बनती हैं जिनका अन्य लोग मूल्यांकन और रखरखाव कर सकें।", "सिस्टम आर्किटेक्चर · IoT · ब्लॉकचेन", "सिस्टम आर्किटेक्चर देखें"],
+    ["संस्थान शिक्षण क्षमता, समन्वय और जवाबदेह क्रियान्वयन से क्षमता को टिकाऊ बनाते हैं। Train-the-Trainer और स्थानीय कार्यक्रम लोगों को स्थायी संरचनाओं से जोड़ते हैं।", "संस्थागत परिवर्तन · प्रशिक्षकों का प्रशिक्षण", "प्रशिक्षक विकास देखें"],
+    ["Governance शिक्षा, संस्थानों और आर्थिक अवसरों को सार्वजनिक आवश्यकताओं से जोड़ता है। National Capability स्थानीय मार्गों को एक साथ लाता है; समाज का अनुभव विकास के अगले चक्र को दिशा देता है।", "AI शासन और जवाबदेही · डिजिटल संप्रभुता", "राष्ट्रीय क्षमता देखें"]
+  ]
+}

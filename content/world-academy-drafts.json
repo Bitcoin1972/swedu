@@ -1,0 +1,14 @@
+{
+ "de":[
+  ["Nutze die Wasserfrage, um Beobachtung, Interpretation und eigenständiges Urteilen zu üben.","Lernende müssen erklären können, warum ein Ergebnis glaubwürdig ist, statt nur eine Antwort von einem Werkzeug zu erhalten.","Ein Beobachtungsprotokoll mit Unsicherheiten und einer kurzen Erklärung des Gelernten."],
+  ["Begleite praktisches Lernen, ohne pädagogische Urteilskraft an Technologie abzugeben.","Eine wasserbezogene Aufgabe braucht klare Lernziele, inklusive Beteiligung und eine sichere Bewertung.","Ein geprüfter Unterrichtsentwurf, Rückmeldungen der Lernenden und eine beobachtete Lehraktivität."],
+  ["Verbinde Grundlagenlernen, praktische Arbeit und verantwortlichen Technologieeinsatz im Curriculum.","Ein Projekt soll übertragbare Handlungsfähigkeit stärken und keine isolierte Technikvorführung bleiben.","Ein vorgeschlagener Curriculumplan, der Lernziele, Bewertungsnachweise und lokale Bedürfnisse verbindet."],
+  ["Untersuche, ob ein technischer Ansatz die lokale Wasserfrage unter realistischen Bedingungen beantwortet.","Sensoren und KI-Ausgaben brauchen Überprüfung, sichere Integration und menschliche Interpretation.","Ein abgegrenzter Prototyp und Testplan mit Messungen, Grenzen und Prüfverantwortlichkeiten."]
+ ],
+ "hi":[
+  ["जल संबंधी प्रश्न से अवलोकन, व्याख्या और स्वतंत्र निर्णय का अभ्यास करें।","सीखने वाले को समझाना चाहिए कि परिणाम विश्वसनीय क्यों है, न कि केवल किसी उपकरण से उत्तर लेना चाहिए।","अनिश्चितताओं सहित अवलोकन अभिलेख और सीखी गई बातों का छोटा विवरण।"],
+  ["शिक्षकीय निर्णय तकनीक को सौंपे बिना व्यावहारिक शिक्षण में मार्गदर्शन दें।","जल संबंधी अभ्यास में स्पष्ट सीखने के लक्ष्य, समावेशी भागीदारी और सुरक्षित मूल्यांकन चाहिए।","समीक्षित पाठ योजना, विद्यार्थियों की प्रतिक्रिया और अवलोकित शिक्षण गतिविधि।"],
+  ["पाठ्यक्रम में बुनियादी शिक्षण, व्यावहारिक काम और जवाबदेह तकनीकी उपयोग को जोड़ें।","एक परियोजना केवल अलग-थलग तकनीकी प्रदर्शन न बने, बल्कि अन्य संदर्भों में उपयोगी क्षमता विकसित करे।","सीखने के लक्ष्यों, मूल्यांकन साक्ष्यों और स्थानीय आवश्यकताओं को जोड़ने वाला प्रस्तावित पाठ्यक्रम मानचित्र।"],
+  ["जाँचें कि तकनीकी तरीका वास्तविक सीमाओं में स्थानीय जल समस्या का उत्तर देता है या नहीं।","सेंसर और एआई परिणामों के लिए सत्यापन, सुरक्षित एकीकरण और मानवीय व्याख्या आवश्यक है।","सीमित दायरे का प्रोटोटाइप और परीक्षण योजना जिसमें माप, सीमाएँ और समीक्षा की ज़िम्मेदारियाँ हों।"]
+ ]
+}

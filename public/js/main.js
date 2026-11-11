@@ -1,4 +1,5 @@
 // Smart World Education — swedu.me
+const siteText = source => window.SWE_I18N?.t(source) || source;
 
 // VIDEO INTRO
 const overlay = document.getElementById('introOverlay');
@@ -60,7 +61,12 @@ if (overlay) {
       const playHint = document.createElement('button');
       playHint.id = 'playHint';
       playHint.type = 'button';
-      playHint.innerHTML = '<strong>Play Intro</strong><span>Tap to start the video</span>';
+      const hintTitle = document.createElement('strong');
+      hintTitle.textContent = siteText('Play Intro');
+      const hintHelp = document.createElement('span');
+      hintHelp.textContent = siteText('Tap to start the video');
+      playHint.appendChild(hintTitle);
+      playHint.appendChild(hintHelp);
       overlay.appendChild(playHint);
       playHint.addEventListener('click', async () => {
         try {
@@ -166,7 +172,7 @@ if (form) {
     success.style.display = 'none';
     error.style.display = 'none';
     btn.disabled = true;
-    btn.querySelector('.btn-text').textContent = 'Sending...';
+    btn.querySelector('.btn-text').textContent = siteText('Sending...');
 
     try {
       const data = Object.fromEntries(new FormData(form));
@@ -177,19 +183,19 @@ if (form) {
       });
       const json = await res.json();
       if (res.ok && json.success) {
-        success.textContent = 'Your message was accepted by our mail service. Thank you.';
+        success.textContent = siteText('Your message was accepted by our mail service. Thank you.');
         success.style.display = 'block';
         form.reset();
       } else {
-        error.textContent = json.error || 'We could not send your message. Please email info@swedu.info.';
+        error.textContent = siteText(json.error || 'We could not send your message. Please email info@swedu.info.');
         error.style.display = 'block';
       }
     } catch {
-      error.textContent = 'We could not confirm delivery. Please try again later or email info@swedu.info.';
+      error.textContent = siteText('We could not confirm delivery. Please try again later or email info@swedu.info.');
       error.style.display = 'block';
     } finally {
       btn.disabled = false;
-      btn.querySelector('.btn-text').textContent = 'Send Message';
+      btn.querySelector('.btn-text').textContent = siteText('Send Message');
     }
   });
 }

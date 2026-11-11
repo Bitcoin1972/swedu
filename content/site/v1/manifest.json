@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "sourceLanguage": "en",
+  "languages": {
+    "en": { "label": "English", "status": "existing-source" },
+    "de": { "label": "Deutsch", "status": "pending-editorial-review" },
+    "hi": { "label": "हिन्दी", "status": "pending-editorial-review" }
+  }
+}

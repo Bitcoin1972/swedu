@@ -5,7 +5,7 @@ const fs = require('node:fs');
 const script = fs.readFileSync(require.resolve('../public/js/main.js'),'utf8').split('// NAV mobile toggle')[0];
 async function intro({search='',hash='',seen=false,reduced=false,blocked=false,storageDenied=false}={}) {
   const events = new Map();
-  const element = id => ({id,hidden:true,inert:false,style:{},classList:{add(){}},setAttribute(){},focus(){doc.activeElement=this;},addEventListener(type,fn){events.set(`${id}:${type}`,fn);}});
+  const element = id => ({id,hidden:true,inert:false,style:{},children:[],appendChild(child){this.children.push(child);},classList:{add(){}},setAttribute(){},focus(){doc.activeElement=this;},addEventListener(type,fn){events.set(`${id}:${type}`,fn);}});
   const overlay=element('introOverlay'),video=element('introVideo'),skip=element('skipBtn'),main=element('main');
   let plays=0,paused=true,stored=seen?'1':null,hint;
   video.play=async()=>{plays++;if(blocked)throw Error('Autoplay blocked');paused=false;};

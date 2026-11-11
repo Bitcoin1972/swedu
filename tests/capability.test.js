@@ -48,9 +48,11 @@ async function site(t) {
 test('server-rendered model and discovery work without JavaScript; content remains escaped', async t => {
   const root=await site(t);
   const html=await (await fetch(root+'/?layer=society')).text();
-  assert.match(html, /id="layer-society" class="layer-detail" open/);
-  assert.match(html, /Top-down/);
-  assert.match(html, /Bottom-up/);
+  assert.match(html, /id="journey-society"/);
+  const model = await (await fetch(root+'/capability-model?layer=society')).text();
+  assert.match(model, /id="layer-society" class="layer-detail" open/);
+  assert.match(model, /Top-down/);
+  assert.match(model, /Bottom-up/);
   assert.match(html, /<form[\s\S]*id="contactForm"/);
   assert.ok(html.indexOf('id="capability-model"')<html.indexOf('id="audience-pathways"'));
   assert.ok(html.indexOf('id="audience-pathways"')<html.indexOf('id="progression"'));

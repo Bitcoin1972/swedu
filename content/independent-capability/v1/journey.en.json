@@ -1,0 +1,26 @@
+{
+  "title": "One story. Six connected layers.",
+  "start": "Start the Capability Journey",
+  "language": "Article and Capability Journey language",
+  "review": "Local editorial preview. Translations and the journey are not yet approved for publication.",
+  "model": "The connected model",
+  "down": "Objectives and frameworks shape practice",
+  "up": "Experience and needs reshape objectives",
+  "layers": ["Capability", "Governance", "Institutions", "Academy", "Economy", "Society"],
+  "disclaimer": "An illustrative story about a child and their region, not a promised programme or a guarantee of educational access, funding or employment.",
+  "previous": "Previous stage",
+  "next": "Next stage",
+  "all": "The complete story",
+  "outcome": "Possible development",
+  "feedback": "Feedback into the system",
+  "explore": "Explore a relevant pathway",
+  "return": "Back to Society: a new development cycle",
+  "stages": [
+    { "id": "society", "title": "Society – A child and their family", "body": "A child from an economically disadvantaged family wants to understand how digital technologies work. Together with their parents, they learn to question information and make their own decisions. Roots2AI can provide a connection to family-oriented education; AIcademy4you opens a digital learning pathway where access and the offering suit the person.", "outcome": "Curiosity develops into initial capabilities and more conscious use of technology.", "feedback": "The family's experiences reveal where access, language and learning support need to improve.", "url": "/audiences/society" },
+    { "id": "academy", "title": "Academy – Learning receives guidance", "body": "At school, a teacher builds on this curiosity. They connect foundational learning with a small project on the region's water supply. Later, a university, practical learning spaces and qualified mentors can deepen the project. SWE and Train-the-Trainer connect subject learning with the ability to support others in learning.", "outcome": "The child learns to explain observations, check results and collaborate with others.", "feedback": "Learners' and teachers' experiences reshape learning content and the need for institutional support.", "url": "/audiences/academia" },
+    { "id": "economy", "title": "Economy – Knowledge is applied", "body": "As a young adult, the learner brings their project experience into collaboration with a local business. Together, they explore how sensors and data analysis can reveal water losses. Within the ecosystem, SWEX.AI represents technical expertise; specific support requires a separate agreement. People check results and remain responsible for decisions.", "outcome": "Learning can become demonstrated practical competence, opening professional prospects where suitable opportunities exist.", "feedback": "Workplace experience and local needs feed back into educational offerings.", "url": "/audiences/business" },
+    { "id": "institutions", "title": "Institutions – A project becomes local structure", "body": "A local institution works with the school and business to examine the resources, maintenance and responsibilities needed to sustain the water project. With appropriate qualifications, the now-experienced learner can guide others. A learning space and local trainers can keep knowledge available locally instead of relying permanently on external sources.", "outcome": "Local organisations develop the ability to teach knowledge and operate solutions.", "feedback": "Operational and educational experience reveals which rules and resources should be adapted.", "url": "/audiences/institutions" },
+    { "id": "governance", "title": "Governance – Responsibility becomes transparent", "body": "The participants clarify who may use data, who reviews decisions and how the public can raise concerns. Public authorities incorporate project experience into frameworks. Governance thus connects technological possibilities with rights, responsibility and public accountability.", "outcome": "Decisions and responsibilities can be made understandable, reviewable and appropriate to their context.", "feedback": "Feedback from the public and institutions reshapes rules and strategic objectives.", "url": "/audiences/governments" },
+    { "id": "capability", "title": "National Capability – Independence grows", "body": "The region can now share its knowledge and adapt solutions itself. At national level, several such learning and development pathways can be brought together. The former child can contribute as a qualified professional, mentor or local coordinator where suitable roles exist. Success is measured by independent development, not permanent external support.", "outcome": "People and institutions jointly develop the ability to learn, apply, teach and take responsibility.", "feedback": "New experiences and societal needs lead back to Society and shape the next development cycle.", "url": "/national-capability" }
+  ]
+}

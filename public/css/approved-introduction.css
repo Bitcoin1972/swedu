@@ -1,0 +1,56 @@
+.approved-introduction { padding:40px 0 0; letter-spacing:0; }
+.cap-intro .intro-brand { font:400 56px/1.15 'Cormorant Garamond',serif; color:#f3eee4; margin:12px 0; }
+.story-controls button { color:#f3eee4; background:#10172e; border:1px solid #c9a84c; padding:12px; font:inherit; min-height:44px; max-width:100%; }
+.intro-review { font-size:14px; border-left:2px solid var(--gold); padding:12px 16px; }
+.approved-article { max-width:78ch; margin:40px auto 0; }
+.approved-article h1 { font:400 56px/1.15 'Cormorant Garamond',serif; color:var(--gold-light); margin:24px 0 48px; letter-spacing:0; }
+.approved-article h2 { font-size:38px; line-height:1.2; padding-top:44px; margin-top:48px; border-top:1px solid #c9a84c66; }
+.approved-article p { margin:0 0 22px; line-height:1.85; font-size:18px; color:#d7d9df; }
+.approved-article strong { color:#f3eee4; font-weight:500; }
+.approved-article hr { border:0; border-top:1px solid var(--gold); margin-top:48px; }
+.approved-article [id],.story-stage h3,#journey-heading,#capability-journey { scroll-margin-top:200px; }
+.intro-start { display:flex; width:fit-content; gap:24px; align-items:center; max-width:100%; margin:32px auto 64px; padding:16px 24px; background:var(--gold); color:#080d20 !important; text-decoration:none; font-weight:500; }
+.story-journey { padding:48px 0; border-top:1px solid var(--gold); }
+.story-disclaimer { font-size:14px; }
+.story-model { margin:32px 0; padding:24px 0; border-block:1px solid #ffffff33; }
+.story-model ol { display:flex; flex-wrap:wrap; padding:0; list-style:none; gap:12px; }
+.story-model li:not(:last-child)::after { content:'\2194'; padding-left:12px; color:var(--gold); }
+.story-model li { line-height:2; }
+.story-directions { display:flex; flex-wrap:wrap; gap:12px 40px; }
+.story-directions p { font-size:14px; }
+.story-directions p:last-child { color:#9acdc8; }
+.story-sequence ol { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:12px; list-style:none; padding:0; margin:24px 0; }
+.story-sequence a { display:block; text-decoration:none; padding:12px 4px; border-top:2px solid #ffffff44; line-height:1.5; }
+.story-sequence span { display:block; font-family:'DM Mono',monospace; margin-bottom:8px; }
+.story-sequence a[aria-current],.story-model a[aria-current] { color:white; text-decoration:underline; border-color:var(--gold); }
+.story-controls { display:flex; flex-wrap:wrap; gap:12px; padding:16px 0; }
+.story-controls button { cursor:pointer; }
+.story-controls button:disabled { opacity:.45; cursor:default; }
+.story-stage { display:grid; grid-template-columns:60px minmax(0,1fr); gap:24px; padding:32px 0; border-bottom:1px solid #ffffff33; }
+.story-number { color:var(--gold); font:400 24px 'DM Mono',monospace; }
+.story-stage h3 { font-size:32px; margin:0 0 16px; }
+.story-stage p { margin-bottom:24px; }
+.story-stage dl { max-width:78ch; }
+.story-stage dt { color:var(--gold-light); font-weight:500; margin:20px 0 8px; }
+.story-stage dd { margin:0 0 20px; line-height:1.75; color:#d7d9df; }
+.story-feedback { border-left:2px solid #9acdc8; padding:20px; }
+.approved-introduction :focus-visible { outline:2px solid #f5d98b; outline-offset:5px; }
+.approved-introduction :lang(hi) { font-family:'Nirmala UI','Kohinoor Devanagari','Noto Sans Devanagari',Mangal,sans-serif; line-height:1.85; }
+.approved-introduction { overflow-wrap:break-word; }
+.intro-announcement.sr-only { position:absolute; width:1px; height:1px; padding:0; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+@media(max-width:760px) {
+  .cap-intro .intro-brand { font-size:38px; }
+  .approved-article [id],.story-stage h3,#journey-heading,#capability-journey { scroll-margin-top:180px; }
+  .approved-article h1 { font-size:38px; }
+  .approved-article h2 { font-size:30px; }
+  .approved-article p { font-size:17px; }
+  .story-sequence ol { grid-template-columns:minmax(0,1fr); gap:0; }
+  .story-sequence a { display:flex; align-items:baseline; gap:16px; min-height:48px; }
+  .story-sequence span { margin:0; }
+  .story-model ol { display:block; border-left:2px solid var(--gold); padding-left:20px; }
+  .story-model li:not(:last-child)::after { content:'\2193\2191'; }
+  .story-stage { grid-template-columns:minmax(0,1fr); gap:12px; }
+  .story-controls button { flex:1 1 130px; }
+  .intro-start { font-size:16px; padding:16px; }
+}
+@media(prefers-reduced-motion:reduce) { .approved-introduction * { scroll-behavior:auto !important; animation:none !important; transition:none !important; } }
