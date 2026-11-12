@@ -24,7 +24,13 @@
  const knowledge=document.createElement('dialog');knowledge.className='sp-knowledge';knowledge.setAttribute('aria-labelledby','sp-knowledge-title');document.body.append(knowledge);
  let knowledgeTrigger=null;
  knowledge.addEventListener('close',()=>knowledgeTrigger?.isConnected&&knowledgeTrigger.focus({preventScroll:true}));
- function assumptions(){const k=data.versions[state.lang].knowledge;return `<section class="sp-dependencies"><h3>${k.heading}</h3><p>${k.intro}</p>${k.issues.map((issue,i)=>`<button data-sp-knowledge="${i}">${issue.title}<i data-lucide="arrow-up-right" aria-hidden="true"></i></button>`).join('')}</section>`;}
+ function assumptions(){const k=data.versions[state.lang].knowledge,a=data.versions[state.lang].assessment;return `<section class="sp-dependencies"><h3>${k.heading}</h3><p>${k.intro}</p>${k.issues.map((issue,i)=>`<button data-sp-knowledge="${i}">${issue.title}<i data-lucide="arrow-up-right" aria-hidden="true"></i></button>`).join('')}${a?`<button data-sp-assessment>${a.title}</button>`:''}</section>`;}
+ function openAssessment(trigger){
+  const a=data.versions[state.lang].assessment,k=data.versions[state.lang].knowledge;if(!a)return;
+  knowledgeTrigger=trigger;knowledge.lang=state.lang;
+  knowledge.innerHTML=`<header><div><small>${k.context}: ${data.versions[state.lang].labels[state.stage]}</small><h2 id="sp-knowledge-title" tabindex="-1">${a.title}</h2></div><button data-sp-knowledge-close aria-label="${k.close}">${k.close}</button></header><div class="sp-knowledge-body"><h3>${a.labels[0]}</h3><p>${a.facts}</p><h3>${a.labels[1]}</h3><p>${a.meaning}</p><label>${a.perspective}<select data-sp-case-view>${a.names.map((name,i)=>`<option value="${i}">${name}</option>`).join('')}</select></label><p data-sp-case-text aria-live="polite">${a.views[0]}</p><h3>${a.labels[2]}</h3><p>${a.response}</p>${a.links}<h3>${a.labels[3]}</h3><p>${a.evaluation}</p><h3>${a.labels[4]}</h3>${a.sources.map(([name,url])=>`<p><a href="${url}" target="_blank" rel="noopener">${name}</a></p>`).join('')}</div><footer><button data-sp-knowledge-close>${k.close}</button></footer>`;
+  knowledge.showModal();knowledge.querySelector('h2').focus({preventScroll:true});
+ }
  function openKnowledge(index,trigger){
   stop();knowledgeTrigger=trigger;const v=data.versions[state.lang],k=v.knowledge,issue=k.issues[index];
   knowledge.lang=state.lang;
@@ -39,7 +45,7 @@
   if(view==='document')return;
   const v=data.versions[state.lang];
   reader.innerHTML=view==='model'?model():zoneOpen&&state.room!=='world'?v.zones[state.room][state.zone]:state.stage===0?v.intro:v.stories[state.stage];
-  const lens=reader.querySelector('[data-sp-lens]');if(lens)lens.innerHTML=v.lenses[state.stage][state.perspective]+assumptions();
+  const lens=reader.querySelector('[data-sp-lens]');if(lens)lens.innerHTML=assumptions();
   if(zoneOpen&&state.room!=='world')reader.insertAdjacentHTML('beforeend',v.lenses[state.stage][state.perspective]+assumptions());
   if(state.room==='governance'&&view==='story'&&!zoneOpen){const s=v.model.stages.find(s=>s.id==='governance');reader.innerHTML=`<p class="sp-note">${c().note}</p><h2>${c().roomLabels[5]}</h2><p>${s.body}</p><h3>${c().feedback}</h3><p>${s.feedback}</p><h3>${c().decision}</h3><p>${c().decisions[4]}</p><p>${c().roles[['citizen','education','business','government'].indexOf(state.perspective)]}</p>${assumptions()}`;}
   if(reset)reader.scrollTop=0;
@@ -61,7 +67,11 @@
   document.querySelector('[data-sp-drawer="information"]').innerHTML=`<i data-lucide="book-open" aria-hidden="true"></i>${u.information}`;
   for(const [attr,label]of [['prev',u.previous],['next',u.next],['restart',u.restart]])document.querySelectorAll('[data-sp-'+attr+']').forEach(b=>{b.title=label;b.setAttribute('aria-label',label);});
   document.getElementById('sp-count').textContent=`${String(state.stage+1).padStart(2,'0')} / 09`;
+  document.getElementById('sp-status').textContent=v.labels[state.stage];
   document.querySelector('.sp-utilities a').textContent=u.contact;document.querySelector('.sp-utilities a[href="/privacy"]').textContent={en:'Privacy',de:'Datenschutz',hi:'गोपनीयता'}[state.lang];
+  let replay=document.querySelector('[data-sp-replay]');
+  if(!replay){replay=document.createElement('a');replay.dataset.spReplay='';document.querySelector('.sp-utilities').append(replay);}
+  replay.href='/?intro=1&lang='+state.lang;replay.textContent={en:'Replay intro',de:'Intro erneut abspielen',hi:'परिचय फिर चलाएँ'}[state.lang];
  }
  function render(reset=true){scene();const offers=document.getElementById('sp-offers-body');offers.innerHTML=data.versions[state.lang].ecosystems[state.stage];
   if(state.stage){const priorities={citizen:['aicademy','labs'],education:['teachers','trainers','labs'],business:['architecture','bootcamp','labs'],government:['national','local','trainers']}[state.perspective];const links=[...offers.querySelectorAll('.sp-programme')];const matched=links.filter(a=>priorities.some(id=>a.getAttribute('href')==='/programmes/'+id));if(matched.length)links.filter(a=>!matched.includes(a)).forEach(a=>a.remove());}
@@ -83,6 +93,7 @@
  }
  document.addEventListener('click',e=>{
   const el=e.target.closest('a,button');if(!el||el.closest('#introOverlay'))return;
+  if(el.matches('[data-sp-assessment]')){openAssessment(el);return;}
   if(el.matches('[data-sp-knowledge]')){openKnowledge(Number(el.dataset.spKnowledge),el);return;}
   if(el.matches('[data-sp-knowledge-close]')){knowledge.close();return;}
   if(knowledge.open&&el.matches('[data-sp-room],[data-sp-document]'))knowledge.close();
@@ -104,7 +115,7 @@
   }
  });
  document.getElementById('sp-language').addEventListener('change',e=>{const position=reader.scrollTop/Math.max(1,reader.scrollHeight-reader.clientHeight);state.lang=e.target.value;render();if(view==='document')documentView(documentURL,false,position);else reader.scrollTop=position*Math.max(0,reader.scrollHeight-reader.clientHeight);save();});
- document.addEventListener('change',e=>{if(e.target.matches('[data-sp-assumption]')){const i=Number(e.target.dataset.spAssumption),bits=state.scenario.split('');bits[i]=e.target.checked?'1':'0';state.scenario=bits.join('');knowledge.querySelector('[data-sp-effect]').textContent=data.versions[state.lang].knowledge.issues[i].effects[e.target.checked?0:1];labels();save(false);}});
+ document.addEventListener('change',e=>{if(e.target.matches('[data-sp-case-view]'))knowledge.querySelector('[data-sp-case-text]').textContent=data.versions[state.lang].assessment.views[Number(e.target.value)];if(e.target.matches('[data-sp-assumption]')){const i=Number(e.target.dataset.spAssumption),bits=state.scenario.split('');bits[i]=e.target.checked?'1':'0';state.scenario=bits.join('');knowledge.querySelector('[data-sp-effect]').textContent=data.versions[state.lang].knowledge.issues[i].effects[e.target.checked?0:1];labels();save(false);}});
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!knowledge.open){stop();drawer(null);}const a=e.target.closest('[data-sp-stage]');if(a&&['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();stop();select(e.key==='Home'?0:e.key==='End'?8:(Number(a.dataset.spStage)+(e.key==='ArrowLeft'?-1:1)+9)%9);document.querySelector('.sp-timeline [data-sp-stage="'+state.stage+'"]').focus();}});
  addEventListener('popstate',e=>{stop();cancelDocument();const s=e.state;if(s){for(const key of Object.keys(data.state))state[key]=s[key];view=s.view||'story';zoneOpen=!!s.zoneOpen;documentURL=s.documentURL||null;}else{const q=new URLSearchParams(location.search);Object.assign(state,data.state);for(const key of ['lang','perspective','room','scenario'])if(q.has(key))state[key]=q.get(key);state.stage=Math.max(0,Math.min(8,Number(q.get('stage'))||0));state.zone=Number(q.get('zone'))||0;view='story';zoneOpen=q.get('topic')==='1';}
   if(!data.versions[state.lang])state.lang='en';if(!data.roomIds.includes(state.room)&&state.room!=='world')state.room=data.roomsByStage[state.stage];render();if(view==='document'&&documentURL)documentView(documentURL,false);

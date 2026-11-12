@@ -48,7 +48,7 @@ if (overlay) {
     overlay.addEventListener('keydown', event => {
       if (event.key === 'Escape') dismissIntro();
       if (event.key === 'Tab') {
-        const buttons = [...overlay.querySelectorAll('button')];
+        const buttons = [...overlay.querySelectorAll('video[controls],button')];
         const first = buttons[0], last = buttons[buttons.length - 1];
         if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
         else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
@@ -74,7 +74,7 @@ if (overlay) {
           if (introClosed) { video.pause(); return; }
           playHint.remove();
           clearTimeout(playHintTimer);
-          fallbackTimer = setTimeout(dismissIntro, 30000);
+          fallbackTimer = setTimeout(dismissIntro, 120000);
         } catch {
           playHint.classList.add('is-blocked');
         }
@@ -93,7 +93,8 @@ if (overlay) {
         await video.play();
         if (introClosed) { video.pause(); return; }
         clearTimeout(playHintTimer);
-        fallbackTimer = setTimeout(dismissIntro, 30000);
+        // Allow the planned 60-90 second film; retain an escape for stalled media.
+        fallbackTimer = setTimeout(dismissIntro, 120000);
       } catch {
         showPlayHint();
       }
