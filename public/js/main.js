@@ -93,7 +93,7 @@ if (overlay) {
         await video.play();
         if (introClosed) { video.pause(); return; }
         clearTimeout(playHintTimer);
-        // Allow the planned 60-90 second film; retain an escape for stalled media.
+        // Retain an escape for a stalled brand opener.
         fallbackTimer = setTimeout(dismissIntro, 120000);
       } catch {
         showPlayHint();

@@ -1,7 +1,8 @@
 {
-  "status": "production-draft-not-generated",
+  "status": "english-rendered-local-review",
+  "export": {"language":"en","seconds":91.435,"path":"/media/swe-mission-en.mp4","project":"207044","publicationApproved":false,"otherAudioLanguages":"de and hi remain drafts"},
   "targetSeconds": 84,
-  "music": "No track selected. Require documented website-publication licence before export.",
+  "music": "ToonBee regenerated strictly instrumental underscore at 15 percent; revised export supplied by user. Listening review and website-publication licence evidence remain release requirements.",
   "voice": "Natural professional narrator; no imitation of founder voices.",
   "scenes": [
     {"start":0,"end":11,"title":"Human potential","visual":"Natural morning light. A child and family observe their local water environment from a safe distance. No unsafe sampling. Establish a consistent fictional family, not a claimed SWE beneficiary.","en":"A question begins at home. Why has the water around us changed? Curiosity is a beginning. Understanding needs opportunities to learn, and people who listen.","de":"Eine Frage beginnt zu Hause. Warum hat sich das Wasser in unserer Umgebung verändert? Neugier ist ein Anfang. Verständnis braucht Lernmöglichkeiten und Menschen, die zuhören.","hi":"एक प्रश्न घर से शुरू होता है। हमारे आसपास का पानी क्यों बदल गया है? जिज्ञासा शुरुआत है। समझ के लिए सीखने के अवसर और सुनने वाले लोग चाहिए।"},

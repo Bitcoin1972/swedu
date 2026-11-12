@@ -22,5 +22,5 @@ test('explanations precede optional assumptions and preserve intro URL until int
  assert.ok(js.includes("knowledge.addEventListener('close'"));
  assert.ok(js.includes("render();history.replaceState({...state,view,zoneOpen,documentURL},'',location.href)"));
  const opening=js.slice(js.indexOf('function openKnowledge'),js.indexOf('function model'));
- assert.ok(!/state\.(room|stage|zone)\s*=/.test(opening));
+ assert.ok(!/state\.(room|stage|zone)\s*=(?!=)/.test(opening));
 });

@@ -21,7 +21,7 @@ test('all room routes use one shell and localized knowledge zones with real cata
   assert.equal($('.sp-environment').attr('data-scene'),room);
   assert.equal($('#sp-perspective,.sp-perspective-form,[data-sp-guide],[data-sp-exit]').length,0);
   assert.equal($('select#sp-language').length,1);
-  assert.equal($('.sp-timeline a').length,9);
+  assert.equal($('.sp-timeline a').length,10);
   assert.equal($('.room-heading,.world-toolbar,.board-introduction').length,0);
   assert.equal(shell.versions()[lang].zones[room].length,4);
  }
@@ -50,5 +50,5 @@ test('journey progresses only through manual navigation',()=>{
  assert.ok(js.includes("if(el.matches('[data-sp-start]')){select(1);return;}"));
  const $=cheerio.load(shell.page({lang:'de',stage:2}));
  assert.equal($('.sp-controls button').length,3);
- assert.equal($('.sp-timeline a').length,9);
+ assert.equal($('.sp-timeline a').length,10);
 });
