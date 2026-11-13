@@ -1,0 +1,183 @@
+{
+  "sourceHash": "8be0e46caf9f08c8d63ef86717f92d2fe8b47a7efc74cee1ee370cb46443c8ad",
+  "sourceStrings": 1633,
+  "academySource": "https://academy.swex.ai/individual",
+  "additionalLanguage": "Kiswahili (sw), confirmed by the author",
+  "publication": "Site owner approved all complete language packs for release on 2026-11-13 (deploy alles). No independent native-language review is claimed.",
+  "languages": [
+    {
+      "code": "en",
+      "label": "English",
+      "status": "existing",
+      "changed": false
+    },
+    {
+      "code": "de",
+      "label": "Deutsch",
+      "status": "existing",
+      "changed": false
+    },
+    {
+      "code": "hi",
+      "label": "हिन्दी",
+      "status": "existing",
+      "changed": false
+    },
+    {
+      "code": "fr",
+      "label": "Français",
+      "status": "approved",
+      "translated": 1633,
+      "total": 1633,
+      "sourceMatches": true,
+      "missing": [],
+      "unchangedProse": [],
+      "unsafe": [],
+      "structurallyComplete": true
+    },
+    {
+      "code": "es",
+      "label": "Español",
+      "status": "approved",
+      "translated": 1633,
+      "total": 1633,
+      "sourceMatches": true,
+      "missing": [],
+      "unchangedProse": [],
+      "unsafe": [],
+      "structurallyComplete": true
+    },
+    {
+      "code": "ar",
+      "label": "العربية",
+      "status": "approved",
+      "translated": 1633,
+      "total": 1633,
+      "sourceMatches": true,
+      "missing": [],
+      "unchangedProse": [],
+      "unsafe": [],
+      "structurallyComplete": true
+    },
+    {
+      "code": "ja",
+      "label": "日本語",
+      "status": "approved",
+      "translated": 1633,
+      "total": 1633,
+      "sourceMatches": true,
+      "missing": [],
+      "unchangedProse": [],
+      "unsafe": [],
+      "structurallyComplete": true
+    },
+    {
+      "code": "zh-CN",
+      "label": "简体中文",
+      "status": "approved",
+      "translated": 1633,
+      "total": 1633,
+      "sourceMatches": true,
+      "missing": [],
+      "unchangedProse": [],
+      "unsafe": [],
+      "structurallyComplete": true
+    },
+    {
+      "code": "ru",
+      "label": "Русский",
+      "status": "approved",
+      "translated": 1633,
+      "total": 1633,
+      "sourceMatches": true,
+      "missing": [],
+      "unchangedProse": [],
+      "unsafe": [],
+      "structurallyComplete": true
+    },
+    {
+      "code": "id",
+      "label": "Bahasa Indonesia",
+      "status": "approved",
+      "translated": 1633,
+      "total": 1633,
+      "sourceMatches": true,
+      "missing": [],
+      "unchangedProse": [],
+      "unsafe": [],
+      "structurallyComplete": true
+    },
+    {
+      "code": "el",
+      "label": "Ελληνικά",
+      "status": "approved",
+      "translated": 1633,
+      "total": 1633,
+      "sourceMatches": true,
+      "missing": [],
+      "unchangedProse": [],
+      "unsafe": [],
+      "structurallyComplete": true
+    },
+    {
+      "code": "tr",
+      "label": "Türkçe",
+      "status": "approved",
+      "translated": 1633,
+      "total": 1633,
+      "sourceMatches": true,
+      "missing": [],
+      "unchangedProse": [],
+      "unsafe": [],
+      "structurallyComplete": true
+    },
+    {
+      "code": "ur",
+      "label": "اردو",
+      "status": "approved",
+      "translated": 1633,
+      "total": 1633,
+      "sourceMatches": true,
+      "missing": [],
+      "unchangedProse": [],
+      "unsafe": [],
+      "structurallyComplete": true
+    },
+    {
+      "code": "th",
+      "label": "ไทย",
+      "status": "approved",
+      "translated": 1633,
+      "total": 1633,
+      "sourceMatches": true,
+      "missing": [],
+      "unchangedProse": [],
+      "unsafe": [],
+      "structurallyComplete": true
+    },
+    {
+      "code": "rw",
+      "label": "Ikinyarwanda",
+      "status": "approved",
+      "translated": 1633,
+      "total": 1633,
+      "sourceMatches": true,
+      "missing": [],
+      "unchangedProse": [],
+      "unsafe": [],
+      "structurallyComplete": true
+    },
+    {
+      "code": "sw",
+      "label": "Kiswahili",
+      "status": "approved",
+      "translated": 1633,
+      "total": 1633,
+      "sourceMatches": true,
+      "missing": [],
+      "unchangedProse": [],
+      "unsafe": [],
+      "structurallyComplete": true
+    }
+  ]
+}

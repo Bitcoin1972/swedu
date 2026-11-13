@@ -7,14 +7,21 @@
  const reduced=matchMedia('(prefers-reduced-motion: reduce)'),mobile=matchMedia('(max-width:900px)');
  let zoneOpen=new URLSearchParams(location.search).get('topic')==='1',view='story',documentURL=null,request=null,requestNumber=0;
  const c=()=>data.versions[state.lang].copy;
- window.SWE_I18N={t:text=>({de:{'Play Intro':'Intro abspielen','Tap to start the video':'Antippen, um das Video zu starten'},hi:{'Play Intro':'परिचय चलाएँ','Tap to start the video':'वीडियो शुरू करने के लिए टैप करें'}}[state.lang]?.[text]||text)};
+ const translated=text=>data.translations?.[state.lang]?.[text]||text;
+ window.SWE_I18N={t:text=>({de:{'Play Intro':'Intro abspielen','Tap to start the video':'Antippen, um das Video zu starten'},hi:{'Play Intro':'परिचय चलाएँ','Tap to start the video':'वीडियो शुरू करने के लिए टैप करें'}}[state.lang]?.[text]||translated(text))};
  const icons=()=>window.lucide?.createIcons();
  function address(){return (state.room==='world'?'/':'/world/'+state.room)+'?'+new URLSearchParams({...state,topic:zoneOpen?'1':'0',skipIntro:'1'});}
  function save(push=true){history[push?'pushState':'replaceState']({...state,view,zoneOpen,documentURL},'',documentURL?withContext(documentURL):address());}
  function withContext(href){const url=new URL(href,location.origin);for(const[k,v]of Object.entries(state))url.searchParams.set(k,v);url.searchParams.set('topic',zoneOpen?'1':'0');url.searchParams.set('skipIntro','1');return url.pathname+url.search+url.hash;}
  let contactReturn=null;
+ let languageRequest=null;
+ function cancelLanguage(){
+  if(!languageRequest)return;
+  languageRequest.abort();languageRequest=null;
+  const selector=document.getElementById('sp-language');selector.disabled=false;selector.removeAttribute('aria-busy');selector.value=state.lang;
+ }
  function closeContact(){app.classList.remove('sp-contact-open');reader.removeAttribute('role');reader.removeAttribute('aria-modal');reader.removeAttribute('aria-label');document.querySelectorAll('[data-contact-inert]').forEach(el=>{el.inert=false;el.removeAttribute('data-contact-inert');});if(contactReturn?.isConnected)contactReturn.focus({preventScroll:true});contactReturn=null;}
- function cancelDocument(){closeContact();window.SWE_PARTNERS?.close();request?.abort();request=null;requestNumber++;documentURL=null;app.classList.remove('sp-document-open');}
+ function cancelDocument(){cancelLanguage();closeContact();window.SWE_PARTNERS?.close();request?.abort();request=null;requestNumber++;documentURL=null;app.classList.remove('sp-document-open');}
  function drawer(which){document.querySelectorAll('.sp-panel').forEach(p=>p.classList.toggle('sp-open',p.id==='sp-'+which));document.querySelectorAll('[data-sp-drawer]').forEach(b=>b.setAttribute('aria-expanded',String(b.dataset.spDrawer===which)));if(which)document.querySelector('#sp-'+which+' .sp-close')?.focus({preventScroll:true});}
  function scene(){
   const sceneId=state.stage===9?'programmes':state.stage===3&&state.room==='school'?'youth':state.room;
@@ -73,13 +80,15 @@
   if(reset)reader.scrollTop=0;
  }
  function labels(){
-  const u=c(),v=data.versions[state.lang];document.documentElement.lang=state.lang;
+  const u=c(),v=data.versions[state.lang];document.documentElement.lang=state.lang;document.documentElement.dir=data.languages?.find(l=>l.code===state.lang)?.dir||'ltr';
+  document.querySelector('.sp-brand small').textContent=translated('CONSULTING & DEVELOPMENT');
   document.querySelector('.skip-content').textContent=state.stage===0?u.vision:state.stage===9?u.programmes:v.panelCopy.realityLabel;
   document.querySelector('.sp-scene').setAttribute('aria-label',u.world);
   document.querySelector('.sp-title h1').textContent=u.title;document.querySelector('.sp-title p').textContent=u.subtitle;document.querySelector('.sp-title small').textContent=u.draft;
   document.querySelector('#sp-language').value=state.lang;
   document.querySelectorAll('[data-sp-stage]').forEach(a=>{const i=Number(a.dataset.spStage);a.querySelector('span').textContent=v.labels[i];a.setAttribute('aria-label',v.labels[i]);a.setAttribute('aria-current',String(i===state.stage));const s={...state,stage:i,room:data.roomsByStage[i]};a.href=(s.room==='world'?'/':'/world/'+s.room)+'?'+new URLSearchParams(s);});
   document.querySelectorAll('[data-sp-home]').forEach(a=>{if(!a.classList.contains('sp-brand'))a.textContent=u.vision;});
+  const visionLink=document.querySelector('[data-vr-link]');if(visionLink){visionLink.href=(data.visionPath||'/vision-preview')+'?lang='+state.lang;visionLink.textContent=u.vision;}
   document.querySelector('[data-sp-model]').textContent=u.model;
   const nav=document.querySelector('.sp-header nav');nav.querySelector('[href="/programmes"]').textContent=u.all;nav.querySelector('[href="/network"]').textContent=u.ecosystem;nav.querySelector('[href="/about"]').textContent=u.about;
   document.querySelector('.sp-partner').textContent=u.partners;document.querySelector('.sp-language span').textContent=u.language;
@@ -90,17 +99,18 @@
   for(const [attr,label]of [['prev',u.previous],['next',u.next],['restart',u.restart]])document.querySelectorAll('[data-sp-'+attr+']').forEach(b=>{b.title=label;b.setAttribute('aria-label',label);});
   document.getElementById('sp-count').textContent=`${String(state.stage+1).padStart(2,'0')} / ${String(stageCount).padStart(2,'0')}`;
   document.getElementById('sp-status').textContent=v.labels[state.stage];
-  document.querySelector('.sp-utilities a').textContent=u.contact;document.querySelector('.sp-utilities a[href="/privacy"]').textContent={en:'Privacy',de:'Datenschutz',hi:'गोपनीयता'}[state.lang];
+  document.querySelector('.sp-utilities a').textContent=u.contact;document.querySelector('.sp-utilities a[href="/privacy"]').textContent={en:'Privacy',de:'Datenschutz',hi:'गोपनीयता'}[state.lang]||translated('Privacy');
   let replay=document.querySelector('[data-sp-replay]');
   if(!replay){replay=document.createElement('a');replay.dataset.spReplay='';document.querySelector('.sp-utilities').append(replay);}
-  replay.href='/?intro=1&lang='+state.lang;replay.textContent={en:'Replay intro',de:'Intro erneut abspielen',hi:'परिचय फिर चलाएँ'}[state.lang];
+  replay.href='/?intro=1&lang='+state.lang;replay.textContent={en:'Replay intro',de:'Intro erneut abspielen',hi:'परिचय फिर चलाएँ'}[state.lang]||translated('Replay intro');
  }
  function render(reset=true){scene();const offers=document.getElementById('sp-offers-body');offers.innerHTML=data.versions[state.lang].ecosystems[state.stage];
   if(reset)document.getElementById('sp-offers').scrollTop=offers.scrollTop=0;
   renderPanel(reset);labels();icons();}
  function stop(){labels();icons();}
  function select(stage,push=true){cancelDocument();state.stage=Math.max(0,Math.min(stageCount-1,stage));state.room=data.roomsByStage[state.stage];state.focus=['society','society','academy','academy','academy','economy','economy','institutions','capability','capability'][state.stage];state.zone=0;zoneOpen=false;view='story';render();save(push);document.getElementById('sp-status').textContent=data.versions[state.lang].labels[state.stage];}
- async function documentView(href,push=true,position=0){
+ async function documentView(href,push=true,position=0,languageRebuild=false){
+  if(!languageRebuild)cancelLanguage();
   const contact=new URL(href,location.origin).hash==='#contact';
   const contactValues=app.classList.contains('sp-contact-open')&&reader.querySelector('form')?Object.fromEntries(new FormData(reader.querySelector('form'))):null;
   if(!contact)closeContact();
@@ -121,9 +131,9 @@
    reader.querySelector('.sp-loaded').append(...main.childNodes);reader.scrollTop=position*Math.max(0,reader.scrollHeight-reader.clientHeight);icons();
    if(contact){
     if(!contactReturn)contactReturn=document.activeElement;
-    app.classList.add('sp-contact-open');reader.setAttribute('role','dialog');reader.setAttribute('aria-modal','true');reader.setAttribute('aria-label',{de:'Kontakt aufnehmen',en:'Contact Smart World Education',hi:'Smart World Education से संपर्क करें'}[state.lang]);
+    app.classList.add('sp-contact-open');reader.setAttribute('role','dialog');reader.setAttribute('aria-modal','true');reader.setAttribute('aria-label',{de:'Kontakt aufnehmen',en:'Contact Smart World Education',hi:'Smart World Education से संपर्क करें'}[state.lang]||translated('Contact Smart World Education'));
     for(const selector of ['.sp-header','.sp-left','.sp-scene','.sp-bottom','.sp-title']){const el=document.querySelector(selector);if(el&&!el.contains(reader)&&!el.inert){el.inert=true;el.setAttribute('data-contact-inert','');}}
-    if(contactValues)for(const [key,value]of Object.entries(contactValues)){const field=reader.querySelector('form')?.elements.namedItem(key);if(field)field.value=value;}
+    if(contactValues)for(const [key,value]of Object.entries(contactValues)){if(languageRebuild&&key==='lang')continue;const field=reader.querySelector('form')?.elements.namedItem(key);if(field)field.value=value;}
     reader.querySelector('[data-sp-story]').focus({preventScroll:true});
    }
   }catch(e){if(e.name==='AbortError'||n!==requestNumber)return;reader.innerHTML=`<p>${c().error}</p><a data-sp-original>${c().original}</a>`;reader.querySelector('a').href=href;}
@@ -135,6 +145,7 @@
  });
  document.addEventListener('click',e=>{
   const el=e.target.closest('a,button');if(!el||el.closest('#introOverlay'))return;
+  if(el.matches('[data-sp-pathway],[data-sp-zone],[data-sp-chapter],[data-sp-assessment],[data-sp-knowledge]'))cancelLanguage();
   if(el.matches('[data-mission-replay]')){e.preventDefault();const film=reader.querySelector('#sp-mission-video');if(film){film.scrollIntoView({block:'center'});film.focus({preventScroll:true});film.play().catch(()=>{});}return;}
   if(el.matches('[data-sp-pathway]')){e.preventDefault();pathway=Number(el.dataset.spPathway);pathwayPanel();icons();if(mobile.matches)drawer('information');reader.querySelector('[data-sp-pathway-choice]')?.scrollIntoView({block:'start'});return;}
   if(el.matches('[data-sp-return-stage]')){select(Number(el.dataset.spReturnStage));return;}
@@ -159,7 +170,43 @@
    if(el.hasAttribute('data-sp-document')||el.closest('.sp-reader')){e.preventDefault();documentView(target.pathname+target.search+target.hash);}
   }
  });
- document.getElementById('sp-language').addEventListener('change',e=>{const position=reader.scrollTop/Math.max(1,reader.scrollHeight-reader.clientHeight),left=document.getElementById('sp-offers'),leftPosition=left.scrollTop/Math.max(1,left.scrollHeight-left.clientHeight);state.lang=e.target.value;render();left.scrollTop=leftPosition*Math.max(0,left.scrollHeight-left.clientHeight);if(view==='document')documentView(documentURL,false,position);else reader.scrollTop=position*Math.max(0,reader.scrollHeight-reader.clientHeight);save();});
+ function readingAnchor(element){
+  const top=element.getBoundingClientRect().top;
+  const anchor=[...element.querySelectorAll('[data-reading-anchor],[data-swe-i18n]')].find(node=>node.getBoundingClientRect().height>0&&node.getBoundingClientRect().bottom>top+20);
+  if(!anchor)return null;
+  return {selector:anchor.id?'#'+CSS.escape(anchor.id):'[data-swe-i18n="'+CSS.escape(anchor.dataset.sweI18n)+'"]',offset:(top-anchor.getBoundingClientRect().top)/Math.max(1,anchor.offsetHeight)};
+ }
+ document.getElementById('sp-language').addEventListener('change',async e=>{
+  const selector=e.target,language=selector.value,prior=state.lang;
+  cancelLanguage();const pending=new AbortController();languageRequest=pending;
+  const formValues=app.classList.contains('sp-contact-open')&&reader.querySelector('form')?Object.fromEntries(new FormData(reader.querySelector('form'))):null;
+  const anchor=readingAnchor(reader);
+  const position=reader.scrollTop/Math.max(1,reader.scrollHeight-reader.clientHeight),left=document.getElementById(mobile.matches?'sp-offers-body':'sp-offers'),leftPosition=left.scrollTop/Math.max(1,left.scrollHeight-left.clientHeight);
+  selector.disabled=true;selector.setAttribute('aria-busy','true');
+  try {
+   if(!data.versions[language]) {
+    const url=new URL(address(),location.origin);url.searchParams.set('lang',language);
+    const response=await fetch(url,{signal:pending.signal});if(!response.ok)throw Error('Locale unavailable');
+    const page=new DOMParser().parseFromString(await response.text(),'text/html');
+    if(languageRequest!==pending)return;
+    const incoming=JSON.parse(page.querySelector('#sp-data')?.textContent||'null');
+    if(!incoming?.versions[language])throw Error('Locale incomplete');
+    data.versions[language]=incoming.versions[language];
+    data.translations={...data.translations,...incoming.translations};
+    if(data.partners&&incoming.partners){Object.assign(data.partners.copy,incoming.partners.copy);
+    for(const record of data.partners.records){const next=incoming.partners.records.find(r=>r.id===record.id);if(!next)continue;Object.assign(record.description,next.description);for(const key of ['type','relationship','benefit'])Object.assign(record.editorial[key],next.editorial[key]);}}
+   }
+   state.lang=language;render();left.scrollTop=leftPosition*Math.max(0,left.scrollHeight-left.clientHeight);
+   if(view==='document')await documentView(documentURL,false,position,true);
+   else reader.scrollTop=position*Math.max(0,reader.scrollHeight-reader.clientHeight);
+   if(languageRequest!==pending)return;
+   const target=anchor&&reader.querySelector(anchor.selector);
+   if(target)reader.scrollTop+=target.getBoundingClientRect().top-reader.getBoundingClientRect().top+anchor.offset*target.offsetHeight;
+   if(formValues)for(const [key,value]of Object.entries(formValues)){if(key==='lang')continue;const field=reader.querySelector('form')?.elements.namedItem(key);if(field)field.value=value;}
+   save();
+  } catch {if(languageRequest===pending){state.lang=prior;selector.value=prior;document.getElementById('sp-status').textContent=c().missing;}}
+  finally {if(languageRequest===pending){languageRequest=null;selector.disabled=false;selector.removeAttribute('aria-busy');if(document.activeElement===document.body)selector.focus({preventScroll:true});}}
+ });
  document.addEventListener('change',e=>{if(e.target.matches('[data-sp-pathway-choice]')){pathway=Number(e.target.value);pathwayPanel();icons();}if(e.target.matches('[data-sp-case-view]'))knowledge.querySelector('[data-sp-case-text]').textContent=data.versions[state.lang].assessment.views[Number(e.target.value)];if(e.target.matches('[data-sp-assumption]')){const i=Number(e.target.dataset.spAssumption),bits=state.scenario.split('');bits[i]=e.target.checked?'1':'0';state.scenario=bits.join('');knowledge.querySelector('[data-sp-effect]').textContent=data.versions[state.lang].knowledge.issues[i].effects[e.target.checked?0:1];labels();save(false);}});
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!knowledge.open){stop();drawer(null);}const a=e.target.closest('[data-sp-stage]');if(a&&['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();stop();select(e.key==='Home'?0:e.key==='End'?stageCount-1:(Number(a.dataset.spStage)+(e.key==='ArrowLeft'?-1:1)+stageCount)%stageCount);document.querySelector('.sp-timeline [data-sp-stage="'+state.stage+'"]').focus();}});
  addEventListener('popstate',e=>{stop();cancelDocument();const s=e.state;if(s){for(const key of Object.keys(data.state))state[key]=s[key];view=s.view||'story';zoneOpen=!!s.zoneOpen;documentURL=s.documentURL||null;}else{const q=new URLSearchParams(location.search);Object.assign(state,data.state);for(const key of ['lang','perspective','room','scenario'])if(q.has(key))state[key]=q.get(key);state.stage=Math.max(0,Math.min(stageCount-1,Number(q.get('stage'))||0));state.zone=Number(q.get('zone'))||0;view='story';zoneOpen=q.get('topic')==='1';}
@@ -169,7 +216,7 @@
  document.addEventListener('submit',async e=>{
   if(e.target.id!=='contactForm')return;e.preventDefault();const form=e.target,button=form.querySelector('[type=submit]'),success=form.querySelector('#formSuccess')||reader.querySelector('#formSuccess'),error=form.querySelector('#formError')||reader.querySelector('#formError');
   if(success)success.style.display='none';if(error)error.style.display='none';button.disabled=true;
-  try{const r=await fetch('/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form)))}),j=await r.json();if(!r.ok||!j.success)throw Error(j.error||'Delivery could not be confirmed.');if(success){success.textContent={en:'Your message was accepted by our mail service.',de:'Deine Nachricht wurde von unserem E-Mail-Dienst angenommen.',hi:'हमारी ईमेल सेवा ने आपका संदेश स्वीकार कर लिया है।'}[state.lang];success.style.display='block';}form.reset();}catch{if(error){error.textContent={en:'Delivery could not be confirmed. Please email info@swedu.info.',de:'Die Zustellung konnte nicht bestätigt werden. Bitte schreibe an info@swedu.info.',hi:'संदेश की डिलीवरी की पुष्टि नहीं हुई। कृपया info@swedu.info पर लिखें।'}[state.lang];error.style.display='block';}}finally{button.disabled=false;}
+  try{const r=await fetch('/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form)))}),j=await r.json();if(!r.ok||!j.success)throw Error(j.error||'Delivery could not be confirmed.');if(success){success.textContent={en:'Your message was accepted by our mail service.',de:'Deine Nachricht wurde von unserem E-Mail-Dienst angenommen.',hi:'हमारी ईमेल सेवा ने आपका संदेश स्वीकार कर लिया है।'}[state.lang]||translated('Your message was accepted by our mail service.');success.style.display='block';}form.reset();}catch{if(error){error.textContent={en:'Delivery could not be confirmed. Please email info@swedu.info.',de:'Die Zustellung konnte nicht bestätigt werden. Bitte schreibe an info@swedu.info.',hi:'संदेश की डिलीवरी की पुष्टि नहीं हुई। कृपया info@swedu.info पर लिखें।'}[state.lang]||translated('Delivery could not be confirmed. Please email info@swedu.info.');error.style.display='block';}}finally{button.disabled=false;}
  });
  const initialDocument=data.initialDocument,initialHash=location.hash;
  for(const src of ['/images/academy-room.jpg','/images/world-environments.jpg']){const image=new Image();image.src=src;}

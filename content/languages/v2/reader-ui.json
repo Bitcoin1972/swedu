@@ -1,0 +1,258 @@
+{
+  "status": "approved",
+  "locales": {
+    "fr": {
+      "vision": "Notre vision",
+      "chapters": "Chapitres",
+      "model": "Modèle de capacités",
+      "current": "Chapitre actuel",
+      "journey": "Commencer le parcours",
+      "back": "Retour au parcours",
+      "preview": "Aperçu local",
+      "top": "Des cadres communs et la responsabilité permettent le développement.",
+      "bottom": "L’expérience et les besoins de la société nourrissent en retour l’éducation, les institutions et les objectifs de développement.",
+      "layers": [
+        "Capacité",
+        "Gouvernance",
+        "Institutions",
+        "Académie",
+        "Économie",
+        "Société"
+      ]
+    },
+    "es": {
+      "vision": "Nuestra visión",
+      "chapters": "Capítulos",
+      "model": "Modelo de capacidades",
+      "current": "Capítulo actual",
+      "journey": "Iniciar el recorrido",
+      "back": "Volver al recorrido",
+      "preview": "Vista previa local",
+      "top": "Los marcos compartidos y la responsabilidad hacen posible el desarrollo.",
+      "bottom": "La experiencia y las necesidades de la sociedad retroalimentan la educación, las instituciones y los objetivos de desarrollo.",
+      "layers": [
+        "Capacidad",
+        "Gobernanza",
+        "Instituciones",
+        "Academia",
+        "Economía",
+        "Sociedad"
+      ]
+    },
+    "ar": {
+      "vision": "رؤيتنا",
+      "chapters": "الفصول",
+      "model": "نموذج القدرات",
+      "current": "الفصل الحالي",
+      "journey": "ابدأ الرحلة",
+      "back": "العودة إلى الرحلة",
+      "preview": "معاينة محلية",
+      "top": "تتيح الأطر المشتركة والمسؤولية تحقيق التنمية.",
+      "bottom": "تُسهم خبرات المجتمع واحتياجاته بدورها في توجيه التعليم والمؤسسات وأهداف التنمية.",
+      "layers": [
+        "القدرة",
+        "الحوكمة",
+        "المؤسسات",
+        "الأوساط التعليمية",
+        "الاقتصاد",
+        "المجتمع"
+      ]
+    },
+    "ja": {
+      "vision": "私たちのビジョン",
+      "chapters": "章",
+      "model": "能力開発モデル",
+      "current": "現在の章",
+      "journey": "旅を始める",
+      "back": "旅に戻る",
+      "preview": "ローカルプレビュー",
+      "top": "共通の枠組みと責任が発展を可能にします。",
+      "bottom": "社会の経験とニーズが、教育、組織、発展目標にフィードバックされます。",
+      "layers": [
+        "能力",
+        "ガバナンス",
+        "組織",
+        "教育機関",
+        "経済",
+        "社会"
+      ]
+    },
+    "zh-CN": {
+      "vision": "我们的愿景",
+      "chapters": "章节",
+      "model": "能力模型",
+      "current": "当前章节",
+      "journey": "开始旅程",
+      "back": "返回旅程",
+      "preview": "本地预览",
+      "top": "共同的框架和责任使发展成为可能。",
+      "bottom": "社会的经验和需求反过来为教育、机构和发展目标提供反馈。",
+      "layers": [
+        "能力",
+        "治理",
+        "机构",
+        "教育领域",
+        "经济",
+        "社会"
+      ]
+    },
+    "ru": {
+      "vision": "Наше видение",
+      "chapters": "Главы",
+      "model": "Модель потенциала",
+      "current": "Текущая глава",
+      "journey": "Начать путь",
+      "back": "Вернуться к пути",
+      "preview": "Локальный предпросмотр",
+      "top": "Общие рамки и ответственность делают развитие возможным.",
+      "bottom": "Опыт и потребности общества, в свою очередь, влияют на образование, институты и цели развития.",
+      "layers": [
+        "Потенциал",
+        "Управление",
+        "Институты",
+        "Образование",
+        "Экономика",
+        "Общество"
+      ]
+    },
+    "id": {
+      "vision": "Visi kami",
+      "chapters": "Bab",
+      "model": "Model kapabilitas",
+      "current": "Bab saat ini",
+      "journey": "Mulai perjalanan",
+      "back": "Kembali ke perjalanan",
+      "preview": "Pratinjau lokal",
+      "top": "Kerangka bersama dan tanggung jawab memungkinkan pengembangan.",
+      "bottom": "Pengalaman dan kebutuhan masyarakat memberikan umpan balik bagi pendidikan, institusi, dan tujuan pengembangan.",
+      "layers": [
+        "Kapabilitas",
+        "Tata Kelola",
+        "Institusi",
+        "Akademi",
+        "Ekonomi",
+        "Masyarakat"
+      ]
+    },
+    "el": {
+      "vision": "Το όραμά μας",
+      "chapters": "Κεφάλαια",
+      "model": "Μοντέλο ικανοτήτων",
+      "current": "Τρέχον κεφάλαιο",
+      "journey": "Ξεκινήστε τη διαδρομή",
+      "back": "Επιστροφή στη διαδρομή",
+      "preview": "Τοπική προεπισκόπηση",
+      "top": "Τα κοινά πλαίσια και η ευθύνη καθιστούν δυνατή την ανάπτυξη.",
+      "bottom": "Οι εμπειρίες και οι ανάγκες της κοινωνίας ανατροφοδοτούν την εκπαίδευση, τους θεσμούς και τους αναπτυξιακούς στόχους.",
+      "layers": [
+        "Ικανότητα",
+        "Διακυβέρνηση",
+        "Θεσμοί",
+        "Εκπαίδευση",
+        "Οικονομία",
+        "Κοινωνία"
+      ]
+    },
+    "tr": {
+      "vision": "Vizyonumuz",
+      "chapters": "Bölümler",
+      "model": "Yetkinlik modeli",
+      "current": "Geçerli bölüm",
+      "journey": "Yolculuğa başlayın",
+      "back": "Yolculuğa dönün",
+      "preview": "Yerel önizleme",
+      "top": "Ortak çerçeveler ve sorumluluk gelişimi mümkün kılar.",
+      "bottom": "Toplumsal deneyimler ve ihtiyaçlar eğitime, kurumlara ve gelişim hedeflerine geri bildirim sağlar.",
+      "layers": [
+        "Yetkinlik",
+        "Yönetişim",
+        "Kurumlar",
+        "Akademi",
+        "Ekonomi",
+        "Toplum"
+      ]
+    },
+    "ur": {
+      "vision": "ہمارا وژن",
+      "chapters": "ابواب",
+      "model": "صلاحیت کا ماڈل",
+      "current": "موجودہ باب",
+      "journey": "سفر شروع کریں",
+      "back": "سفر پر واپس جائیں",
+      "preview": "مقامی پیش منظر",
+      "top": "مشترکہ لائحۂ عمل اور ذمہ داری ترقی کو ممکن بناتے ہیں۔",
+      "bottom": "معاشرے کے تجربات اور ضروریات تعلیم، اداروں اور ترقیاتی مقاصد کو دوبارہ سمت دیتے ہیں۔",
+      "layers": [
+        "صلاحیت",
+        "نظم و نسق",
+        "ادارے",
+        "تعلیمی شعبہ",
+        "معیشت",
+        "معاشرہ"
+      ]
+    },
+    "th": {
+      "vision": "วิสัยทัศน์ของเรา",
+      "chapters": "บท",
+      "model": "แบบจำลองขีดความสามารถ",
+      "current": "บทปัจจุบัน",
+      "journey": "เริ่มการเดินทาง",
+      "back": "กลับสู่การเดินทาง",
+      "preview": "ตัวอย่างในเครื่อง",
+      "top": "กรอบร่วมกันและความรับผิดชอบเอื้อให้เกิดการพัฒนา",
+      "bottom": "ประสบการณ์และความต้องการของสังคมส่งข้อมูลย้อนกลับไปสู่การศึกษา สถาบัน และเป้าหมายการพัฒนา",
+      "layers": [
+        "ขีดความสามารถ",
+        "ธรรมาภิบาล",
+        "สถาบัน",
+        "ภาคการศึกษา",
+        "เศรษฐกิจ",
+        "สังคม"
+      ]
+    },
+    "rw": {
+      "vision": "Icyerekezo cyacu",
+      "chapters": "Ibice",
+      "model": "Icyitegererezo cy’ubushobozi",
+      "current": "Igice urimo",
+      "journey": "Tangira urugendo",
+      "back": "Subira ku rugendo",
+      "preview": "Igaragazambere ryo kuri mudasobwa yawe",
+      "top": "Imirongo ngenderwaho ihuriweho no gufata inshingano bituma iterambere rishoboka.",
+      "bottom": "Ibyo sosiyete inyuramo n’ibyo ikeneye bigira uruhare mu kongera kunoza uburezi, inzego n’intego z’iterambere.",
+      "layers": [
+        "Ubushobozi",
+        "Imiyoborere",
+        "Inzego",
+        "Uburezi",
+        "Ubukungu",
+        "Sosiyete"
+      ]
+    },
+    "sw": {
+      "vision": "Dira yetu",
+      "chapters": "Sura",
+      "model": "Mfumo wa uwezo",
+      "current": "Sura ya sasa",
+      "journey": "Anza safari",
+      "back": "Rudi kwenye safari",
+      "preview": "Onyesho la awali la ndani",
+      "top": "Mifumo ya pamoja na uwajibikaji huwezesha maendeleo.",
+      "bottom": "Uzoefu na mahitaji ya jamii hutoa mrejesho kwa elimu, taasisi na malengo ya maendeleo.",
+      "layers": [
+        "Uwezo",
+        "Utawala",
+        "Taasisi",
+        "Elimu",
+        "Uchumi",
+        "Jamii"
+      ]
+    }
+  },
+  "releaseApproval": {
+    "date": "2026-11-13",
+    "by": "Site owner",
+    "instruction": "deploy alles",
+    "independentNativeReview": false
+  }
+}

@@ -1,0 +1,37 @@
+html[dir="rtl"] .sp-reader,
+html[dir="rtl"] .sp-offers,
+html[dir="rtl"] .sp-knowledge,
+html[dir="rtl"] .pn-left,
+html[dir="rtl"] .pn-right,
+html[dir="rtl"] .pn-heading,
+html[dir="rtl"] .sp-loaded { direction: rtl; text-align: start; }
+html[dir="rtl"] .sp-header,
+html[dir="rtl"] .sp-scene,
+html[dir="rtl"] .sp-bottom { direction: ltr; }
+html[dir="rtl"] .sp-app,
+html[dir="rtl"] .sp-main,
+html[dir="rtl"] #sp-count { direction: ltr; }
+html[dir="rtl"] #sp-reader,
+html[dir="rtl"] #sp-offers { direction: rtl; }
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3 { font-family: Tahoma, Arial, sans-serif; line-height: 1.6; }
+html[dir="rtl"] .sp-reader p,
+html[dir="rtl"] .sp-left p { font-size: 16px; line-height: 1.85; }
+html:lang(ja), html:lang(zh-CN), html:lang(th) { line-break: auto; overflow-wrap: anywhere; }
+html:lang(ja) h1, html:lang(ja) h2,
+html:lang(zh-CN) h1, html:lang(zh-CN) h2,
+html:lang(th) h1, html:lang(th) h2 { font-family: system-ui, sans-serif; line-height: 1.5; }
+#sp-language[aria-busy="true"] { opacity: .65; }
+.sp-language { flex: 0 0 142px; }
+.sp-language select { width: 100%; max-width: 100%; }
+.sp-brand { min-width: 0; flex-shrink: 1; }
+.sp-main { grid-template-rows: minmax(92px, auto) minmax(0, 1fr); }
+html[dir="rtl"] input[type="email"],
+html[dir="rtl"] input[type="url"],
+html[dir="rtl"] input[type="tel"] { direction: ltr; text-align: left; }
+@media (max-width: 480px) {
+ .sp-language { flex-basis: 125px; }
+ .sp-brand span { font-size: 12px; }
+ .sp-brand small { font-size: 8px; }
+}
