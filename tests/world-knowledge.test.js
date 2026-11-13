@@ -17,7 +17,8 @@ test('knowledge windows contain complete narratives and authoritative navigation
 });
 test('explanations precede optional assumptions and preserve intro URL until interaction',()=>{
  const js=fs.readFileSync(require.resolve('../public/js/spatial-shell.js'),'utf8');
- assert.ok(js.indexOf('${issue.meaning}')<js.indexOf('${k.explore}'));
+ assert.ok(js.indexOf('${issue.explanation}')>=0);
+ assert.ok(js.indexOf('${issue.explanation}')<js.indexOf('${k.explore}'));
  assert.ok(js.includes('knowledge.showModal()'));
  assert.ok(js.includes("knowledge.addEventListener('close'"));
  assert.ok(js.includes("render();history.replaceState({...state,view,zoneOpen,documentURL},'',location.href)"));

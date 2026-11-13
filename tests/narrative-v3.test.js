@@ -12,14 +12,15 @@ test('three complete narratives connect all nine existing stations without chang
   const $=cheerio.load(versions.intro);
   assert.equal($('.sp-founders img').length,2);assert.equal($('.sp-full-vision .sp-approved').length,1);
   assert.equal($('.sp-full-vision').next().is('[data-sp-start]'),true);
-  for(const field of ['identity','purpose','audiences','example'])assert.ok($.text().includes(n[field]));
+  for(const field of ['identity','purpose','audiences'])assert.ok($.text().includes(n[field]));
   for(let i=1;i<9;i++){
-   const s=cheerio.load(versions.stories[i]);assert.equal(s('.sp-connected-story>section').length,6);
-   for(const paragraph of n.stages[i])assert.ok(s.text().includes(paragraph));
+   const s=cheerio.load(versions.stories[i]);assert.equal(s('.sp-real-world').length,1);
+   const left=cheerio.load(versions.ecosystems[i]);
+   for(const paragraph of require('../content/journey-panels')[lang].story[i])assert.ok(left.text().includes(paragraph));
    assert.equal(s('.sp-programme').length,0);
   }
-  assert.ok(versions.stories[8].includes('data-sp-model'));
-  assert.ok(versions.stories[8].includes('/#contact'));
+  assert.ok(versions.ecosystems[8].includes('data-sp-next'));
+  assert.ok(versions.stories[9].includes('/#contact'));
  }
 });
 test('English film is rendered for local review; multilingual subtitle timelines remain drafts',()=>{

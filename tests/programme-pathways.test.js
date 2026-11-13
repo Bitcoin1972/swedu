@@ -30,7 +30,7 @@ test('station ten appends eight programme pathways without replacing the nine-st
 });
 test('dependency windows use a topic-specific station context, not a repeated story preamble',()=>{
  const js=fs.readFileSync(require.resolve('../public/js/spatial-shell.js'),'utf8');
- assert.ok(js.includes('contexts[index]'));
+ assert.ok(js.includes('${issue.explanation}'));
  assert.ok(!js.includes("insertAdjacentHTML('afterbegin'"));
  assert.ok(js.includes('stageCount=data.stages.length'));
 });

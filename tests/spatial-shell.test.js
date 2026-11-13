@@ -29,7 +29,7 @@ test('all room routes use one shell and localized knowledge zones with real cata
 test('spatial state is allowlisted and programme status stays authoritative',()=>{
  const c=shell.context({room:'../../private',lang:'ru',stage:'99',zone:'oops',perspective:'admin'});
  assert.equal(c.room,'world');assert.equal(c.lang,'en');assert.equal(c.stage,0);assert.equal(c.zone,0);assert.equal(c.perspective,'citizen');
- const $=cheerio.load(shell.page({lang:'de'}));
+ const $=cheerio.load(shell.page({lang:'de',stage:9}));
  assert.ok($('.sp-left').text().includes('Bestehendes Angebot'));
  assert.ok($('.sp-left').text().includes('Programmentwurf'));
  assert.equal($('.sp-left').text().includes('existing'),false);
