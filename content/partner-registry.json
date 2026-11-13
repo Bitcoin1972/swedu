@@ -1,0 +1,776 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-11-13",
+  "status": "internal-review-not-connected-to-public-routes",
+  "translationStatus": "draft-awaiting-editorial-review",
+  "records": [
+    {
+      "id": "africa-web3-institute",
+      "officialName": "Africa Web3 Institute",
+      "website": "https://www.africaweb3institute.org/",
+      "identityStatus": "verified",
+      "description": {
+        "en": "A pan-African institute working on Web3 research, policy, education and ecosystem development.",
+        "de": "Ein panafrikanisches Institut für Web3-Forschung, Politik, Bildung und Ökosystementwicklung.",
+        "hi": "Web3 अनुसंधान, नीति, शिक्षा और पारितंत्र विकास पर काम करने वाला एक पैन-अफ्रीकी संस्थान।"
+      },
+      "relationship": {
+        "type": "cooperation-agreement-user-confirmed",
+        "summary": {
+          "en": "Joerg Molt contributes to the Africa Web3 Institute’s Advisory Board. AWI publicly names Smart World Education in its partner and affiliate network. This connects SWE’s blockchain education and systems perspective with African policy dialogue and locally grounded capability development.",
+          "de": "Joerg Molt bringt seine Expertise in das Advisory Board des Africa Web3 Institute ein. AWI nennt Smart World Education öffentlich in seinem Partner- und Affiliate-Netzwerk. Diese Verbindung führt SWE-Kompetenz in Blockchain-Bildung und Systemdenken mit afrikanischem Politikdialog und lokal verankerter Kompetenzentwicklung zusammen.",
+          "hi": "Joerg Molt Africa Web3 Institute के Advisory Board में अपनी विशेषज्ञता का योगदान देते हैं। AWI अपने भागीदार और संबद्ध नेटवर्क में Smart World Education को सार्वजनिक रूप से सूचीबद्ध करता है। यह संबंध SWE की ब्लॉकचेन शिक्षा और प्रणालीगत दृष्टि को अफ्रीकी नीतिगत संवाद तथा स्थानीय क्षमता विकास से जोड़ता है।"
+        },
+        "formalAgreementVerified": false,
+        "previousResearch": {
+          "type": "public-network-listing",
+          "summary": {
+            "en": "The official website lists Smart World Education among its partners and affiliates. This listing does not establish a signed cooperation agreement.",
+            "de": "Die offizielle Website nennt Smart World Education unter ihren Partnern und Affiliates. Daraus ergibt sich kein Nachweis einer unterzeichneten Kooperationsvereinbarung.",
+            "hi": "आधिकारिक वेबसाइट Smart World Education को अपने भागीदारों और संबद्ध संगठनों में सूचीबद्ध करती है। यह सूची हस्ताक्षरित सहयोग समझौते का प्रमाण नहीं है।"
+          }
+        },
+        "evidenceStatus": "public-sources-and-user-context"
+      },
+      "logo": {
+        "sourceUrl": "https://www.africaweb3institute.org/logos/awi-logo.png",
+        "assetPath": "public/images/partners/partner-africa-web3-institute.png",
+        "permissionStatus": "user-authorised",
+        "alt": "Africa Web3 Institute logo"
+      },
+      "capabilities": [
+        "Web3",
+        "Education",
+        "Governance"
+      ],
+      "representative": null,
+      "publicationApproved": true,
+      "sources": [
+        "https://www.africaweb3institute.org/",
+        "https://www.linkedin.com/posts/africa-web3-institute_africaweb3institute-advisoryboard-blockchainafrica-activity-7476554651660775424-fC89"
+      ],
+      "editorial": {
+        "type": {
+          "en": "Knowledge & advisory",
+          "de": "Wissen & Advisory",
+          "hi": "ज्ञान और परामर्श"
+        },
+        "relationship": {
+          "en": "Joerg Molt contributes to the Africa Web3 Institute’s Advisory Board. AWI publicly names Smart World Education in its partner and affiliate network. This connects SWE’s blockchain education and systems perspective with African policy dialogue and locally grounded capability development.",
+          "de": "Joerg Molt bringt seine Expertise in das Advisory Board des Africa Web3 Institute ein. AWI nennt Smart World Education öffentlich in seinem Partner- und Affiliate-Netzwerk. Diese Verbindung führt SWE-Kompetenz in Blockchain-Bildung und Systemdenken mit afrikanischem Politikdialog und lokal verankerter Kompetenzentwicklung zusammen.",
+          "hi": "Joerg Molt Africa Web3 Institute के Advisory Board में अपनी विशेषज्ञता का योगदान देते हैं। AWI अपने भागीदार और संबद्ध नेटवर्क में Smart World Education को सार्वजनिक रूप से सूचीबद्ध करता है। यह संबंध SWE की ब्लॉकचेन शिक्षा और प्रणालीगत दृष्टि को अफ्रीकी नीतिगत संवाद तथा स्थानीय क्षमता विकास से जोड़ता है।"
+        },
+        "benefit": {
+          "en": "SWE gains perspectives on regional needs and institutional conditions; AWI gains educational and technical advisory experience. This exchange helps shape learning that is useful beyond a single technology product.",
+          "de": "SWE gewinnt Einblicke in regionale Bedürfnisse und institutionelle Rahmenbedingungen; AWI erhält Bildungs- und technologische Beratungserfahrung. Dieser Austausch hilft, Lernen über ein einzelnes Technologieprodukt hinaus nutzbar zu machen.",
+          "hi": "SWE को क्षेत्रीय आवश्यकताओं और संस्थागत परिस्थितियों की समझ मिलती है; AWI को शिक्षा और तकनीकी परामर्श का अनुभव मिलता है। यह आदान-प्रदान सीखने को किसी एक प्रौद्योगिकी उत्पाद से आगे उपयोगी बनाने में मदद करता है।"
+        },
+        "references": [
+          [
+            "AWI Advisory Board",
+            "https://www.linkedin.com/posts/africa-web3-institute_africaweb3institute-advisoryboard-blockchainafrica-activity-7476554651660775424-fC89"
+          ],
+          [
+            "AWI",
+            "https://www.africaweb3institute.org/"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "galter",
+      "officialName": "Global Academy of Law-Tech Education & Research",
+      "website": "https://galterprofmkb.org/",
+      "identityStatus": "verified",
+      "description": {
+        "en": "GALTER connects legal education and research with emerging technologies and their ethical and regulatory implications.",
+        "de": "GALTER verbindet juristische Bildung und Forschung mit neuen Technologien sowie deren ethischen und regulatorischen Auswirkungen.",
+        "hi": "GALTER विधि शिक्षा और अनुसंधान को उभरती प्रौद्योगिकियों तथा उनके नैतिक और नियामक प्रभावों से जोड़ता है।"
+      },
+      "relationship": {
+        "type": "cooperation-agreement-user-confirmed",
+        "summary": {
+          "en": "The knowledge relationship with GALTER connects SWE’s AI, blockchain and systems expertise with legal scholarship and academic dialogue. Research, education and advisory meet where technological possibilities raise questions about rights, responsibility and institutional practice.",
+          "de": "Die Knowledge-Partnerschaft mit GALTER verbindet SWE-Expertise in KI, Blockchain und Systemen mit Rechtswissenschaft und akademischem Austausch. Forschung, Bildung und Advisory treffen dort zusammen, wo technologische Möglichkeiten Fragen nach Rechten, Verantwortung und institutioneller Praxis aufwerfen.",
+          "hi": "GALTER के साथ ज्ञान साझेदारी SWE की एआई, ब्लॉकचेन और प्रणाली विशेषज्ञता को विधि अनुसंधान और अकादमिक संवाद से जोड़ती है। अनुसंधान, शिक्षा और परामर्श वहाँ मिलते हैं जहाँ तकनीकी संभावनाएँ अधिकारों, जिम्मेदारी और संस्थागत व्यवहार के प्रश्न उठाती हैं।"
+        },
+        "formalAgreementVerified": false,
+        "previousResearch": {
+          "type": "academic-engagement-reported",
+          "summary": {
+            "en": "SWE reports academic engagement through ATLEG and Prof. M. K. Bhandari. A current institutional SWE agreement has not been verified.",
+            "de": "SWE berichtet über akademischen Austausch im Zusammenhang mit ATLEG und Prof. M. K. Bhandari. Eine aktuelle institutionelle SWE-Vereinbarung ist nicht belegt.",
+            "hi": "SWE ने ATLEG और प्रो. एम. के. भंडारी के माध्यम से अकादमिक सहभागिता की जानकारी दी है। वर्तमान संस्थागत SWE समझौते की पुष्टि नहीं हुई है।"
+          }
+        },
+        "evidenceStatus": "public-sources-and-user-context"
+      },
+      "logo": {
+        "sourceUrl": "https://galterprofmkb.org/img/galterprofmkb-logo.png",
+        "assetPath": "public/images/partners/partner-galter.png",
+        "permissionStatus": "user-authorised",
+        "alt": "Global Academy of Law-Tech Education & Research logo"
+      },
+      "capabilities": [
+        "Law",
+        "AI Governance",
+        "Education"
+      ],
+      "representative": null,
+      "publicationApproved": true,
+      "sources": [
+        "https://galterprofmkb.org/",
+        "https://galterprofmkb.org/about",
+        "https://galterprofmkb.org/collaboration"
+      ],
+      "editorial": {
+        "type": {
+          "en": "Law, technology & knowledge partnership",
+          "de": "Recht, Technologie & Knowledge-Partnerschaft",
+          "hi": "विधि, प्रौद्योगिकी और ज्ञान साझेदारी"
+        },
+        "relationship": {
+          "en": "The knowledge relationship with GALTER connects SWE’s AI, blockchain and systems expertise with legal scholarship and academic dialogue. Research, education and advisory meet where technological possibilities raise questions about rights, responsibility and institutional practice.",
+          "de": "Die Knowledge-Partnerschaft mit GALTER verbindet SWE-Expertise in KI, Blockchain und Systemen mit Rechtswissenschaft und akademischem Austausch. Forschung, Bildung und Advisory treffen dort zusammen, wo technologische Möglichkeiten Fragen nach Rechten, Verantwortung und institutioneller Praxis aufwerfen.",
+          "hi": "GALTER के साथ ज्ञान साझेदारी SWE की एआई, ब्लॉकचेन और प्रणाली विशेषज्ञता को विधि अनुसंधान और अकादमिक संवाद से जोड़ती है। अनुसंधान, शिक्षा और परामर्श वहाँ मिलते हैं जहाँ तकनीकी संभावनाएँ अधिकारों, जिम्मेदारी और संस्थागत व्यवहार के प्रश्न उठाती हैं।"
+        },
+        "benefit": {
+          "en": "SWE contributes practical technology understanding; GALTER contributes legal and academic perspectives. The reciprocal value is stronger interdisciplinary judgement for AI education and the research of National Capability, rather than technology training detached from its social context.",
+          "de": "SWE bringt praktisches Technologieverständnis ein, GALTER juristische und akademische Perspektiven. Der gegenseitige Nutzen liegt in stärkerer interdisziplinärer Urteilskraft für KI-Bildung und die Erforschung von National Capability, statt Technikschulung losgelöst vom gesellschaftlichen Kontext.",
+          "hi": "SWE व्यावहारिक तकनीकी समझ और GALTER विधिक तथा अकादमिक दृष्टिकोण का योगदान देता है। पारस्परिक लाभ एआई शिक्षा और National Capability के अनुसंधान में मजबूत अंतर्विषयी विवेक है, न कि सामाजिक संदर्भ से अलग तकनीकी प्रशिक्षण।"
+        },
+        "references": [
+          [
+            "GALTER",
+            "https://galterprofmkb.org/about"
+          ],
+          [
+            "Academic network",
+            "https://galterprofmkb.org/collaboration"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "est-fab",
+      "officialName": "FAB Association (EST-FAB)",
+      "website": "https://www.estfab.com/",
+      "identityStatus": "verified",
+      "description": {
+        "en": "The Fintech & Blockchain Association connects financial technology, blockchain, education and professional networks.",
+        "de": "Die Fintech & Blockchain Association verbindet Finanztechnologie, Blockchain, Bildung und berufliche Netzwerke.",
+        "hi": "Fintech & Blockchain Association वित्तीय प्रौद्योगिकी, ब्लॉकचेन, शिक्षा और पेशेवर नेटवर्क को जोड़ती है।"
+      },
+      "relationship": {
+        "type": "cooperation-agreement-user-confirmed",
+        "summary": {
+          "en": "EST-FAB lists Joerg Molt as a Board Member. The connection brings SWE’s educational and systems expertise into a network spanning finance, blockchain, academic knowledge and business practice.",
+          "de": "EST-FAB führt Joerg Molt als Board Member. Die Verbindung bringt die Bildungs- und Systemkompetenz von SWE in ein Netzwerk aus Finanzwirtschaft, Blockchain, akademischem Wissen und Unternehmenspraxis ein.",
+          "hi": "EST-FAB Joerg Molt को Board Member के रूप में सूचीबद्ध करता है। यह संबंध SWE की शिक्षा और प्रणाली विशेषज्ञता को वित्त, ब्लॉकचेन, अकादमिक ज्ञान और व्यावसायिक व्यवहार के नेटवर्क से जोड़ता है।"
+        },
+        "formalAgreementVerified": false,
+        "previousResearch": {
+          "type": "personal-professional-affiliation",
+          "summary": {
+            "en": "The official website names Joerg Molt as a Board Member. This is a personal professional affiliation, not evidence of a signed SWE institutional partnership.",
+            "de": "Die offizielle Website führt Joerg Molt als Board Member. Dies ist eine persönliche berufliche Zugehörigkeit und kein Nachweis einer unterzeichneten institutionellen SWE-Partnerschaft.",
+            "hi": "आधिकारिक वेबसाइट Joerg Molt को Board Member के रूप में सूचीबद्ध करती है। यह व्यक्तिगत पेशेवर संबद्धता है, हस्ताक्षरित संस्थागत SWE साझेदारी का प्रमाण नहीं।"
+          }
+        },
+        "evidenceStatus": "public-sources-and-user-context"
+      },
+      "logo": {
+        "sourceUrl": "https://www.estfab.com/images/latestlogo.png",
+        "assetPath": "public/images/partners/partner-est-fab.png",
+        "permissionStatus": "user-authorised",
+        "alt": "FAB Association (EST-FAB) logo"
+      },
+      "capabilities": [
+        "Fintech",
+        "Blockchain",
+        "Education"
+      ],
+      "representative": null,
+      "publicationApproved": true,
+      "sources": [
+        "https://www.estfab.com/"
+      ],
+      "editorial": {
+        "type": {
+          "en": "Academic & professional network",
+          "de": "Akademisches & berufliches Netzwerk",
+          "hi": "अकादमिक और पेशेवर नेटवर्क"
+        },
+        "relationship": {
+          "en": "EST-FAB lists Joerg Molt as a Board Member. The connection brings SWE’s educational and systems expertise into a network spanning finance, blockchain, academic knowledge and business practice.",
+          "de": "EST-FAB führt Joerg Molt als Board Member. Die Verbindung bringt die Bildungs- und Systemkompetenz von SWE in ein Netzwerk aus Finanzwirtschaft, Blockchain, akademischem Wissen und Unternehmenspraxis ein.",
+          "hi": "EST-FAB Joerg Molt को Board Member के रूप में सूचीबद्ध करता है। यह संबंध SWE की शिक्षा और प्रणाली विशेषज्ञता को वित्त, ब्लॉकचेन, अकादमिक ज्ञान और व्यावसायिक व्यवहार के नेटवर्क से जोड़ता है।"
+        },
+        "benefit": {
+          "en": "Professional exchange makes economic needs visible to educators and makes technology understandable to decision-makers. SWE contributes interpretation and learning design; the network provides complementary experience against which programme ideas can be examined.",
+          "de": "Der fachliche Austausch macht wirtschaftliche Bedürfnisse für Bildungsakteure und Technologie für Entscheidungsträger verständlich. SWE trägt Einordnung und Lernkonzeption bei; das Netzwerk eröffnet ergänzende Erfahrungen, an denen sich Programmideen prüfen lassen.",
+          "hi": "पेशेवर संवाद शिक्षकों को आर्थिक आवश्यकताएँ और निर्णयकर्ताओं को प्रौद्योगिकी समझने में मदद करता है। SWE संदर्भ और शिक्षण-रचना का योगदान देता है; नेटवर्क कार्यक्रम विचारों को जाँचने के लिए पूरक अनुभव प्रदान करता है।"
+        },
+        "references": [
+          [
+            "EST-FAB Board",
+            "https://www.estfab.com/"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "aigc",
+      "officialName": "AI Governance Corridor",
+      "website": "https://aigovernancecorridor.org/",
+      "identityStatus": "user-confirmed",
+      "description": {
+        "en": "The identified candidate is AI Governance Corridor, an initiative connecting governance research, policy and capability development. Confirm that this is the intended AIGC.",
+        "de": "Als möglicher Treffer wurde AI Governance Corridor identifiziert, eine Initiative für Governance-Forschung, Politik und Kompetenzentwicklung. Die Zuordnung zu AIGC muss bestätigt werden.",
+        "hi": "पहचाना गया संभावित संगठन AI Governance Corridor है, जो शासन अनुसंधान, नीति और क्षमता विकास को जोड़ता है। पुष्टि आवश्यक है कि अपेक्षित AIGC यही है।"
+      },
+      "relationship": {
+        "type": "cooperation-agreement-user-confirmed",
+        "summary": {
+          "en": "AI Governance Corridor presents Joerg Molt within its Council environment. SWE’s contribution connects system architecture and human agency with the governance of AI: who makes decisions, who can question them and what an institution must understand to remain accountable.",
+          "de": "AI Governance Corridor stellt Joerg Molt im Umfeld seines Councils vor. Der SWE-Beitrag verbindet Systemarchitektur und menschliche Handlungsfähigkeit mit KI-Governance: Wer entscheidet, wer kann Entscheidungen hinterfragen und was muss eine Institution verstehen, um verantwortlich handeln zu können?",
+          "hi": "AI Governance Corridor अपने Council के संदर्भ में Joerg Molt को प्रस्तुत करता है। SWE का योगदान प्रणाली वास्तुकला और मानवीय निर्णय-क्षमता को एआई शासन से जोड़ता है: निर्णय कौन करता है, उन पर प्रश्न कौन उठा सकता है और जवाबदेह रहने के लिए संस्थान को क्या समझना चाहिए?"
+        },
+        "formalAgreementVerified": false,
+        "previousResearch": {
+          "type": "unverified",
+          "summary": {
+            "en": "The exact entity and SWE relationship require confirmation; no institutional partnership is asserted.",
+            "de": "Die genaue Organisation und die SWE-Beziehung müssen bestätigt werden; eine institutionelle Partnerschaft wird nicht behauptet.",
+            "hi": "सटीक संगठन और SWE संबंध की पुष्टि आवश्यक है; संस्थागत साझेदारी का दावा नहीं किया गया है।"
+          }
+        },
+        "evidenceStatus": "public-sources-and-user-context"
+      },
+      "logo": {
+        "sourceUrl": "https://aigovernancecorridor.org/brand/aigc-logo.jpg",
+        "assetPath": "public/images/partners/partner-aigc-corridor.jpg",
+        "permissionStatus": "user-authorised",
+        "alt": "AI Governance Corridor logo"
+      },
+      "capabilities": [
+        "AI Governance"
+      ],
+      "representative": null,
+      "publicationApproved": true,
+      "sources": [
+        "https://aigovernancecorridor.org/"
+      ],
+      "editorial": {
+        "type": {
+          "en": "AI governance & advisory",
+          "de": "KI-Governance & Advisory",
+          "hi": "एआई शासन और परामर्श"
+        },
+        "relationship": {
+          "en": "AI Governance Corridor presents Joerg Molt within its Council environment. SWE’s contribution connects system architecture and human agency with the governance of AI: who makes decisions, who can question them and what an institution must understand to remain accountable.",
+          "de": "AI Governance Corridor stellt Joerg Molt im Umfeld seines Councils vor. Der SWE-Beitrag verbindet Systemarchitektur und menschliche Handlungsfähigkeit mit KI-Governance: Wer entscheidet, wer kann Entscheidungen hinterfragen und was muss eine Institution verstehen, um verantwortlich handeln zu können?",
+          "hi": "AI Governance Corridor अपने Council के संदर्भ में Joerg Molt को प्रस्तुत करता है। SWE का योगदान प्रणाली वास्तुकला और मानवीय निर्णय-क्षमता को एआई शासन से जोड़ता है: निर्णय कौन करता है, उन पर प्रश्न कौन उठा सकता है और जवाबदेह रहने के लिए संस्थान को क्या समझना चाहिए?"
+        },
+        "benefit": {
+          "en": "SWE brings the practical educational dimension into governance discussions. International policy and institutional perspectives, in turn, sharpen the questions that SWE addresses through AI training, advisory and National Capability development.",
+          "de": "SWE bringt die praktische Bildungsdimension in Governance-Diskussionen ein. Internationale politische und institutionelle Perspektiven schärfen umgekehrt die Fragen, die SWE durch KI-Schulungen, Advisory und National-Capability-Entwicklung bearbeitet.",
+          "hi": "SWE शासन संबंधी चर्चा में व्यावहारिक शिक्षा का आयाम लाता है। बदले में अंतरराष्ट्रीय नीतिगत और संस्थागत दृष्टिकोण उन प्रश्नों को स्पष्ट करते हैं जिन्हें SWE एआई प्रशिक्षण, परामर्श और National Capability विकास में संबोधित करता है।"
+        },
+        "references": [
+          [
+            "AIGC Council",
+            "https://aigovernancecorridor.org/"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "srm-sonepat",
+      "officialName": "SRM University Delhi-NCR, Sonepat, Haryana",
+      "website": "https://www.srmuniversity.ac.in/",
+      "identityStatus": "verified",
+      "description": {
+        "en": "SRM's Faculty of Law organised INCOLEM 2025 on law and emerging technologies.",
+        "de": "Die juristische Fakultät der SRM organisierte INCOLEM 2025 zu Recht und neuen Technologien.",
+        "hi": "SRM के विधि संकाय ने कानून और उभरती प्रौद्योगिकियों पर INCOLEM 2025 आयोजित किया।"
+      },
+      "relationship": {
+        "type": "cooperation-agreement-user-confirmed",
+        "summary": {
+          "en": "The connection with SRM’s Faculty of Law includes the INCOLEM 2025 invitation for Joerg Molt to chair a session on emerging and converging technologies. It brings SWE’s technology perspective into an academic conversation about responsible digital development.",
+          "de": "Zur Verbindung mit der juristischen Fakultät der SRM gehört die Einladung an Joerg Molt, bei INCOLEM 2025 eine Sitzung zu neuen und zusammenwachsenden Technologien zu leiten. Sie bringt die technologische Perspektive von SWE in einen akademischen Dialog über verantwortliche digitale Entwicklung ein.",
+          "hi": "SRM के विधि संकाय के साथ संबंध में INCOLEM 2025 में उभरती और अभिसारी प्रौद्योगिकियों पर सत्र की अध्यक्षता करने के लिए Joerg Molt को मिला निमंत्रण शामिल है। इससे जिम्मेदार डिजिटल विकास के अकादमिक संवाद में SWE का तकनीकी दृष्टिकोण जुड़ता है।"
+        },
+        "formalAgreementVerified": false,
+        "previousResearch": {
+          "type": "academic-invitation",
+          "summary": {
+            "en": "The supplied invitation names Joerg Molt as an accepted session chair for INCOLEM 2025. It does not establish attendance or a signed institutional agreement.",
+            "de": "Die bereitgestellte Einladung nennt Joerg Molt als zugesagten Session Chair für INCOLEM 2025. Sie belegt weder die tatsächliche Teilnahme noch eine unterzeichnete institutionelle Vereinbarung.",
+            "hi": "प्रदान किए गए निमंत्रण में Joerg Molt को INCOLEM 2025 के लिए सहमति देने वाले सत्र अध्यक्ष के रूप में नामित किया गया है। यह उपस्थिति या हस्ताक्षरित संस्थागत समझौते का प्रमाण नहीं है।"
+          }
+        },
+        "evidenceStatus": "public-sources-and-user-context"
+      },
+      "logo": {
+        "sourceUrl": "https://www.srmuniversity.ac.in/uploads/51ba570fe68fc088e0a942bdf8700cdce7eb8b1d/1661160054srm-logo-white.webp",
+        "assetPath": null,
+        "permissionStatus": "written-authorisation-required",
+        "alt": "SRM University Delhi-NCR, Sonepat, Haryana logo"
+      },
+      "capabilities": [
+        "Law",
+        "AI Governance",
+        "Higher Education"
+      ],
+      "representative": null,
+      "publicationApproved": true,
+      "sources": [
+        "https://www.srmuniversity.ac.in/",
+        "https://www.srmuniversity.ac.in/event/lex-ex-machina-interdisciplinary-dialogues-for-a-responsible-digital-future",
+        "https://www.srmuniversity.ac.in/terms-and-conditions"
+      ],
+      "editorial": {
+        "type": {
+          "en": "Academic dialogue & knowledge exchange",
+          "de": "Akademischer Dialog & Wissensaustausch",
+          "hi": "अकादमिक संवाद और ज्ञान विनिमय"
+        },
+        "relationship": {
+          "en": "The connection with SRM’s Faculty of Law includes the INCOLEM 2025 invitation for Joerg Molt to chair a session on emerging and converging technologies. It brings SWE’s technology perspective into an academic conversation about responsible digital development.",
+          "de": "Zur Verbindung mit der juristischen Fakultät der SRM gehört die Einladung an Joerg Molt, bei INCOLEM 2025 eine Sitzung zu neuen und zusammenwachsenden Technologien zu leiten. Sie bringt die technologische Perspektive von SWE in einen akademischen Dialog über verantwortliche digitale Entwicklung ein.",
+          "hi": "SRM के विधि संकाय के साथ संबंध में INCOLEM 2025 में उभरती और अभिसारी प्रौद्योगिकियों पर सत्र की अध्यक्षता करने के लिए Joerg Molt को मिला निमंत्रण शामिल है। इससे जिम्मेदार डिजिटल विकास के अकादमिक संवाद में SWE का तकनीकी दृष्टिकोण जुड़ता है।"
+        },
+        "benefit": {
+          "en": "Universities contribute research questions, legal analysis and teaching experience. SWE contributes AI and systems understanding. This exchange links educational practice to the institutional capabilities required to evaluate and govern new technologies.",
+          "de": "Universitäten bringen Forschungsfragen, juristische Analyse und Lehrerfahrung ein. SWE ergänzt KI- und Systemverständnis. Der Austausch verbindet Bildungspraxis mit den institutionellen Fähigkeiten, die neue Technologien bewerten und verantworten können.",
+          "hi": "विश्वविद्यालय अनुसंधान प्रश्न, विधिक विश्लेषण और शिक्षण अनुभव प्रदान करते हैं। SWE एआई और प्रणालियों की समझ जोड़ता है। यह आदान-प्रदान शिक्षा के व्यवहार को नई प्रौद्योगिकियों के मूल्यांकन और शासन के लिए आवश्यक संस्थागत क्षमताओं से जोड़ता है।"
+        },
+        "references": [
+          [
+            "INCOLEM 2025",
+            "https://www.srmuniversity.ac.in/event/lex-ex-machina-interdisciplinary-dialogues-for-a-responsible-digital-future"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ambedkar-sonepat",
+      "officialName": "Dr. B.R. Ambedkar National Law University, Sonepat",
+      "website": "https://dbranlu.ac.in/",
+      "identityStatus": "user-confirmed",
+      "description": {
+        "en": "A national law university in Sonepat. It must not be confused with Dr. B.R. Ambedkar Law College named in SWE's earlier invitation.",
+        "de": "Eine National Law University in Sonepat. Sie darf nicht mit dem Dr. B.R. Ambedkar Law College aus der früheren SWE-Einladung verwechselt werden.",
+        "hi": "सोनीपत में स्थित एक राष्ट्रीय विधि विश्वविद्यालय। इसे SWE के पहले निमंत्रण में उल्लिखित Dr. B.R. Ambedkar Law College से अलग समझना आवश्यक है।"
+      },
+      "relationship": {
+        "type": "knowledge-partnership-mou-in-preparation",
+        "summary": {
+          "en": "The academic exchange with Dr. Balwinder Kaur connects SWE with law, sustainability and institutional development. The Knowledge Partner role discussed for an energy-law conference centres on specialist contributions and participation in the event’s certificate process. A broader institutional MoU is being developed.",
+          "de": "Der akademische Austausch mit Dr. Balwinder Kaur verbindet SWE mit Recht, Nachhaltigkeit und institutioneller Entwicklung. Die besprochene Knowledge-Partner-Rolle für eine Energierechtskonferenz umfasst Fachbeiträge und die Mitwirkung am Zertifikatsprozess der Veranstaltung. Ein weiterführendes institutionelles MoU befindet sich in Ausarbeitung.",
+          "hi": "डॉ. Balwinder Kaur के साथ अकादमिक संवाद SWE को कानून, स्थिरता और संस्थागत विकास से जोड़ता है। ऊर्जा कानून सम्मेलन के लिए चर्चित Knowledge Partner भूमिका विशेषज्ञ योगदान और आयोजन की प्रमाणपत्र प्रक्रिया में सहभागिता पर केंद्रित है। व्यापक संस्थागत MoU तैयार किया जा रहा है।"
+        },
+        "formalAgreementVerified": false,
+        "previousResearch": {
+          "type": "unverified",
+          "summary": {
+            "en": "No SWE connection to this university has been verified. The supplied invitation from Dr. D. Srujana refers to a Law College; it cannot substantiate this university relationship.",
+            "de": "Eine SWE-Verbindung zu dieser Universität wurde nicht bestätigt. Die Einladung von Dr. D. Srujana nennt ein Law College und kann diese Universitätsbeziehung nicht belegen.",
+            "hi": "इस विश्वविद्यालय से SWE के संबंध की पुष्टि नहीं हुई है। डॉ. डी. सृजना का निमंत्रण एक Law College का उल्लेख करता है और इस विश्वविद्यालय के संबंध का प्रमाण नहीं बन सकता।"
+          }
+        },
+        "evidenceStatus": "public-sources-and-user-context"
+      },
+      "logo": {
+        "sourceUrl": "https://dbranlu.ac.in/assets/newlogosmall.png",
+        "assetPath": "public/images/partners/partner-ambedkar.png",
+        "permissionStatus": "user-authorised",
+        "alt": "Dr. B.R. Ambedkar National Law University, Sonepat logo"
+      },
+      "capabilities": [
+        "Law",
+        "Higher Education"
+      ],
+      "representative": null,
+      "publicationApproved": true,
+      "sources": [
+        "https://dbranlu.ac.in/"
+      ],
+      "editorial": {
+        "type": {
+          "en": "Knowledge partnership & academic development",
+          "de": "Knowledge-Partnerschaft & akademische Entwicklung",
+          "hi": "ज्ञान साझेदारी और अकादमिक विकास"
+        },
+        "relationship": {
+          "en": "The academic exchange with Dr. Balwinder Kaur connects SWE with law, sustainability and institutional development. The Knowledge Partner role discussed for an energy-law conference centres on specialist contributions and participation in the event’s certificate process. A broader institutional MoU is being developed.",
+          "de": "Der akademische Austausch mit Dr. Balwinder Kaur verbindet SWE mit Recht, Nachhaltigkeit und institutioneller Entwicklung. Die besprochene Knowledge-Partner-Rolle für eine Energierechtskonferenz umfasst Fachbeiträge und die Mitwirkung am Zertifikatsprozess der Veranstaltung. Ein weiterführendes institutionelles MoU befindet sich in Ausarbeitung.",
+          "hi": "डॉ. Balwinder Kaur के साथ अकादमिक संवाद SWE को कानून, स्थिरता और संस्थागत विकास से जोड़ता है। ऊर्जा कानून सम्मेलन के लिए चर्चित Knowledge Partner भूमिका विशेषज्ञ योगदान और आयोजन की प्रमाणपत्र प्रक्रिया में सहभागिता पर केंद्रित है। व्यापक संस्थागत MoU तैयार किया जा रहा है।"
+        },
+        "benefit": {
+          "en": "SWE contributes a connected view of technology, education and National Capability; academic partners contribute disciplinary depth and research questions. Introductions in Nigeria and Poland are a planned next step in this exchange, not yet established institutional partnerships.",
+          "de": "SWE trägt eine vernetzte Sicht auf Technologie, Bildung und National Capability bei; akademische Partner ergänzen fachliche Tiefe und Forschungsfragen. Vorstellungen in Nigeria und Polen sind ein geplanter nächster Schritt dieses Austauschs, noch keine etablierten institutionellen Partnerschaften.",
+          "hi": "SWE प्रौद्योगिकी, शिक्षा और National Capability का जुड़ा हुआ दृष्टिकोण देता है; अकादमिक भागीदार विषयगत गहराई और अनुसंधान प्रश्न जोड़ते हैं। नाइजीरिया और पोलैंड में परिचय इस आदान-प्रदान का नियोजित अगला चरण हैं, अभी स्थापित संस्थागत साझेदारियाँ नहीं।"
+        },
+        "references": [
+          [
+            "University",
+            "https://dbranlu.ac.in/"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "drf-world",
+      "officialName": "DRF World / DRF Conflict Management Solutions",
+      "website": "https://drfworld.org/",
+      "identityStatus": "public-brand-verified-legal-entity-pending",
+      "description": {
+        "en": "DRF provides conflict management, mediation, arbitration, conciliation and related professional training.",
+        "de": "DRF arbeitet in Konfliktmanagement, Mediation, Schiedsverfahren, Schlichtung und entsprechender beruflicher Weiterbildung.",
+        "hi": "DRF विवाद प्रबंधन, मध्यस्थता, पंचाट, सुलह और संबंधित पेशेवर प्रशिक्षण के क्षेत्र में कार्य करता है।"
+      },
+      "relationship": {
+        "type": "cooperation-agreement-user-confirmed",
+        "summary": {
+          "en": "DRF brings mediation, arbitration and conflict-management expertise into the SWE knowledge network. SWE complements this with AI education, system architecture and advisory on the responsible use of technology. The connection matters wherever a technical decision also affects people, trust and professional responsibility.",
+          "de": "DRF bringt Expertise in Mediation, Schiedsverfahren und Konfliktmanagement in das SWE-Wissensnetzwerk ein. SWE ergänzt KI-Schulungen, Systemarchitektur und Advisory zum verantwortlichen Technologieeinsatz. Die Verbindung ist dort wichtig, wo technische Entscheidungen zugleich Menschen, Vertrauen und berufliche Verantwortung betreffen.",
+          "hi": "DRF SWE के ज्ञान नेटवर्क में मध्यस्थता, पंचाट और विवाद-प्रबंधन विशेषज्ञता लाता है। SWE एआई शिक्षा, प्रणाली वास्तुकला और जिम्मेदार तकनीकी उपयोग पर परामर्श जोड़ता है। यह संबंध वहाँ महत्वपूर्ण है जहाँ तकनीकी निर्णय लोगों, विश्वास और पेशेवर जिम्मेदारी को भी प्रभावित करता है।"
+        },
+        "formalAgreementVerified": false,
+        "previousResearch": {
+          "type": "unverified",
+          "summary": {
+            "en": "The official website identifies Vinita Sahay as an advocate and ADR specialist. SWE cooperation and the precise LLP identity await evidence; no signed agreement is asserted.",
+            "de": "Die offizielle Website beschreibt Vinita Sahay als Anwältin und ADR-Spezialistin. SWE-Kooperation und genaue LLP-Zuordnung benötigen Belege; eine unterzeichnete Vereinbarung wird nicht behauptet.",
+            "hi": "आधिकारिक वेबसाइट Vinita Sahay को अधिवक्ता और ADR विशेषज्ञ बताती है। SWE सहयोग और सटीक LLP पहचान के प्रमाण अपेक्षित हैं; हस्ताक्षरित समझौते का दावा नहीं किया गया है।"
+          }
+        },
+        "evidenceStatus": "public-sources-and-user-context"
+      },
+      "logo": {
+        "sourceUrl": "https://drfworld.org/public/uploads/logo/logo-20251215151619-3654.webp",
+        "assetPath": "public/images/partners/partner-drf-world.webp",
+        "permissionStatus": "user-authorised",
+        "alt": "DRF World / DRF Conflict Management Solutions logo"
+      },
+      "capabilities": [
+        "Conflict Resolution",
+        "Governance"
+      ],
+      "representative": {
+        "name": "Vinita Sahay",
+        "role": "Founder & Senior Partner, DRF Conflict Management Solutions LLP",
+        "source": "User-supplied CV-VINITA SAHAY (1).pdf",
+        "portrait": "public/images/partners/vinita-sahay.png",
+        "permissionStatus": "user-supplied-for-profile",
+        "contactPublished": false
+      },
+      "publicationApproved": true,
+      "sources": [
+        "https://drfworld.org/",
+        "https://drfworld.org/team-details/vinita-sahay"
+      ],
+      "editorial": {
+        "type": {
+          "en": "Arbitration, AI education & advisory",
+          "de": "Schiedsverfahren, KI-Schulungen & Advisory",
+          "hi": "पंचाट, एआई शिक्षा और परामर्श"
+        },
+        "relationship": {
+          "en": "DRF brings mediation, arbitration and conflict-management expertise into the SWE knowledge network. SWE complements this with AI education, system architecture and advisory on the responsible use of technology. The connection matters wherever a technical decision also affects people, trust and professional responsibility.",
+          "de": "DRF bringt Expertise in Mediation, Schiedsverfahren und Konfliktmanagement in das SWE-Wissensnetzwerk ein. SWE ergänzt KI-Schulungen, Systemarchitektur und Advisory zum verantwortlichen Technologieeinsatz. Die Verbindung ist dort wichtig, wo technische Entscheidungen zugleich Menschen, Vertrauen und berufliche Verantwortung betreffen.",
+          "hi": "DRF SWE के ज्ञान नेटवर्क में मध्यस्थता, पंचाट और विवाद-प्रबंधन विशेषज्ञता लाता है। SWE एआई शिक्षा, प्रणाली वास्तुकला और जिम्मेदार तकनीकी उपयोग पर परामर्श जोड़ता है। यह संबंध वहाँ महत्वपूर्ण है जहाँ तकनीकी निर्णय लोगों, विश्वास और पेशेवर जिम्मेदारी को भी प्रभावित करता है।"
+        },
+        "benefit": {
+          "en": "The exchange connects practical dispute-resolution experience with the ability to assess AI tools and their limits. For SWE, this strengthens the human and institutional side of capability development; for DRF, it opens a structured bridge to technology understanding and AI training.",
+          "de": "Der Austausch verbindet praktische Streitbeilegung mit der Fähigkeit, KI-Werkzeuge und ihre Grenzen zu beurteilen. Für SWE stärkt das die menschliche und institutionelle Seite der Kompetenzentwicklung; für DRF eröffnet es einen strukturierten Zugang zu Technologieverständnis und KI-Schulungen.",
+          "hi": "यह आदान-प्रदान व्यावहारिक विवाद समाधान को एआई उपकरणों और उनकी सीमाओं के मूल्यांकन की क्षमता से जोड़ता है। SWE के लिए यह क्षमता विकास के मानवीय और संस्थागत पक्ष को मजबूत करता है; DRF के लिए तकनीकी समझ और एआई प्रशिक्षण का व्यवस्थित मार्ग खोलता है।"
+        },
+        "references": [
+          [
+            "DRF World",
+            "https://drfworld.org/"
+          ],
+          [
+            "Vinita Sahay",
+            "https://drfworld.org/team-details/vinita-sahay"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "teen-girls-in-blockchain",
+      "officialName": "Teen Girls in Blockchain",
+      "website": "https://ng.linkedin.com/company/teen-girls-in-blockchain-tgib",
+      "identityStatus": "official-standalone-site-unverified",
+      "description": {
+        "en": "A youth-led initiative supporting girls through blockchain education, digital literacy, outreach and mentoring.",
+        "de": "Eine von jungen Menschen getragene Initiative für Mädchen mit Blockchain-Bildung, digitaler Grundbildung, Bildungsarbeit und Mentoring.",
+        "hi": "ब्लॉकचेन शिक्षा, डिजिटल साक्षरता, संपर्क कार्यक्रमों और मार्गदर्शन के माध्यम से लड़कियों का समर्थन करने वाली युवा-नेतृत्व वाली पहल।"
+      },
+      "relationship": {
+        "type": "cooperation-agreement-user-confirmed",
+        "summary": {
+          "en": "Teen Girls in Blockchain connects digital education with the experiences of girls and young women. Within SWE’s knowledge network, this perspective makes inclusion a practical question: who can access learning, who receives encouragement and who can move from curiosity to participation?",
+          "de": "Teen Girls in Blockchain verbindet digitale Bildung mit den Erfahrungen von Mädchen und jungen Frauen. Im SWE-Wissensnetzwerk wird Inklusion dadurch konkret: Wer erhält Zugang zum Lernen, wer wird ermutigt und wer kann von Neugier zu aktiver Beteiligung gelangen?",
+          "hi": "Teen Girls in Blockchain डिजिटल शिक्षा को लड़कियों और युवतियों के अनुभवों से जोड़ता है। SWE के ज्ञान नेटवर्क में यह दृष्टिकोण समावेशन को व्यावहारिक प्रश्न बनाता है: सीखने तक पहुँच किसकी है, प्रोत्साहन किसे मिलता है और जिज्ञासा से भागीदारी की ओर कौन बढ़ सकता है?"
+        },
+        "formalAgreementVerified": false,
+        "previousResearch": {
+          "type": "existing-outbound-link-only",
+          "summary": {
+            "en": "An existing SWE link is documented. It is not sufficient evidence of a formal partnership or joint programme.",
+            "de": "Ein bestehender SWE-Link ist dokumentiert. Er reicht nicht als Beleg für eine formale Partnerschaft oder ein gemeinsames Programm aus.",
+            "hi": "SWE पर मौजूदा लिंक दर्ज है। यह औपचारिक साझेदारी या संयुक्त कार्यक्रम का पर्याप्त प्रमाण नहीं है।"
+          }
+        },
+        "evidenceStatus": "public-sources-and-user-context"
+      },
+      "logo": {
+        "sourceUrl": "https://gdg.community.dev/events/details/google-gdg-zaria-presents-iwd-zaria-2024/",
+        "assetPath": "public/images/partners/partner-tgib.png",
+        "permissionStatus": "user-authorised",
+        "alt": "Teen Girls in Blockchain logo"
+      },
+      "capabilities": [
+        "Digital Literacy",
+        "Blockchain",
+        "Human Agency"
+      ],
+      "representative": null,
+      "publicationApproved": true,
+      "sources": [
+        "https://ng.linkedin.com/company/teen-girls-in-blockchain-tgib",
+        "https://giveth.io/project/teen-girls-in-blockchain"
+      ],
+      "editorial": {
+        "type": {
+          "en": "Inclusive education & community knowledge",
+          "de": "Inklusive Bildung & Community-Wissen",
+          "hi": "समावेशी शिक्षा और सामुदायिक ज्ञान"
+        },
+        "relationship": {
+          "en": "Teen Girls in Blockchain connects digital education with the experiences of girls and young women. Within SWE’s knowledge network, this perspective makes inclusion a practical question: who can access learning, who receives encouragement and who can move from curiosity to participation?",
+          "de": "Teen Girls in Blockchain verbindet digitale Bildung mit den Erfahrungen von Mädchen und jungen Frauen. Im SWE-Wissensnetzwerk wird Inklusion dadurch konkret: Wer erhält Zugang zum Lernen, wer wird ermutigt und wer kann von Neugier zu aktiver Beteiligung gelangen?",
+          "hi": "Teen Girls in Blockchain डिजिटल शिक्षा को लड़कियों और युवतियों के अनुभवों से जोड़ता है। SWE के ज्ञान नेटवर्क में यह दृष्टिकोण समावेशन को व्यावहारिक प्रश्न बनाता है: सीखने तक पहुँच किसकी है, प्रोत्साहन किसे मिलता है और जिज्ञासा से भागीदारी की ओर कौन बढ़ सकता है?"
+        },
+        "benefit": {
+          "en": "SWE contributes educational and technology expertise; the initiative contributes community knowledge and insight into barriers to participation. Together these perspectives help make capability pathways more relevant to learners who are often overlooked.",
+          "de": "SWE bringt Bildungs- und Technologieexpertise ein; die Initiative ergänzt Community-Wissen und Einblicke in Teilhabebarrieren. Zusammen helfen diese Perspektiven, Entwicklungswege für häufig übersehene Lernende relevanter zu gestalten.",
+          "hi": "SWE शिक्षा और प्रौद्योगिकी विशेषज्ञता देता है; पहल सामुदायिक ज्ञान और भागीदारी की बाधाओं की समझ जोड़ती है। साथ मिलकर ये दृष्टिकोण अक्सर उपेक्षित शिक्षार्थियों के लिए क्षमता विकास के मार्ग को अधिक प्रासंगिक बनाने में मदद करते हैं।"
+        },
+        "references": [
+          [
+            "Teen Girls in Blockchain",
+            "https://ng.linkedin.com/company/teen-girls-in-blockchain-tgib"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "coin-news-extra",
+      "officialName": "Coin News Extra",
+      "website": "https://coinnewsextra.com/",
+      "identityStatus": "verified",
+      "description": {
+        "en": "A media platform covering blockchain, cryptocurrency and fintech, including African technology ecosystems.",
+        "de": "Eine Medienplattform zu Blockchain, Kryptowährungen und Fintech, einschließlich afrikanischer Technologieökosysteme.",
+        "hi": "ब्लॉकचेन, क्रिप्टोकरेंसी और फिनटेक को कवर करने वाला मीडिया मंच, जिसमें अफ्रीकी प्रौद्योगिकी पारितंत्र भी शामिल हैं।"
+      },
+      "relationship": {
+        "type": "cooperation-agreement-user-confirmed",
+        "summary": {
+          "en": "Coin News Extra connects blockchain and fintech developments with public discussion. The relationship complements SWE’s educational work by creating a setting in which technical questions can be explained beyond specialist and academic audiences.",
+          "de": "Coin News Extra verbindet Entwicklungen in Blockchain und Fintech mit öffentlicher Diskussion. Die Verbindung ergänzt die SWE-Bildungsarbeit durch einen Kontext, in dem technische Fragen über Fach- und Hochschulkreise hinaus verständlich werden können.",
+          "hi": "Coin News Extra ब्लॉकचेन और फिनटेक के विकास को सार्वजनिक चर्चा से जोड़ता है। यह संबंध SWE की शिक्षा को ऐसा संदर्भ देता है जहाँ तकनीकी प्रश्न विशेषज्ञ और अकादमिक समुदायों से बाहर भी समझे जा सकते हैं।"
+        },
+        "formalAgreementVerified": false,
+        "previousResearch": {
+          "type": "existing-outbound-link-only",
+          "summary": {
+            "en": "An existing SWE link is documented. No signed cooperation agreement or joint programme has been verified.",
+            "de": "Ein bestehender SWE-Link ist dokumentiert. Eine unterzeichnete Kooperationsvereinbarung oder ein gemeinsames Programm wurde nicht bestätigt.",
+            "hi": "SWE पर मौजूदा लिंक दर्ज है। किसी हस्ताक्षरित सहयोग समझौते या संयुक्त कार्यक्रम की पुष्टि नहीं हुई है।"
+          }
+        },
+        "evidenceStatus": "public-sources-and-user-context"
+      },
+      "logo": {
+        "sourceUrl": "https://coinnewsextra.com/wp-content/uploads/2023/06/CNETV-horizontal-lockup-whiteyellow-noTM.png",
+        "assetPath": "public/images/partners/partner-coin-news-extra.png",
+        "permissionStatus": "user-authorised",
+        "alt": "Coin News Extra logo"
+      },
+      "capabilities": [
+        "Media",
+        "Blockchain",
+        "Fintech"
+      ],
+      "representative": null,
+      "publicationApproved": true,
+      "sources": [
+        "https://coinnewsextra.com/"
+      ],
+      "editorial": {
+        "type": {
+          "en": "Media dialogue & knowledge transfer",
+          "de": "Mediendialog & Wissenstransfer",
+          "hi": "मीडिया संवाद और ज्ञान हस्तांतरण"
+        },
+        "relationship": {
+          "en": "Coin News Extra connects blockchain and fintech developments with public discussion. The relationship complements SWE’s educational work by creating a setting in which technical questions can be explained beyond specialist and academic audiences.",
+          "de": "Coin News Extra verbindet Entwicklungen in Blockchain und Fintech mit öffentlicher Diskussion. Die Verbindung ergänzt die SWE-Bildungsarbeit durch einen Kontext, in dem technische Fragen über Fach- und Hochschulkreise hinaus verständlich werden können.",
+          "hi": "Coin News Extra ब्लॉकचेन और फिनटेक के विकास को सार्वजनिक चर्चा से जोड़ता है। यह संबंध SWE की शिक्षा को ऐसा संदर्भ देता है जहाँ तकनीकी प्रश्न विशेषज्ञ और अकादमिक समुदायों से बाहर भी समझे जा सकते हैं।"
+        },
+        "benefit": {
+          "en": "SWE contributes technical interpretation and educational context; media dialogue brings questions and perspectives from a wider audience back into that work. The benefit is more informed discussion, not a substitute for independently assessed technical competence.",
+          "de": "SWE trägt technische Einordnung und Bildungskontext bei; der Mediendialog bringt Fragen und Perspektiven eines breiteren Publikums zurück in diese Arbeit. Der Nutzen ist ein fundierterer Austausch, kein Ersatz für unabhängig geprüfte technische Kompetenz.",
+          "hi": "SWE तकनीकी व्याख्या और शैक्षिक संदर्भ देता है; मीडिया संवाद व्यापक समुदाय के प्रश्न और दृष्टिकोण वापस इस कार्य में लाता है। लाभ अधिक सूचित चर्चा है, स्वतंत्र रूप से मूल्यांकित तकनीकी दक्षता का विकल्प नहीं।"
+        },
+        "references": [
+          [
+            "Coin News Extra",
+            "https://coinnewsextra.com/"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "gba",
+      "officialName": "Government Blockchain Association (GBA)",
+      "website": "https://gbaglobal.org/",
+      "identityStatus": "verified",
+      "description": {
+        "en": "An international professional association connecting blockchain education, public-sector needs and technology expertise.",
+        "de": "Ein internationales Fachnetzwerk, das Blockchain-Bildung, öffentliche Aufgaben und Technologiekompetenz verbindet.",
+        "hi": "ब्लॉकचेन शिक्षा, सार्वजनिक क्षेत्र की आवश्यकताओं और तकनीकी विशेषज्ञता को जोड़ने वाला अंतरराष्ट्रीय पेशेवर संगठन।"
+      },
+      "relationship": {
+        "formalAgreementVerified": false,
+        "summary": {
+          "en": "Joerg Molt’s long-standing GBA work forms part of SWE’s professional background. GBA’s own training register lists him for Blockchain Foundations, Blockchain Technology Selection and Blockchain Architecture. Angelika Riefling continues her GBA membership, maintaining the connection to the network.",
+          "de": "Joerg Molts langjährige GBA-Arbeit gehört zum fachlichen Hintergrund von SWE. Das GBA-eigene Trainingsverzeichnis führt ihn für Blockchain Foundations, Blockchain Technology Selection und Blockchain Architecture. Angelika Riefling führt ihre GBA-Mitgliedschaft fort und hält damit die Verbindung zum Netzwerk aufrecht.",
+          "hi": "Joerg Molt का लंबे समय का GBA कार्य SWE की पेशेवर पृष्ठभूमि का हिस्सा है। GBA की अपनी प्रशिक्षण सूची उन्हें Blockchain Foundations, Blockchain Technology Selection और Blockchain Architecture के लिए सूचीबद्ध करती है। Angelika Riefling की GBA सदस्यता जारी है और नेटवर्क से संबंध बना हुआ है।"
+        },
+        "type": "professional-reference",
+        "evidenceStatus": "public-sources-and-user-context"
+      },
+      "logo": {
+        "sourceUrl": "https://gbaglobal.org/wp-content/uploads/2022/04/gba.png",
+        "assetPath": "public/images/partners/partner-gba.png",
+        "permissionStatus": "user-authorised",
+        "alt": "Government Blockchain Association (GBA) logo"
+      },
+      "capabilities": [],
+      "representative": null,
+      "publicationApproved": true,
+      "sources": [
+        "https://gbaglobal.org/",
+        "https://gbaglobal.org/training-lead-master/",
+        "https://gbaglobal.org/wp-content/uploads/2021/04/ImpactofCryptocurrencyAdoptionOnGovernment_Final-2.pdf"
+      ],
+      "editorial": {
+        "type": {
+          "en": "Professional reference & member network",
+          "de": "Berufliche Referenz & Mitgliedernetzwerk",
+          "hi": "पेशेवर संदर्भ और सदस्य नेटवर्क"
+        },
+        "relationship": {
+          "en": "Joerg Molt’s long-standing GBA work forms part of SWE’s professional background. GBA’s own training register lists him for Blockchain Foundations, Blockchain Technology Selection and Blockchain Architecture. Angelika Riefling continues her GBA membership, maintaining the connection to the network.",
+          "de": "Joerg Molts langjährige GBA-Arbeit gehört zum fachlichen Hintergrund von SWE. Das GBA-eigene Trainingsverzeichnis führt ihn für Blockchain Foundations, Blockchain Technology Selection und Blockchain Architecture. Angelika Riefling führt ihre GBA-Mitgliedschaft fort und hält damit die Verbindung zum Netzwerk aufrecht.",
+          "hi": "Joerg Molt का लंबे समय का GBA कार्य SWE की पेशेवर पृष्ठभूमि का हिस्सा है। GBA की अपनी प्रशिक्षण सूची उन्हें Blockchain Foundations, Blockchain Technology Selection और Blockchain Architecture के लिए सूचीबद्ध करती है। Angelika Riefling की GBA सदस्यता जारी है और नेटवर्क से संबंध बना हुआ है।"
+        },
+        "benefit": {
+          "en": "This is a concrete external reference for blockchain teaching and architectural expertise. Exchange with practitioners and public-sector specialists informs SWE’s work on governance and institutional capability. It should not be confused with a GBA certification of SWE’s cybersecurity programmes.",
+          "de": "Das ist eine konkrete externe Referenz für Blockchain-Lehre und Architekturkompetenz. Der Austausch mit Praktikern und Fachleuten des öffentlichen Sektors bereichert die SWE-Arbeit zu Governance und institutioneller Handlungsfähigkeit. Daraus folgt keine GBA-Zertifizierung der SWE-Cybersecurity-Programme.",
+          "hi": "यह ब्लॉकचेन शिक्षण और वास्तुकला विशेषज्ञता का ठोस बाहरी संदर्भ है। विशेषज्ञों और सार्वजनिक क्षेत्र के पेशेवरों से संवाद SWE के शासन और संस्थागत क्षमता संबंधी कार्य को समृद्ध करता है। इसे SWE के साइबरसुरक्षा कार्यक्रमों के GBA प्रमाणन के रूप में नहीं समझना चाहिए।"
+        },
+        "references": [
+          [
+            "GBA Training Leads",
+            "https://gbaglobal.org/training-lead-master/"
+          ],
+          [
+            "GBA research publication",
+            "https://gbaglobal.org/wp-content/uploads/2021/04/ImpactofCryptocurrencyAdoptionOnGovernment_Final-2.pdf"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "isac",
+      "officialName": "Information Sharing and Analysis Center (ISAC)",
+      "website": "https://isacfoundation.org/",
+      "identityStatus": "verified",
+      "description": {
+        "en": "A cybersecurity organisation focused on professional capability, cyber resilience and security education.",
+        "de": "Eine Cybersecurity-Organisation mit Schwerpunkt auf beruflicher Kompetenz, Cyberresilienz und Sicherheitsbildung.",
+        "hi": "पेशेवर क्षमता, साइबर लचीलापन और सुरक्षा शिक्षा पर केंद्रित एक साइबर सुरक्षा संगठन।"
+      },
+      "relationship": {
+        "formalAgreementVerified": false,
+        "summary": {
+          "en": "SWE and ISAC have discussed a cybersecurity concept for the National Capability Programme and are developing a partnership. The focus is how specialist security expertise can connect with education, institutional responsibility and the ability to build and retain local capability.",
+          "de": "SWE und ISAC haben ein Cybersecurity-Konzept für das National Capability Programme besprochen und bauen eine Partnerschaft auf. Im Mittelpunkt steht, wie sich spezialisierte Sicherheitskompetenz mit Bildung, institutioneller Verantwortung und dem Aufbau dauerhaft verfügbarer lokaler Fähigkeiten verbinden lässt.",
+          "hi": "SWE और ISAC ने National Capability Programme के लिए साइबरसुरक्षा अवधारणा पर चर्चा की है और साझेदारी विकसित कर रहे हैं। केंद्र में यह है कि विशेषज्ञ सुरक्षा ज्ञान को शिक्षा, संस्थागत जिम्मेदारी और स्थायी स्थानीय क्षमता के निर्माण से कैसे जोड़ा जाए।"
+        },
+        "type": "partnership-in-development",
+        "evidenceStatus": "public-sources-and-user-context"
+      },
+      "logo": {
+        "sourceUrl": "https://isacfoundation.org/img/isac-letters.svg",
+        "assetPath": "public/images/partners/partner-isac.svg",
+        "permissionStatus": "user-authorised",
+        "alt": "Information Sharing and Analysis Center (ISAC) logo"
+      },
+      "capabilities": [],
+      "representative": null,
+      "publicationApproved": true,
+      "sources": [
+        "https://isacfoundation.org/",
+        "https://www.isacindia.org/national-cyber-security-scholar/"
+      ],
+      "editorial": {
+        "type": {
+          "en": "Cybersecurity · partnership in development",
+          "de": "Cybersecurity · Partnerschaft im Aufbau",
+          "hi": "साइबरसुरक्षा · विकसित हो रही साझेदारी"
+        },
+        "relationship": {
+          "en": "SWE and ISAC have discussed a cybersecurity concept for the National Capability Programme and are developing a partnership. The focus is how specialist security expertise can connect with education, institutional responsibility and the ability to build and retain local capability.",
+          "de": "SWE und ISAC haben ein Cybersecurity-Konzept für das National Capability Programme besprochen und bauen eine Partnerschaft auf. Im Mittelpunkt steht, wie sich spezialisierte Sicherheitskompetenz mit Bildung, institutioneller Verantwortung und dem Aufbau dauerhaft verfügbarer lokaler Fähigkeiten verbinden lässt.",
+          "hi": "SWE और ISAC ने National Capability Programme के लिए साइबरसुरक्षा अवधारणा पर चर्चा की है और साझेदारी विकसित कर रहे हैं। केंद्र में यह है कि विशेषज्ञ सुरक्षा ज्ञान को शिक्षा, संस्थागत जिम्मेदारी और स्थायी स्थानीय क्षमता के निर्माण से कैसे जोड़ा जाए।"
+        },
+        "benefit": {
+          "en": "SWE contributes the connected education and capability-development framework; ISAC brings a specialist cybersecurity and workforce-development perspective. The intended value is a coherent pathway from understanding risks to practising and maintaining protective capabilities. Joint delivery, assessments and credentials remain to be agreed.",
+          "de": "SWE bringt den vernetzten Bildungs- und Capability-Development-Rahmen ein; ISAC ergänzt die spezialisierte Perspektive auf Cybersecurity und Fachkräfteentwicklung. Ziel ist ein zusammenhängender Weg vom Risikoverständnis zum praktischen Aufbau und Erhalt von Schutzfähigkeiten. Gemeinsame Durchführung, Prüfungen und Abschlüsse werden noch abgestimmt.",
+          "hi": "SWE जुड़ा हुआ शिक्षा और क्षमता विकास ढाँचा देता है; ISAC विशेषज्ञ साइबरसुरक्षा और कार्यबल विकास का दृष्टिकोण जोड़ता है। उद्देश्य जोखिम समझने से लेकर सुरक्षा क्षमताओं के अभ्यास और रखरखाव तक सुसंगत मार्ग बनाना है। संयुक्त संचालन, मूल्यांकन और प्रमाणपत्र अभी तय किए जाने हैं।"
+        },
+        "references": [
+          [
+            "ISAC",
+            "https://isacfoundation.org/"
+          ],
+          [
+            "ISAC capacity development",
+            "https://www.isacindia.org/national-cyber-security-scholar/"
+          ]
+        ]
+      }
+    }
+  ],
+  "confirmation": {
+    "source": "Direct user statements in this chat, 2026-11-13",
+    "agreements": "User confirms MOUs and agreements with all nine organisations; documents not inspected.",
+    "aigc": "aigovernancecorridor.org confirmed",
+    "ambedkar": "National Law University Sonepat confirmed; supplied Balwinder Kaur profile supports institution name.",
+    "vinita": "CV and portrait supplied for DRF profile; do not publish CV contact data."
+  },
+  "release": {
+    "approved": true,
+    "date": "2026-11-13"
+  }
+}

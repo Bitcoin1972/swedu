@@ -12,7 +12,7 @@
  function address(){return (state.room==='world'?'/':'/world/'+state.room)+'?'+new URLSearchParams({...state,topic:zoneOpen?'1':'0',skipIntro:'1'});}
  function save(push=true){history[push?'pushState':'replaceState']({...state,view,zoneOpen,documentURL},'',documentURL?withContext(documentURL):address());}
  function withContext(href){const url=new URL(href,location.origin);for(const[k,v]of Object.entries(state))url.searchParams.set(k,v);url.searchParams.set('topic',zoneOpen?'1':'0');url.searchParams.set('skipIntro','1');return url.pathname+url.search+url.hash;}
- function cancelDocument(){request?.abort();request=null;requestNumber++;documentURL=null;app.classList.remove('sp-document-open');}
+ function cancelDocument(){window.SWE_PARTNERS?.close();request?.abort();request=null;requestNumber++;documentURL=null;app.classList.remove('sp-document-open');}
  function drawer(which){document.querySelectorAll('.sp-panel').forEach(p=>p.classList.toggle('sp-open',p.id==='sp-'+which));document.querySelectorAll('[data-sp-drawer]').forEach(b=>b.setAttribute('aria-expanded',String(b.dataset.spDrawer===which)));if(which)document.querySelector('#sp-'+which+' .sp-close')?.focus({preventScroll:true});}
  function scene(){
   const sceneId=state.stage===9?'programmes':state.stage===3&&state.room==='school'?'youth':state.room;
@@ -99,6 +99,11 @@
  function stop(){labels();icons();}
  function select(stage,push=true){cancelDocument();state.stage=Math.max(0,Math.min(stageCount-1,stage));state.room=data.roomsByStage[state.stage];state.focus=['society','society','academy','academy','academy','economy','economy','institutions','capability','capability'][state.stage];state.zone=0;zoneOpen=false;view='story';render();save(push);document.getElementById('sp-status').textContent=data.versions[state.lang].labels[state.stage];}
  async function documentView(href,push=true,position=0){
+  if(data.partners&&window.SWE_PARTNERS&&new URL(href,location.origin).pathname==='/network'){
+   request?.abort();requestNumber++;documentURL=href;view='document';app.classList.remove('sp-document-open');drawer(null);save(push);
+   window.SWE_PARTNERS.open(data.partners,state.lang,()=>{cancelDocument();view='story';render();save();document.querySelector('.sp-header a[href="/network"]').focus();});return;
+  }
+  window.SWE_PARTNERS?.close();
   stop();request?.abort();request=new AbortController();const n=++requestNumber;documentURL=href;view='document';app.classList.add('sp-document-open');reader.innerHTML=`<p role="status">${c().loading}</p>`;save(push);if(mobile.matches)drawer('information');
   try{
    const target=new URL(href,location.origin);if(target.origin!==location.origin||target.pathname.startsWith('/partners'))return location.assign(href);
