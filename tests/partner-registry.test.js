@@ -5,9 +5,9 @@ const path = require('node:path');
 const registry = require('../content/partner-registry.json');
 const root = path.resolve(__dirname, '..');
 
-test('partner review has eleven distinct identities and complete localized descriptions', () => {
-  assert.equal(registry.records.length, 11);
-  assert.equal(new Set(registry.records.map(record => record.id)).size, 11);
+test('partner review has thirteen distinct identities and complete localized descriptions', () => {
+  assert.equal(registry.records.length, 13);
+  assert.equal(new Set(registry.records.map(record => record.id)).size, 13);
   for (const record of registry.records) {
     assert.equal(new URL(record.website).protocol, 'https:');
     for (const locale of ['de', 'en', 'hi']) {

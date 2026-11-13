@@ -4,6 +4,116 @@
   "status": "internal-review-not-connected-to-public-routes",
   "translationStatus": "draft-awaiting-editorial-review",
   "records": [
+{
+  "id": "swex",
+  "officialName": "SWEX.AI",
+  "website": "https://swex.ai/",
+  "identityStatus": "user-confirmed",
+  "description": {
+    "de": "SWEX.AI verbindet Technologie, Lernen und Innovation mit praktischer Systementwicklung.",
+    "en": "SWEX.AI connects technology, learning and innovation with practical systems development.",
+    "hi": "SWEX.AI प्रौद्योगिकी, शिक्षा और नवाचार को व्यावहारिक प्रणाली विकास से जोड़ता है।"
+  },
+  "relationship": {
+    "type": "swe-ecosystem",
+    "summary": {
+      "de": "SWE verbindet Bildung, Systemverständnis und gesellschaftliche Handlungsfähigkeit. SWEX.AI ergänzt diese Arbeit durch den technischen Anwendungsraum: Hier werden KI, digitale Werkzeuge und vernetzte Systeme im Zusammenhang mit konkreten Aufgaben betrachtet. So stehen Lernen und technische Umsetzung nicht nebeneinander, sondern beziehen sich aufeinander.",
+      "en": "SWE connects education, systems understanding and societal capability. SWEX.AI complements this work with a space for technical application: AI, digital tools and connected systems are considered in relation to concrete tasks. Learning and technical implementation can therefore inform one another.",
+      "hi": "SWE शिक्षा, प्रणालियों की समझ और सामाजिक क्षमता को जोड़ता है। SWEX.AI तकनीकी अनुप्रयोग के क्षेत्र के रूप में इस कार्य को पूरक बनाता है: एआई, डिजिटल उपकरण और परस्पर जुड़ी प्रणालियों को वास्तविक कार्यों के संदर्भ में समझा जाता है। इस तरह सीखना और तकनीकी क्रियान्वयन एक-दूसरे को दिशा देते हैं।"
+    },
+    "formalAgreementVerified": false,
+    "evidenceStatus": "public-sources-and-user-context"
+  },
+  "logo": {
+    "sourceUrl": "https://swex.ai/public/campus/assets/swex-logo.webp",
+    "assetPath": "public/images/partners/partner-swex.webp",
+    "permissionStatus": "user-authorised",
+    "alt": "SWEX.AI logo"
+  },
+  "representative": null,
+  "publicationApproved": true,
+  "sources": [
+    "https://swex.ai/"
+  ],
+  "editorial": {
+    "type": {
+      "de": "Technologie und Anwendung im SWE-Ökosystem",
+      "en": "Technology and application in the SWE ecosystem",
+      "hi": "SWE पारितंत्र में प्रौद्योगिकी और अनुप्रयोग"
+    },
+    "relationship": {
+      "de": "SWE verbindet Bildung, Systemverständnis und gesellschaftliche Handlungsfähigkeit. SWEX.AI ergänzt diese Arbeit durch den technischen Anwendungsraum: Hier werden KI, digitale Werkzeuge und vernetzte Systeme im Zusammenhang mit konkreten Aufgaben betrachtet. So stehen Lernen und technische Umsetzung nicht nebeneinander, sondern beziehen sich aufeinander.",
+      "en": "SWE connects education, systems understanding and societal capability. SWEX.AI complements this work with a space for technical application: AI, digital tools and connected systems are considered in relation to concrete tasks. Learning and technical implementation can therefore inform one another.",
+      "hi": "SWE शिक्षा, प्रणालियों की समझ और सामाजिक क्षमता को जोड़ता है। SWEX.AI तकनीकी अनुप्रयोग के क्षेत्र के रूप में इस कार्य को पूरक बनाता है: एआई, डिजिटल उपकरण और परस्पर जुड़ी प्रणालियों को वास्तविक कार्यों के संदर्भ में समझा जाता है। इस तरह सीखना और तकनीकी क्रियान्वयन एक-दूसरे को दिशा देते हैं।"
+    },
+    "benefit": {
+      "de": "Für SWE macht diese Verbindung sichtbar, welche Fähigkeiten Menschen zum Verstehen, Gestalten und verantwortlichen Betreiben von Technologie brauchen. SWEX.AI profitiert von der pädagogischen und institutionellen Perspektive von SWE. Die eigenständige Plattform bleibt der Ort für ihre technischen Angebote und Anwendungen.",
+      "en": "For SWE, this connection clarifies the capabilities people need to understand, design and responsibly operate technology. SWEX.AI benefits from SWE’s educational and institutional perspective. Its separate platform remains the place for its technical offerings and applications.",
+      "hi": "SWE के लिए यह संबंध स्पष्ट करता है कि प्रौद्योगिकी को समझने, विकसित करने और जिम्मेदारी से संचालित करने के लिए लोगों को किन क्षमताओं की आवश्यकता है। SWEX.AI को SWE के शैक्षिक और संस्थागत दृष्टिकोण से लाभ मिलता है। उसके तकनीकी प्रस्ताव और अनुप्रयोग उसकी स्वतंत्र वेबसाइट पर उपलब्ध रहते हैं।"
+    },
+    "references": [
+      [
+        "SWEX.AI",
+        "https://swex.ai/"
+      ]
+    ]
+  }
+},
+{
+  "id": "roots2ai",
+  "officialName": "Roots2AI",
+  "website": "https://roots2.ai/",
+  "identityStatus": "user-confirmed",
+  "description": {
+    "de": "Roots2AI von Angelika Riefling stärkt menschliche Handlungsfähigkeit im Umgang mit KI: in Familien, Schulen und der Begleitung junger digitaler Talente.",
+    "en": "Angelika Riefling’s Roots2AI strengthens human agency in the age of AI through families, schools and the support of young digital talent.",
+    "hi": "Angelika Riefling की Roots2AI परिवारों, विद्यालयों और युवा डिजिटल प्रतिभाओं के मार्गदर्शन के माध्यम से एआई के युग में मानवीय निर्णय और कार्यक्षमता को मजबूत करती है।"
+  },
+  "relationship": {
+    "type": "swe-ecosystem",
+    "summary": {
+      "de": "SWE-Co-Founderin Angelika Riefling verbindet mit Roots2AI die frühen Stationen der Capability Journey mit dem Alltag. Eltern, Kinder und Bildungskräfte brauchen mehr als Zugang zu KI: Sie brauchen Urteilsvermögen, Vertrauen und die Fähigkeit, Verantwortung zu übernehmen. Roots2AI richtet seine Bildungsarbeit auf diese menschlichen Voraussetzungen technologischer Entwicklung aus.",
+      "en": "Through Roots2AI, SWE co-founder Angelika Riefling connects the early stages of the Capability Journey with everyday life. Parents, children and educators need more than access to AI: they need judgement, trust and the ability to take responsibility. Roots2AI focuses its educational work on these human foundations of technological development.",
+      "hi": "SWE की सह-संस्थापक Angelika Riefling Roots2AI के माध्यम से क्षमता यात्रा के शुरुआती चरणों को दैनिक जीवन से जोड़ती हैं। माता-पिता, बच्चों और शिक्षकों को केवल एआई तक पहुँच नहीं, बल्कि विवेक, विश्वास और जिम्मेदारी लेने की क्षमता भी चाहिए। Roots2AI का शैक्षिक कार्य तकनीकी विकास की इन्हीं मानवीय नींवों पर केंद्रित है।"
+    },
+    "formalAgreementVerified": false,
+    "evidenceStatus": "public-sources-and-user-context"
+  },
+  "logo": {
+    "sourceUrl": "https://roots2.ai/assets/roots2ai-header-logo.png",
+    "assetPath": "public/images/partners/partner-roots2ai.png",
+    "permissionStatus": "user-authorised",
+    "alt": "Roots2AI logo"
+  },
+  "representative": null,
+  "publicationApproved": true,
+  "sources": [
+    "https://roots2.ai/"
+  ],
+  "editorial": {
+    "type": {
+      "de": "Familien, Bildung und Human Agency",
+      "en": "Families, education and human agency",
+      "hi": "परिवार, शिक्षा और मानवीय कार्यक्षमता"
+    },
+    "relationship": {
+      "de": "SWE-Co-Founderin Angelika Riefling verbindet mit Roots2AI die frühen Stationen der Capability Journey mit dem Alltag. Eltern, Kinder und Bildungskräfte brauchen mehr als Zugang zu KI: Sie brauchen Urteilsvermögen, Vertrauen und die Fähigkeit, Verantwortung zu übernehmen. Roots2AI richtet seine Bildungsarbeit auf diese menschlichen Voraussetzungen technologischer Entwicklung aus.",
+      "en": "Through Roots2AI, SWE co-founder Angelika Riefling connects the early stages of the Capability Journey with everyday life. Parents, children and educators need more than access to AI: they need judgement, trust and the ability to take responsibility. Roots2AI focuses its educational work on these human foundations of technological development.",
+      "hi": "SWE की सह-संस्थापक Angelika Riefling Roots2AI के माध्यम से क्षमता यात्रा के शुरुआती चरणों को दैनिक जीवन से जोड़ती हैं। माता-पिता, बच्चों और शिक्षकों को केवल एआई तक पहुँच नहीं, बल्कि विवेक, विश्वास और जिम्मेदारी लेने की क्षमता भी चाहिए। Roots2AI का शैक्षिक कार्य तकनीकी विकास की इन्हीं मानवीय नींवों पर केंद्रित है।"
+    },
+    "benefit": {
+      "de": "Roots2AI bringt die Perspektive von Familien, Lehrkräften und jungen Menschen in SWE ein. SWE verbindet diese Bedürfnisse mit Systemarchitektur, institutioneller Entwicklung und Governance. Daraus entsteht ein zusammenhängender Blick auf Bildung: von ersten Fragen im Alltag bis zu den Strukturen, die selbstbestimmtes Handeln ermöglichen. Programme und Anfragen bleiben auf der Roots2AI-Plattform.",
+      "en": "Roots2AI brings the perspectives of families, educators and young people into SWE. SWE connects these needs with systems architecture, institutional development and governance. Together they provide a connected view of education, from everyday questions to the structures that enable independent action. Programme details and enquiries remain on the Roots2AI platform.",
+      "hi": "Roots2AI परिवारों, शिक्षकों और युवाओं का दृष्टिकोण SWE में लाती है। SWE इन जरूरतों को प्रणाली वास्तुकला, संस्थागत विकास और शासन से जोड़ता है। इससे शिक्षा का एक जुड़ा हुआ दृष्टिकोण बनता है: रोजमर्रा के प्रश्नों से लेकर स्वतंत्र निर्णय और कार्य को संभव बनाने वाली संरचनाओं तक। कार्यक्रमों का विवरण और पूछताछ Roots2AI मंच पर ही रहते हैं।"
+    },
+    "references": [
+      [
+        "Roots2AI",
+        "https://roots2.ai/"
+      ]
+    ]
+  }
+},
     {
       "id": "africa-web3-institute",
       "officialName": "Africa Web3 Institute",
@@ -315,8 +425,8 @@
       },
       "logo": {
         "sourceUrl": "https://www.srmuniversity.ac.in/uploads/51ba570fe68fc088e0a942bdf8700cdce7eb8b1d/1661160054srm-logo-white.webp",
-        "assetPath": null,
-        "permissionStatus": "written-authorisation-required",
+    "assetPath": "public/images/partners/partner-srm.webp",
+    "permissionStatus": "user-authorised",
         "alt": "SRM University Delhi-NCR, Sonepat, Haryana logo"
       },
       "capabilities": [

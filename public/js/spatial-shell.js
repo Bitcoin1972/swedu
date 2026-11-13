@@ -12,7 +12,9 @@
  function address(){return (state.room==='world'?'/':'/world/'+state.room)+'?'+new URLSearchParams({...state,topic:zoneOpen?'1':'0',skipIntro:'1'});}
  function save(push=true){history[push?'pushState':'replaceState']({...state,view,zoneOpen,documentURL},'',documentURL?withContext(documentURL):address());}
  function withContext(href){const url=new URL(href,location.origin);for(const[k,v]of Object.entries(state))url.searchParams.set(k,v);url.searchParams.set('topic',zoneOpen?'1':'0');url.searchParams.set('skipIntro','1');return url.pathname+url.search+url.hash;}
- function cancelDocument(){window.SWE_PARTNERS?.close();request?.abort();request=null;requestNumber++;documentURL=null;app.classList.remove('sp-document-open');}
+ let contactReturn=null;
+ function closeContact(){app.classList.remove('sp-contact-open');reader.removeAttribute('role');reader.removeAttribute('aria-modal');reader.removeAttribute('aria-label');document.querySelectorAll('[data-contact-inert]').forEach(el=>{el.inert=false;el.removeAttribute('data-contact-inert');});if(contactReturn?.isConnected)contactReturn.focus({preventScroll:true});contactReturn=null;}
+ function cancelDocument(){closeContact();window.SWE_PARTNERS?.close();request?.abort();request=null;requestNumber++;documentURL=null;app.classList.remove('sp-document-open');}
  function drawer(which){document.querySelectorAll('.sp-panel').forEach(p=>p.classList.toggle('sp-open',p.id==='sp-'+which));document.querySelectorAll('[data-sp-drawer]').forEach(b=>b.setAttribute('aria-expanded',String(b.dataset.spDrawer===which)));if(which)document.querySelector('#sp-'+which+' .sp-close')?.focus({preventScroll:true});}
  function scene(){
   const sceneId=state.stage===9?'programmes':state.stage===3&&state.room==='school'?'youth':state.room;
@@ -99,6 +101,9 @@
  function stop(){labels();icons();}
  function select(stage,push=true){cancelDocument();state.stage=Math.max(0,Math.min(stageCount-1,stage));state.room=data.roomsByStage[state.stage];state.focus=['society','society','academy','academy','academy','economy','economy','institutions','capability','capability'][state.stage];state.zone=0;zoneOpen=false;view='story';render();save(push);document.getElementById('sp-status').textContent=data.versions[state.lang].labels[state.stage];}
  async function documentView(href,push=true,position=0){
+  const contact=new URL(href,location.origin).hash==='#contact';
+  const contactValues=app.classList.contains('sp-contact-open')&&reader.querySelector('form')?Object.fromEntries(new FormData(reader.querySelector('form'))):null;
+  if(!contact)closeContact();
   if(data.partners&&window.SWE_PARTNERS&&new URL(href,location.origin).pathname==='/network'){
    request?.abort();requestNumber++;documentURL=href;view='document';app.classList.remove('sp-document-open');drawer(null);save(push);
    window.SWE_PARTNERS.open(data.partners,state.lang,()=>{cancelDocument();view='story';render();save();document.querySelector('.sp-header a[href="/network"]').focus();});return;
@@ -114,8 +119,20 @@
    main.querySelectorAll('script,header,footer,#nav,#introOverlay,.site-language,.site-translation-notice,.world-return-strip').forEach(el=>el.remove());
    reader.innerHTML=`<button data-sp-story>${c().back}</button>${state.lang!=='en'&&doc.documentElement.getAttribute('data-swe-translation-complete')!=='true'?`<p class="sp-doc-warning">${c().missing}</p>`:''}<div class="sp-loaded"></div>`;
    reader.querySelector('.sp-loaded').append(...main.childNodes);reader.scrollTop=position*Math.max(0,reader.scrollHeight-reader.clientHeight);icons();
+   if(contact){
+    if(!contactReturn)contactReturn=document.activeElement;
+    app.classList.add('sp-contact-open');reader.setAttribute('role','dialog');reader.setAttribute('aria-modal','true');reader.setAttribute('aria-label',{de:'Kontakt aufnehmen',en:'Contact Smart World Education',hi:'Smart World Education से संपर्क करें'}[state.lang]);
+    for(const selector of ['.sp-header','.sp-left','.sp-scene','.sp-bottom','.sp-title']){const el=document.querySelector(selector);if(el&&!el.contains(reader)&&!el.inert){el.inert=true;el.setAttribute('data-contact-inert','');}}
+    if(contactValues)for(const [key,value]of Object.entries(contactValues)){const field=reader.querySelector('form')?.elements.namedItem(key);if(field)field.value=value;}
+    reader.querySelector('[data-sp-story]').focus({preventScroll:true});
+   }
   }catch(e){if(e.name==='AbortError'||n!==requestNumber)return;reader.innerHTML=`<p>${c().error}</p><a data-sp-original>${c().original}</a>`;reader.querySelector('a').href=href;}
  }
+ document.addEventListener('keydown',e=>{
+  if(!app.classList.contains('sp-contact-open'))return;
+  if(e.key==='Escape'){e.preventDefault();reader.querySelector('[data-sp-story]').click();return;}
+  if(e.key==='Tab'){const items=[...reader.querySelectorAll('button,a[href],input,select,textarea')].filter(el=>!el.disabled&&el.getClientRects().length),first=items[0],last=items.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}
+ });
  document.addEventListener('click',e=>{
   const el=e.target.closest('a,button');if(!el||el.closest('#introOverlay'))return;
   if(el.matches('[data-mission-replay]')){e.preventDefault();const film=reader.querySelector('#sp-mission-video');if(film){film.scrollIntoView({block:'center'});film.focus({preventScroll:true});film.play().catch(()=>{});}return;}
