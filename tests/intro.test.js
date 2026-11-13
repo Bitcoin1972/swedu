@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const vm = require('node:vm');
 const fs = require('node:fs');
 const script = fs.readFileSync(require.resolve('../public/js/main.js'),'utf8').split('// NAV mobile toggle')[0];
-async function intro({search='',hash='',seen=false,reduced=false,blocked=false,storageDenied=false,mission=false}={}) {
+async function intro({search='',hash='',pathname='/',seen=false,reduced=false,blocked=false,storageDenied=false,mission=false}={}) {
   const events = new Map();
   const element = id => ({id,hidden:true,inert:false,style:{},children:[],appendChild(child){this.children.push(child);},classList:{add(){}},setAttribute(){},focus(){doc.activeElement=this;},addEventListener(type,fn){events.set(`${id}:${type}`,fn);}});
   const overlay=element('introOverlay'),video=element('introVideo'),skip=element('skipBtn'),main=element('main');
@@ -18,7 +18,7 @@ async function intro({search='',hash='',seen=false,reduced=false,blocked=false,s
     getElementById:id=>({introOverlay:overlay,introVideo:video,skipBtn:skip,playHint:hint}[id]),
     createElement:()=>({...element('hint'),remove(){hint=null;}})};
   doc.activeElement=doc.body;
-  vm.runInNewContext(script,{document:doc,window:{location:{search,hash},matchMedia:()=>({matches:reduced})},URLSearchParams,
+  vm.runInNewContext(script,{document:doc,window:{location:{search,hash,pathname},matchMedia:()=>({matches:reduced})},URLSearchParams,
     sessionStorage:{getItem(){if(storageDenied)throw Error();return stored;},setItem(k,v){if(storageDenied)throw Error();stored=v;},removeItem(){stored=null;}},setTimeout:()=>1,clearTimeout(){}});
   await Promise.resolve();await Promise.resolve();
   return {overlay,video,main,doc,events,get plays(){return plays;},get paused(){return paused;},get seen(){return stored;},get hint(){return hint;}};
@@ -27,9 +27,14 @@ test('intro plays muted on first visit and dismissal restores access and remembe
   const x=await intro();assert.equal(x.plays,1);assert.equal(x.overlay.hidden,false);assert.equal(x.video.muted,true);assert.equal(x.main.inert,true);
   x.events.get('skipBtn:click')();assert.equal(x.overlay.hidden,true);assert.equal(x.paused,true);assert.equal(x.seen,'1');assert.equal(x.main.inert,false);
 });
-test('return visits, deep links, reduced motion and explicit skip do not autoplay',async()=>{
-  for(const opts of [{seen:true},{hash:'#contact'},{reduced:true},{search:'?skipIntro=1'},{search:'?intro=1&skipIntro=1'}]){
+test('deep links, reduced motion and explicit skip do not autoplay',async()=>{
+  for(const opts of [{pathname:'/world/academy'},{pathname:'/programmes'},{search:'?stage=0'},{search:'?stage=6&lang=de'},{search:'?room=economy'},{search:'?topic=1'},{hash:'#contact'},{reduced:true},{search:'?skipIntro=1'},{search:'?intro=1&skipIntro=1'}]){
     const x=await intro(opts);assert.equal(x.plays,0);assert.equal(x.overlay.hidden,true);
+  }
+});
+test('direct homepage visits replay the opener even after it was seen',async()=>{
+  for(const opts of [{seen:true},{seen:true,search:'?lang=de'},{seen:true,search:'?lang=hi'},{seen:true,pathname:'/index.html'}]){
+    const x=await intro(opts);assert.equal(x.plays,1);assert.equal(x.overlay.hidden,false);assert.equal(x.video.muted,true);
   }
 });
 test('explicit replay overrides seen state but reduced motion waits for user playback',async()=>{
@@ -64,8 +69,8 @@ test('mission is skippable and media errors restore the journey',async()=>{
     x.events.get(event)({key:'Escape'});assert.equal(x.overlay.hidden,true);assert.equal(x.main.inert,false);
   }
 });
-test('return visits and reduced motion do not force the mission',async()=>{
-  for(const opts of [{seen:true},{reduced:true},{search:'?skipIntro=1'}]){
+test('journey visits and reduced motion do not force the mission',async()=>{
+  for(const opts of [{seen:true,search:'?stage=0'},{reduced:true},{search:'?skipIntro=1'}]){
     const x=await intro({...opts,mission:true});assert.equal(x.plays,0);assert.equal(x.video.src,undefined);
   }
 });

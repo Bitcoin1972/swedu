@@ -5,12 +5,15 @@ const siteText = source => window.SWE_I18N?.t(source) || source;
 const overlay = document.getElementById('introOverlay');
 const video = document.getElementById('introVideo');
 const skipBtn = document.getElementById('skipBtn');
-const forceIntro = new URLSearchParams(window.location.search).get('intro') === '1';
-let introSeen = false;
-try { introSeen = sessionStorage.getItem('introSeen') === '1'; } catch { /* Storage can be unavailable in private contexts. */ }
+const introParams = new URLSearchParams(window.location.search);
+const forceIntro = introParams.get('intro') === '1';
+// A fresh homepage visit replays the opener; journey URLs retain their position.
+const homepageEntry = ['/', '/index.html'].includes(window.location.pathname)
+  && !window.location.hash
+  && !['stage', 'room', 'topic'].some(key => introParams.has(key));
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const skipIntro = new URLSearchParams(window.location.search).get('skipIntro') === '1'
-  || (!forceIntro && (introSeen || Boolean(window.location.hash) || reducedMotion));
+const skipIntro = introParams.get('skipIntro') === '1'
+  || (!forceIntro && (!homepageEntry || reducedMotion));
 let introClosed = false;
 let fallbackTimer;
 let playHintTimer;
